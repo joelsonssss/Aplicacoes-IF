@@ -1,6 +1,13 @@
 import flet as ft
 import json
+import os
 
+# =====================================================
+# CAMINHO DO JSON
+# =====================================================
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARQUIVO_CONFIG = os.path.join(BASE_DIR, "configuracoes.json")
 
 # =====================================================
 # CARREGA JSON
@@ -8,34 +15,27 @@ import json
 
 def carregar_configuracoes():
     try:
-        with open("configuracoes.json", "r", encoding="utf-8") as arquivo:
+        with open(ARQUIVO_CONFIG, "r", encoding="utf-8") as arquivo:
             return json.load(arquivo)
     except FileNotFoundError:
-        print("Arquivo configuracoes.json não encontrado.")
+        print(f"Arquivo não encontrado: {ARQUIVO_CONFIG}")
         return {}
     except json.JSONDecodeError:
-        print("Erro ao ler configuracoes.json.")
+        print(f"Erro ao ler JSON: {ARQUIVO_CONFIG}")
         return {}
 
-
 CONFIGURACOES = carregar_configuracoes()
-
 
 # =====================================================
 # APP
 # =====================================================
 
 def main(page: ft.Page):
-
     page.title = "Configurador de Inversores"
     page.window_width = 900
     page.window_height = 900
     page.scroll = ft.ScrollMode.AUTO
     page.theme_mode = ft.ThemeMode.LIGHT
-
-    # =====================================================
-    # CONTROLES
-    # =====================================================
 
     titulo = ft.Text(
         "CONFIGURADOR DE INVERSORES",
@@ -65,19 +65,10 @@ def main(page: ft.Page):
         scroll=ft.ScrollMode.AUTO,
     )
 
-    # =====================================================
-    # CARREGA INVERSORES
-    # =====================================================
-
     for inv in sorted(CONFIGURACOES.keys()):
         dd_inversor.options.append(ft.dropdown.Option(inv))
 
-    # =====================================================
-    # FUNÇÕES AUXILIARES
-    # =====================================================
-
     def adicionar_secao(titulo_secao, itens, separador="="):
-
         if not itens:
             return
 
@@ -103,7 +94,6 @@ def main(page: ft.Page):
         )
 
     def adicionar_observacoes(lista):
-
         if not lista:
             return
 
@@ -128,69 +118,59 @@ def main(page: ft.Page):
             )
         )
 
-    # =====================================================
-    # TROCA INVERSOR
-    # =====================================================
-
     def mudou_inversor(e):
-
         dd_config.options.clear()
         dd_config.value = None
 
-        if dd_inversor.value:
-
+        if dd_inversor.value and dd_inversor.value in CONFIGURACOES:
             for cfg in CONFIGURACOES[dd_inversor.value].keys():
-
-                dd_config.options.append(
-                    ft.dropdown.Option(cfg)
-                )
+                dd_config.options.append(ft.dropdown.Option(cfg))
 
         page.update()
 
     dd_inversor.on_change = mudou_inversor
 
-    # =====================================================
-    # GERAR
-    # =====================================================
-
     def gerar(e):
-
         resultado.controls.clear()
 
-        if not dd_inversor.value:
+        if not CONFIGURACOES:
+            resultado.controls.append(
+                ft.Text(
+                    "Nenhuma configuração foi carregada do arquivo JSON.",
+                    color=ft.Colors.RED,
+                )
+            )
+            page.update()
+            return
 
+        if not dd_inversor.value:
             resultado.controls.append(
                 ft.Text(
                     "Selecione um modelo de inversor.",
                     color=ft.Colors.RED,
                 )
             )
-
             page.update()
             return
 
         if not dd_config.value:
-
             resultado.controls.append(
                 ft.Text(
                     "Selecione uma configuração.",
                     color=ft.Colors.RED,
                 )
             )
-
             page.update()
             return
 
         dados = CONFIGURACOES[dd_inversor.value][dd_config.value]
 
         resultado.controls.append(
-
             ft.Text(
                 f"{dd_inversor.value} - {dd_config.value}",
                 size=28,
                 weight=ft.FontWeight.BOLD,
             )
-
         )
 
         resultado.controls.append(ft.Divider())
@@ -221,14 +201,8 @@ def main(page: ft.Page):
 
     btn.on_click = gerar
 
-    # =====================================================
-    # LAYOUT
-    # =====================================================
-
     page.add(
-
         titulo,
-
         ft.Row(
             [
                 dd_inversor,
@@ -236,16 +210,8 @@ def main(page: ft.Page):
                 btn,
             ]
         ),
-
         ft.Divider(),
-
         resultado,
-
     )
-
-
-# =====================================================
-# EXECUTA
-# =====================================================
 
 ft.app(target=main)
