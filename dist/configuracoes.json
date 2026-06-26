@@ -1,0 +1,190 @@
+{
+  "IF10": {
+
+    "3 FIOS": {
+      "parametros": [
+        ["P101", "3"],
+        ["P102", "1"],
+        ["P317", "8"],
+        ["P329", "2"]
+      ],
+
+      "ligacoes": [
+        ["FWD", "Botão Liga NOaaaaaaaaa"],
+        ["S1", "Botão Desliga NC"],
+        ["REV", "Botão Reversão NO (Opcional)"]
+      ],
+      
+      "motor": [
+  	  ["P2.01", "kW"],
+       ["P2.03", "A"],
+       ["P2.04", "Hz"],
+       ["P2.05", "RPM"]
+	],
+       
+      "observacoes": [
+        "Botão Liga NO ligado no borne aaaaaaaaaaaaaa",
+        "Botão Desliga NC ligado no borne S1",
+        "Botão Reversão NO ligado no borne REV (Opcional)"
+      ]
+    },
+
+
+    "Multi velocidade": {
+      "parametros": [
+        ["P101", "6"],
+        ["102", "1"],
+        ["315", "7"],
+        ["316", "7"],
+        ["317", "9"],
+        ["P503", "VELOCIDADE S1"],
+        ["P504", "VELOCIDADE S2"],
+        ["P100", "VELOCIDADE SEM S1 e S2"]
+        
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Liga"],
+        ["REV + GND", "Reversão"],
+        ["S1 + GND", "Mais Velocidade"],
+        ["S2 + GND", "Menos Velocidade"]
+      ],
+      
+      "motor": [
+  	  ["P209", "Tensao Motor"],
+       ["P210", "A"],
+       ["P212", "RPM"],
+       ["P213", "Número de pólos do motor"]
+	],
+      
+      "observacoes": [
+        "ligação multi velocidade",
+        "Número de pólos do motor. Informação na placa do motor:",
+	      "2 POLOS = 3600 RPM",
+	      "4 POLOS = 1700 RPM",
+	      "6 POLOS = 1200 RPM",
+	      "8 POLOS = 900 RPM "
+        
+        
+      ]
+    },
+
+    "teste": {
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "1"],
+        ["P0.10", "Valor Hz Inicial"],
+        ["P0.23", "1"],
+        ["P5.00", "1"],
+        ["P5.01", "2"],
+        ["P5.02", "6 = Mais Velocidade"],
+        ["P5.03", "7 = Menos Velocidade"],
+        ["P5.12", "Pulso em Hz"],
+        ["P5.1ssssssss2", "Pulso esssssm Hz"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Liga"],
+        ["REV + GND", "Reversão"],
+        ["S1 + GND", "Mais Velocidade"],
+        ["S2 + GND", "Menos Velocidade"]
+      ],
+      
+      "motor": [
+  	  ["P2.01", "kW"],
+       ["P2.03", "A"],
+       ["P2.04", "Hz"],
+       ["P2.05", "RPM"]
+	],
+      
+      "observacoes": [
+        "Definir frequência inicial em P0.10",
+        "S1 aumenta velocidade",
+        "S2 diminui velocidade"
+      ]
+    }
+
+
+
+
+
+  },
+
+  
+  "IF20": {
+
+    "3 FIOS": {
+      "parametros": [
+        ["P5.11", "2"],
+        ["P5.00", "1"],
+        ["P5.01", "2"],
+        ["P5.02", "3"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão Liga NA"],
+        ["S1 + GND", "Botão Desliga NF"]
+      ],
+      "observacoes": [
+        "FWD + GND = Botão Liga",
+        "S1 + GND = Botão Desliga"
+      ]
+    },
+
+    "UP / DOWN": {
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "1"],
+        ["P0.10", "Valor Hz Inicial"],
+        ["P0.23", "1"],
+        ["P5.00", "1"],
+        ["P5.01", "2"],
+        ["P5.02", "6 = Mais Velocidade"],
+        ["P5.03", "7 = Menos Velocidade"],
+        ["P5.12", "Pulso em Hz"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Liga"],
+        ["REV + GND", "Reversão"],
+        ["S1 + GND", "Mais Velocidade"],
+        ["S2 + GND", "Menos Velocidade"]
+      ],
+      
+      "motor": [
+  	  ["P2.01", "kW"],
+       ["P2.03", "A"],
+       ["P2.04", "Hz"],
+       ["P2.05", "RPM"]
+	],
+      
+      "observacoes": [
+        "Definir frequência inicial em P0.10",
+        "S1 aumenta velocidade",
+        "S2 diminui velocidade"
+      ]
+    }
+  },
+
+  "IF30": {
+    "3 FIOS": {
+
+
+
+      
+      "parametros": [
+        ["P2.01", "kW"],
+       ["P2.03", "A"],
+       ["P2.04", "Hz"],
+       ["P2.05", "RPM"]
+      ],
+      "ligacoes": [
+       ["P2.01", "kW"],
+       ["P2.03", "A"],
+       ["P2.04", "Hz"],
+       ["P2.05", "RPM"]
+      ],
+      "observacoes": [
+       "Definir frequência inicial em P0.10",
+        "S1 aumenta velocidade",
+        "S2 diminui velocidade"
+      ]
+    }
+  }
+}
