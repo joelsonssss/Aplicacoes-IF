@@ -3,26 +3,21 @@ import json
 import os
 
 # =====================================================
-# CAMINHO DO JSON
+# JSON
 # =====================================================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQUIVO_CONFIG = os.path.join(BASE_DIR, "configuracoes.json")
 
-# =====================================================
-# CARREGA JSON
-# =====================================================
 
 def carregar_configuracoes():
     try:
-        with open(ARQUIVO_CONFIG, "r", encoding="utf-8") as arquivo:
-            return json.load(arquivo)
-    except FileNotFoundError:
-        print(f"Arquivo não encontrado: {ARQUIVO_CONFIG}")
+        with open(ARQUIVO_CONFIG, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print("Erro ao carregar JSON:", e)
         return {}
-    except json.JSONDecodeError:
-        print(f"Erro ao ler JSON: {ARQUIVO_CONFIG}")
-        return {}
+
 
 CONFIGURACOES = carregar_configuracoes()
 
@@ -35,40 +30,64 @@ def main(page: ft.Page):
     page.window_width = 900
     page.window_height = 900
     page.scroll = ft.ScrollMode.AUTO
-    page.theme_mode = ft.ThemeMode.LIGHT
 
     titulo = ft.Text(
         "CONFIGURADOR DE INVERSORES",
-        size=30,
+        size=28,
         weight=ft.FontWeight.BOLD,
     )
+
+    # ----------------------------
+    # DROPDOWNS
+    # ----------------------------
 
     dd_inversor = ft.Dropdown(
         label="Modelo do Inversor",
         width=260,
-        enable_filter=True,
     )
 
     dd_config = ft.Dropdown(
         label="Configuração",
         width=320,
-        enable_filter=True,
     )
 
-    btn = ft.ElevatedButton(
-        "GERAR",
-        icon=ft.Icons.SETTINGS,
-    )
+    btn = ft.ElevatedButton("GERAR")
 
-    resultado = ft.Column(
-        spacing=8,
-        scroll=ft.ScrollMode.AUTO,
-    )
+    resultado = ft.Column(scroll=ft.ScrollMode.AUTO)
 
-    for inv in sorted(CONFIGURACOES.keys()):
+    # =====================================================
+    # CARREGA INVERSORES
+    # =====================================================
+
+    for inv in CONFIGURACOES.keys():
         dd_inversor.options.append(ft.dropdown.Option(inv))
 
-    def adicionar_secao(titulo_secao, itens, separador="="):
+    # =====================================================
+    # AO MUDAR INVERSOR
+    # =====================================================
+
+    def mudou_inversor(e):
+        dd_config.options.clear()
+        dd_config.value = None
+
+        inv = dd_inversor.value
+
+        if inv in CONFIGURACOES:
+            for cfg in CONFIGURACOES[inv].keys():
+                # 🔥 IMPORTANTE: value = cfg (garante chave correta)
+                dd_config.options.append(
+                    ft.dropdown.Option(text=cfg, key=cfg)
+                )
+
+        page.update()
+
+    dd_inversor.on_change = mudou_inversor
+
+    # =====================================================
+    # FUNÇÕES UI
+    # =====================================================
+
+    def secao(titulo, itens, simbolo="="):
         if not itens:
             return
 
@@ -78,14 +97,10 @@ def main(page: ft.Page):
                     padding=15,
                     content=ft.Column(
                         [
-                            ft.Text(
-                                titulo_secao,
-                                size=20,
-                                weight=ft.FontWeight.BOLD,
-                            ),
+                            ft.Text(titulo, size=18, weight=ft.FontWeight.BOLD),
                             *[
-                                ft.Text(f"{item[0]} {separador} {item[1]}")
-                                for item in itens
+                                ft.Text(f"{i[0]} {simbolo} {i[1]}")
+                                for i in itens
                             ],
                         ]
                     ),
@@ -93,7 +108,7 @@ def main(page: ft.Page):
             )
         )
 
-    def adicionar_observacoes(lista):
+    def obs(lista):
         if not lista:
             return
 
@@ -103,115 +118,90 @@ def main(page: ft.Page):
                     padding=15,
                     content=ft.Column(
                         [
-                            ft.Text(
-                                "OBSERVAÇÕES",
-                                size=20,
-                                weight=ft.FontWeight.BOLD,
-                            ),
-                            *[
-                                ft.Text(f"• {obs}")
-                                for obs in lista
-                            ],
+                            ft.Text("OBSERVAÇÕES", size=18, weight=ft.FontWeight.BOLD),
+                            *[ft.Text("• " + o) for o in lista],
                         ]
                     ),
                 )
             )
         )
 
-    def mudou_inversor(e):
-        dd_config.options.clear()
-        dd_config.value = None
-
-        if dd_inversor.value and dd_inversor.value in CONFIGURACOES:
-            for cfg in CONFIGURACOES[dd_inversor.value].keys():
-                dd_config.options.append(ft.dropdown.Option(cfg))
-
-        page.update()
-
-    dd_inversor.on_change = mudou_inversor
+    # =====================================================
+    # GERAR
+    # =====================================================
 
     def gerar(e):
         resultado.controls.clear()
 
+        inv = dd_inversor.value
+        cfg = dd_config.value
+
+        # ----------------------------
+        # VALIDAÇÕES
+        # ----------------------------
+
         if not CONFIGURACOES:
+            resultado.controls.append(ft.Text("JSON não carregado!", color="red"))
+            page.update()
+            return
+
+        if not inv:
+            resultado.controls.append(ft.Text("Selecione o inversor!", color="red"))
+            page.update()
+            return
+
+        if not cfg:
+            resultado.controls.append(ft.Text("Selecione a configuração!", color="red"))
+            page.update()
+            return
+
+        # ----------------------------
+        # PEGAR DADOS COM SEGURANÇA
+        # ----------------------------
+
+        dados = CONFIGURACOES.get(inv, {}).get(cfg)
+
+        if not dados:
             resultado.controls.append(
-                ft.Text(
-                    "Nenhuma configuração foi carregada do arquivo JSON.",
-                    color=ft.Colors.RED,
-                )
+                ft.Text("Configuração não encontrada no JSON!", color="red")
             )
             page.update()
             return
 
-        if not dd_inversor.value:
-            resultado.controls.append(
-                ft.Text(
-                    "Selecione um modelo de inversor.",
-                    color=ft.Colors.RED,
-                )
-            )
-            page.update()
-            return
-
-        if not dd_config.value:
-            resultado.controls.append(
-                ft.Text(
-                    "Selecione uma configuração.",
-                    color=ft.Colors.RED,
-                )
-            )
-            page.update()
-            return
-
-        dados = CONFIGURACOES[dd_inversor.value][dd_config.value]
+        # ----------------------------
+        # TÍTULO
+        # ----------------------------
 
         resultado.controls.append(
-            ft.Text(
-                f"{dd_inversor.value} - {dd_config.value}",
-                size=28,
-                weight=ft.FontWeight.BOLD,
-            )
+            ft.Text(f"{inv} - {cfg}", size=24, weight=ft.FontWeight.BOLD)
         )
 
         resultado.controls.append(ft.Divider())
 
-        adicionar_secao(
-            "LIGAÇÕES",
-            dados.get("ligacoes", []),
-            "→",
-        )
+        # ----------------------------
+        # SEÇÕES
+        # ----------------------------
 
-        adicionar_secao(
-            "PARÂMETROS",
-            dados.get("parametros", []),
-            "=",
-        )
+        secao("LIGAÇÕES", dados.get("ligacoes", []), "→")
+        secao("PARÂMETROS", dados.get("parametros", []))
+        secao("MOTOR", dados.get("motor", []))
 
-        adicionar_secao(
-            "MOTOR",
-            dados.get("motor", []),
-            "=",
-        )
-
-        adicionar_observacoes(
-            dados.get("observacoes", [])
-        )
+        obs(dados.get("observacoes", []))
 
         page.update()
 
     btn.on_click = gerar
 
+    # =====================================================
+    # UI
+    # =====================================================
+
     page.add(
         titulo,
-        ft.Row(
-            [
-                dd_inversor,
-                dd_config,
-                btn,
-            ]
-        ),
+        ft.Row([dd_inversor, dd_config, btn]),
         ft.Divider(),
         resultado,
     )
+
 
 ft.app(target=main)
