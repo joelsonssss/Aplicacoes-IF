@@ -354,7 +354,7 @@ def main(page: ft.Page):
 
     # Linha que mostra o link da aplicação/desenho
     linha_link = ft.Container(
-        padding=15,
+        padding=2,
         alignment=ft.alignment.center,
         content=ft.Row(
             [
@@ -363,14 +363,15 @@ def main(page: ft.Page):
                 botao_abrir_link,
             ],
             wrap=True,
-            spacing=12,
+            spacing=4,
         ),
     )
 
     # Área principal onde os resultados aparecem
     area_resultado = ft.Container(
+        #bgcolor=ft.Colors.ORANGE_800,
         expand=True,
-        padding=15,
+        padding=2,
         alignment=ft.alignment.center,
         content=resultado,
     )
@@ -381,7 +382,7 @@ def main(page: ft.Page):
             ft.Container(
                 expand=True,
                 bgcolor=ft.Colors.ORANGE_800,
-                padding=5,
+                padding=2,
                 content=ft.Text(
                     "Metaltex ",
                     color=ft.Colors.WHITE,
