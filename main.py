@@ -113,18 +113,18 @@ def main(page: ft.Page):
         width=112,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
-        text_style=ft.TextStyle(size=12),
-        label_style=ft.TextStyle(size=13),
+        text_style=ft.TextStyle(size=15),
+        label_style=ft.TextStyle(size=17),
         options=[ft.dropdown.Option(nome) for nome in sorted(CONFIGURACOES.keys())],
     )
 
     dd_configuracao = ft.Dropdown(
         label="Aplicação",
-        width=150,
+        width=175,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
-        text_style=ft.TextStyle(size=12),
-        label_style=ft.TextStyle(size=15),
+        text_style=ft.TextStyle(size=15),
+        label_style=ft.TextStyle(size=17),
         options=[],
     )
 
