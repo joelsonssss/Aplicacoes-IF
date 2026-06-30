@@ -108,6 +108,18 @@ def main(page: ft.Page):
         ),
     )
 
+
+    dd_texto01 = ft.Text(
+        "Defina Inversor e Aplicação",
+        size=15,
+        
+        color=ft.Colors.ORANGE_800,
+        #weight=ft.FontWeight.BOLD,
+        italic=False,
+        text_align=ft.TextAlign.CENTER,
+        
+)
+
     dd_inversor = ft.Dropdown(
         label="IF ",
         width=112,
@@ -340,6 +352,7 @@ def main(page: ft.Page):
             spacing=0,
             controls=[
                 imagem_topo,
+                dd_texto01,
                 linha_codigo,
                 area_resultado,
                 linha_link,
