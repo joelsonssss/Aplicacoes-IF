@@ -20,7 +20,6 @@ def carregar_configuracoes():
         with open(ARQUIVO_CONFIG, "r", encoding="utf-8") as arquivo:
             dados = json.load(arquivo)
 
-        # Garante que o JSON carregado seja um dicionário
         if not isinstance(dados, dict):
             print("JSON inválido: o arquivo precisa ter formato de dicionário.")
             return {}
@@ -51,11 +50,8 @@ def main(page: ft.Page):
     """
     page.title = "Configurador de Inversores"
     page.theme_mode = ft.ThemeMode.LIGHT
-
-    # Ajustes úteis para desktop; no navegador/celular o layout responsivo é o que manda
     page.window_width = 400
     page.window_height = 700
-
     page.padding = 0
     page.spacing = 0
     page.bgcolor = ft.Colors.GREY_100
@@ -103,8 +99,6 @@ def main(page: ft.Page):
         if link_atual["url"]:
             page.launch_url(link_atual["url"])
 
-    # Imagem de topo da aplicação
-    # Removido width fixo para não estourar no celular
     imagem_topo = ft.Container(
         alignment=ft.alignment.bottom_left,
         content=ft.Image(
@@ -114,39 +108,38 @@ def main(page: ft.Page):
         ),
     )
 
-    # Dropdown para selecionar o modelo do inversor
     dd_inversor = ft.Dropdown(
-        label="Modelo do Inversor",
-        width=150,
+        label="Modelo ",
+        width=112,
         dense=True,
-        content_padding=ft.padding.symmetric(vertical=6, horizontal=12),
-        text_style=ft.TextStyle(size=14),
-        label_style=ft.TextStyle(size=12),
+        content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
+        text_style=ft.TextStyle(size=12),
+        label_style=ft.TextStyle(size=13),
         options=[ft.dropdown.Option(nome) for nome in sorted(CONFIGURACOES.keys())],
     )
 
-    # Dropdown para selecionar o tipo de configuração
     dd_configuracao = ft.Dropdown(
-        label="Configuração",
-        text_style=ft.TextStyle(size=14),
-        label_style=ft.TextStyle(size=12),
+        label="Aplicação",
         width=150,
+        dense=True,
+        content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
+        text_style=ft.TextStyle(size=12),
+        label_style=ft.TextStyle(size=15),
         options=[],
     )
 
-    # Botão que dispara a exibição da configuração selecionada
     botao_mostrar = ft.ElevatedButton(
         text="Buscar",
         icon=ft.Icons.SEARCH,
+        height=40,
         bgcolor=ft.Colors.ORANGE_800,
         color="#F7F8F3",
         style=ft.ButtonStyle(
             shape=ft.RoundedRectangleBorder(radius=5),
-            padding=ft.padding.symmetric(horizontal=14, vertical=14),
+            padding=ft.padding.symmetric(horizontal=10, vertical=8),
         ),
     )
 
-    # Texto que mostra o link da aplicação/desenho
     texto_link = ft.Text(
         "Nenhum link disponível para esta configuração.",
         selectable=True,
@@ -155,7 +148,6 @@ def main(page: ft.Page):
         text_align=ft.TextAlign.CENTER,
     )
 
-    # Botão para abrir o link da configuração
     botao_abrir_link = ft.TextButton(
         text="abrir link",
         width=90,
@@ -168,7 +160,6 @@ def main(page: ft.Page):
         ),
     )
 
-    # Coluna onde serão exibidos os resultados da configuração escolhida
     resultado = ft.Column(
         spacing=10,
         scroll=ft.ScrollMode.AUTO,
@@ -176,9 +167,6 @@ def main(page: ft.Page):
     )
 
     def adicionar_secao(titulo, itens, separador="="):
-        """
-        Adiciona uma seção formatada na área de resultados.
-        """
         if not itens:
             return
 
@@ -204,9 +192,6 @@ def main(page: ft.Page):
         )
 
     def adicionar_observacoes(lista):
-        """
-        Adiciona um card específico para observações.
-        """
         if not lista:
             return
 
@@ -225,9 +210,6 @@ def main(page: ft.Page):
         )
 
     def ao_mudar_inversor(e):
-        """
-        Evento executado quando o usuário troca o modelo do inversor.
-        """
         dd_configuracao.value = None
         dd_configuracao.options = []
         resultado.controls.clear()
@@ -252,19 +234,12 @@ def main(page: ft.Page):
         page.update()
 
     def ao_mudar_configuracao(e):
-        """
-        Evento executado quando o usuário troca a configuração.
-        """
         atualizar_linha_link()
 
-    # Associa os eventos aos dropdowns
     dd_inversor.on_change = ao_mudar_inversor
     dd_configuracao.on_change = ao_mudar_configuracao
 
     def mostrar_configuracao(e):
-        """
-        Exibe na tela os dados da configuração selecionada.
-        """
         resultado.controls.clear()
 
         if not dd_inversor.value:
@@ -310,19 +285,17 @@ def main(page: ft.Page):
 
     botao_mostrar.on_click = mostrar_configuracao
 
-    # Linha com os controles de seleção
     linha_codigo = ft.Container(
-        padding=10,
+        padding=6,
         content=ft.Row(
             [dd_inversor, dd_configuracao, botao_mostrar],
-            wrap=True,
-            spacing=10,
-            run_spacing=8,
+            wrap=False,
+            spacing=4,
             alignment=ft.MainAxisAlignment.CENTER,
+            tight=True,
         ),
     )
 
-    # Linha que mostra o link da aplicação/desenho
     linha_link = ft.Container(
         padding=4,
         alignment=ft.alignment.center,
@@ -338,14 +311,12 @@ def main(page: ft.Page):
         ),
     )
 
-    # Área principal onde os resultados aparecem
     area_resultado = ft.Container(
         expand=True,
         padding=4,
         content=resultado,
     )
 
-    # Rodapé da aplicação
     rodape = ft.Row(
         [
             ft.Container(
@@ -361,7 +332,6 @@ def main(page: ft.Page):
         ]
     )
 
-    # Conteúdo principal da aplicação
     conteudo_app = ft.Container(
         width=400,
         bgcolor=ft.Colors.WHITE,
@@ -379,37 +349,13 @@ def main(page: ft.Page):
     )
 
     def ajustar_layout(e=None):
-        """
-        Ajusta a largura da aplicação conforme o espaço disponível.
-        No celular, encolhe para caber na tela.
-        No desktop, mantém no máximo 400 px.
-        """
         largura_disponivel = page.width if page.width else 400
         largura_final = min(max(largura_disponivel - 12, 280), 400)
         conteudo_app.width = largura_final
-
-        # Ajustes opcionais para telas muito pequenas
-        if largura_final < 360:
-            dd_inversor.width = 130
-            dd_configuracao.width = 130
-            botao_mostrar.style = ft.ButtonStyle(
-                shape=ft.RoundedRectangleBorder(radius=5),
-                padding=ft.padding.symmetric(horizontal=10, vertical=12),
-            )
-        else:
-            dd_inversor.width = 150
-            dd_configuracao.width = 150
-            botao_mostrar.style = ft.ButtonStyle(
-                shape=ft.RoundedRectangleBorder(radius=5),
-                padding=ft.padding.symmetric(horizontal=14, vertical=14),
-            )
-
         page.update()
 
-    # Evento de redimensionamento da página/janela
     page.on_resize = ajustar_layout
 
-    # Monta a página final centralizando o conteúdo
     page.add(
         ft.Row(
             expand=True,
@@ -418,9 +364,7 @@ def main(page: ft.Page):
         )
     )
 
-    # Aplica o ajuste inicial
     ajustar_layout()
 
 
-# Inicia a aplicação Flet chamando a função principal
 ft.app(target=main)
