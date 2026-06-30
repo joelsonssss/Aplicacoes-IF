@@ -109,7 +109,7 @@ def main(page: ft.Page):
     )
 
     dd_inversor = ft.Dropdown(
-        label="Modelo ",
+        label="IF ",
         width=112,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
