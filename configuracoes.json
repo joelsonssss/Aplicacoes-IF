@@ -1,5 +1,5 @@
 {
-  "IF1000": {
+  "IF10": {
 
     "3 FIOS": {
       "parametros": [
@@ -23,7 +23,7 @@
 	],
        
       "observacoes": [
-        "Botão Liga NO ligado no borne ",
+        "Botão Liga NO ligado no borne aaaaaaaaaaaaaa",
         "Botão Desliga NC ligado no borne S1",
         "Botão Reversão NO ligado no borne REV (Opcional)"
       ]
@@ -32,7 +32,7 @@
 
     "Multi velocidade": {
       "parametros": [
-        ["P101", "6"],
+        ["P101", "6555555"],
         ["102", "1"],
         ["315", "7"],
         ["316", "7"],
