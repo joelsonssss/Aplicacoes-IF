@@ -2,6 +2,7 @@
   "IF10": {
 
     "3 FIOS": {
+      "link": "www.metaltex.com.br/sss.pdf",
       "parametros": [
         ["P101", "3"],
         ["P102", "1"],
@@ -23,7 +24,7 @@
 	],
        
       "observacoes": [
-        "Botão Liga NO ligado no borne aaaaaaaaaaaaaa",
+        "Botão Liga NO ligado no borne ",
         "Botão Desliga NC ligado no borne S1",
         "Botão Reversão NO ligado no borne REV (Opcional)"
       ]
@@ -31,8 +32,9 @@
 
 
     "Multi velocidade": {
+      "link": "www.metaltex.com.br/if",
       "parametros": [
-        ["P101", "6555555"],
+        ["P101", "66666"],
         ["102", "1"],
         ["315", "7"],
         ["316", "7"],
