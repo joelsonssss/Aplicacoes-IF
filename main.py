@@ -2,6 +2,7 @@ import flet as ft
 import json
 import os
 
+
 # Define a pasta onde está este arquivo .py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -50,8 +51,13 @@ def main(page: ft.Page):
     """
     page.title = "Configurador de Inversores"
     page.theme_mode = ft.ThemeMode.LIGHT
-    page.window_width = 500
+
+    # Essas propriedades funcionam melhor no app desktop.
+    # No navegador, o controle real da largura deve ser feito no layout.
+    page.window_width = 400
     page.window_height = 700
+    page.window_max_width = 00
+
     page.padding = 0
     page.spacing = 0
 
@@ -112,6 +118,7 @@ def main(page: ft.Page):
         content=ft.Image(
             src="images/topo01.png",
             height=70,
+            width=470,
             fit=ft.ImageFit.COVER,
         ),
     )
@@ -120,11 +127,11 @@ def main(page: ft.Page):
     # As opções são montadas com base nas chaves do JSON carregado
     dd_inversor = ft.Dropdown(
         label="Modelo do Inversor",
-        width=220,
+        width=150,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=6, horizontal=12),
         text_style=ft.TextStyle(size=14),
-        label_style=ft.TextStyle(size=14),
+        label_style=ft.TextStyle(size=12),
         options=[ft.dropdown.Option(nome) for nome in sorted(CONFIGURACOES.keys())],
     )
 
@@ -132,14 +139,22 @@ def main(page: ft.Page):
     # Inicialmente vazio, pois depende do inversor escolhido
     dd_configuracao = ft.Dropdown(
         label="Configuração",
-        width=260,
+        text_style=ft.TextStyle(size=14),
+        label_style=ft.TextStyle(size=12),
+        width=150,
         options=[],
     )
 
     # Botão que dispara a exibição da configuração selecionada
     botao_mostrar = ft.ElevatedButton(
-        text="Mostrar",
+        text="Buscar",
         icon=ft.Icons.SEARCH,
+        bgcolor=ft.Colors.ORANGE_800,
+        color="#F7F8F3",
+        style=ft.ButtonStyle(
+        shape=ft.RoundedRectangleBorder(radius=5),
+        padding=ft.padding.symmetric(horizontal=20, vertical=20),
+    ),
     )
 
     # Texto que mostra o link da aplicação/desenho
@@ -159,9 +174,18 @@ def main(page: ft.Page):
 
     # Botão para abrir o link da configuração
     botao_abrir_link = ft.TextButton(
+        
         text="abrir link",
+        width=80,
+        height=20,
         on_click=abrir_link,
-        disabled=True,
+        
+        style=ft.ButtonStyle(
+        bgcolor=ft.Colors.ORANGE_800,
+        color="#F7F8F3",
+        shape=ft.RoundedRectangleBorder(radius=5)),
+        
+        
     )
 
     # Coluna onde serão exibidos os resultados da configuração escolhida
@@ -344,11 +368,11 @@ def main(page: ft.Page):
     # Linha com os controles de seleção
     linha_codigo = ft.Container(
         padding=15,
-        alignment=ft.alignment.center,
         content=ft.Row(
             [dd_inversor, dd_configuracao, botao_mostrar],
             wrap=True,
             spacing=15,
+            alignment=ft.MainAxisAlignment.CENTER,
         ),
     )
 
@@ -357,8 +381,9 @@ def main(page: ft.Page):
         padding=2,
         alignment=ft.alignment.center,
         content=ft.Row(
+            
             [
-                ft.Text("Desenho da Aplicação:", size=12, weight=ft.FontWeight.BOLD),
+                ft.Text("", size=12, weight=ft.FontWeight.BOLD),
                 texto_link,
                 botao_abrir_link,
             ],
@@ -369,10 +394,8 @@ def main(page: ft.Page):
 
     # Área principal onde os resultados aparecem
     area_resultado = ft.Container(
-        #bgcolor=ft.Colors.ORANGE_800,
         expand=True,
         padding=2,
-        alignment=ft.alignment.center,
         content=resultado,
     )
 
@@ -392,9 +415,11 @@ def main(page: ft.Page):
         ]
     )
 
-    # Monta a página final na ordem visual
-    page.add(
-        ft.Column(
+    # Conteúdo principal limitado a 400 px para funcionar bem também no navegador
+    conteudo_app = ft.Container(
+        width=470,
+        bgcolor=ft.Colors.ON_PRIMARY,
+        content=ft.Column(
             expand=True,
             spacing=0,
             controls=[
@@ -404,6 +429,15 @@ def main(page: ft.Page):
                 linha_link,
                 rodape,
             ],
+        ),
+    )
+
+    # Monta a página final centralizando o conteúdo
+    page.add(
+        ft.Row(
+            expand=True,
+            alignment=ft.MainAxisAlignment.CENTER,
+            controls=[conteudo_app],
         )
     )
 
