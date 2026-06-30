@@ -276,7 +276,7 @@ def main(page: ft.Page):
                 bgcolor=ft.Colors.ORANGE_800,
                 padding=5,
                 content=ft.Text(
-                    "Rodapé fixo - aqui você pode colocar empresa, versão ou contato.",
+                    "Metaltex ",
                     color=ft.Colors.WHITE,
                     text_align=ft.TextAlign.CENTER,
                 ),
