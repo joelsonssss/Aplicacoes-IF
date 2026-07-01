@@ -2,7 +2,7 @@
   "IF10": {
 
     "3 FIOS": {
-      "link": "www.metaltex.com.br/sss.pdf",
+      "link": "",
       "parametros": [
         ["P101", "3"],
         ["P102", "1"],
@@ -11,24 +11,284 @@
       ],
 
       "ligacoes": [
-        ["FWD", "Botão Liga NO"],
-        ["S1", "Botão Desliga NC"],
-        ["REV", "Botão Reversão NO (Opcional)"]
+        ["FWD + GND","Botão liga (NA)"],
+        ["S1 + GND", "Botão desliga (NC)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       
       "motor": [
-  	  ["P2.01", "kW"],
-       ["P2.03", "A"],
-       ["P2.04", "Hz"],
-       ["P2.05", "RPM"]
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
 	],
        
       "observacoes": [
-        "Botão Liga NO ligado no borne ",
-        "Botão Desliga NC ligado no borne S1",
-        "Botão Reversão NO ligado no borne REV (Opcional)"
+        "Botão liga NA, ligado no borne ",
+        "Botão desliga NF, ligado no borne S1",
+        "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
     },
+
+
+    "3 FIOS + UP | DOWN": {
+      "link": "",
+      "parametros": [
+        ["P101", "4"],
+        ["P102", "1"],
+        ["P318", "15"],
+        ["P317", "8"],
+        ["P316", "16"],
+        ["P329", "2"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND","Botão liga (NA)"],
+        ["S1 + GND", "Botão desliga (NC)"],
+        ["REV + GND", "Botão + velocidade (NA)"],
+        ["S2 + GND", "Botão - velocidade (NA)"]        
+      ],
+      
+      "motor": [
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
+	],
+       
+      "observacoes": [
+        "Botão liga NA, ligado no borne FWD",
+        "Botão desliga NF, ligado no borne S1",
+        "Botão + Velocidade NA, ligado no borne REV",
+        "Botão - Velocidade NA, ligado no borne S2"
+      ]
+    },
+
+
+    "3 FIOS + MULT VELOCIDADE": {
+      "link": "",
+      "parametros": [
+        ["P101", "6"],
+        ["P102", "1"],
+        ["P318", "9"],
+        ["P317", "8"],
+        ["P316", "7"],
+        ["100", "Velocidade 1"],
+        ["503", "Velocidade 2"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND","Botão liga (NA)"],
+        ["S1 + GND", "Botão desliga (NF)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"],
+        ["S2 + GND", "Botão Troca de Modo (NA)"]        
+      ],
+      
+      "motor": [
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
+	],
+       
+      "observacoes": [
+        "Botão liga NA, ligado no borne FWD",
+        "Botão desliga NF, ligado no borne S1",
+        "Botão troca de modo NA, ligado no borne S2"
+        
+      ]
+    },
+
+
+    "FREIO DC PARTIDA": {
+      "link": "www.metaltex.com.br/sss.pdf",
+      "parametros": [
+        ["P102", "1"],
+        ["P202", "Hz  Frequência inicial de partida "],
+        ["P204", "%  Tensão de operação freio DC partida"],       
+        ["P205", "s  Tempo de operação freio DC partida"] 
+      ],
+
+      "ligacoes": [
+        ["FWD + GND","Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]       
+      ],
+      
+      "motor": [
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
+	],
+       
+      "observacoes": [
+        "P202 define qual Hz vai acionar o Freio DC",
+        "P204 define % Tensão de operação do freio DC",
+        "P205 define Segundos o tempo de atuação do freio DC"
+
+      ]
+    },
+
+    "FREIO DC PARADA": {
+      "link": "",
+      "parametros": [
+        ["P102", "1"],
+        ["P203", "Hz  Frequência inicial de partida "],
+        ["P206", "%  Tensão de operação freio DC partida"],       
+        ["P207", "s  Tempo de operação freio DC partida"] 
+      ],
+
+      "ligacoes": [
+        ["FWD + GND","Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]          
+      ],
+      
+      "motor": [
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
+	],
+       
+      "observacoes": [
+        "P203 define qual Hz vai acionar o Freio DC",
+        "P206 define % Tensão de operação do freio DC",
+        "P207 define Segundos o tempo de atuação do freio DC"
+
+      ]
+    },
+
+
+    "CLP": {
+      "link": "",
+      "parametros": [
+        ["P101", "7"],
+        ["P102", "1"],
+        ["P501", "1"],
+        ["P502", "2"],
+        ["P503", "Multivelocidade 1 "],
+        ["P504", "Multivelocidade 2 "],
+        ["P505", "Multivelocidade 3 "],
+        ["P518", "Tempo 1 de operação do CLP"],
+        ["P519", "Tempo 2 de operação do CLP"],
+        ["P520", "Tempo 3 de operação do CLP"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND","Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+      ],
+      
+      "motor": [
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
+	],
+       
+      "observacoes": [
+        "Botão liga NA, ligado no borne ",
+        "Botão reversão NA, ligado no borne REV (Opcional)"
+      ]
+    },
+
+
+    "MODBUS": {
+      "link": "",
+      "parametros": [
+        ["P101", "5"],
+        ["P102", "2"],
+        ["P700", "1 (9600) - 2 (19200) - 3 (38400)"],
+        ["P701", "3 (8N1 - RTU) | 4 (8E1 - RTU) | 5 (8O1 - RTU)"],
+        ["P702", "Endereço MODBUS (ID Modbus)"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND","Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"],
+        ["RS- e RS+", "Ligação cabos modbus"]
+
+      ],
+      
+      "motor": [
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
+	],
+       
+      "observacoes": [
+        "P700 = Velocidade de comunicação",
+        "P701 = Formato de comunicação",
+        "P702 = Endereço MODBUS (ID Modbus) ",
+        "Valor frequência principal (2001H)",
+        "Enviando comando avanço (escreva 02H) em 2000H:",
+        "Enviando comando parada (escreva 01H) em 2000H:"
+      ]
+    },
+
+    "SPINDLER": {
+      "link": "",
+      "parametros": [
+        ["P101", "3"],
+        ["P102", "1"],
+        ["P105", "400"],
+        ["P110", "400"],
+        ["P215", "400"]
+        
+      ],
+
+      "ligacoes": [
+        ["FWD + GND","Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+      ],
+      
+      "motor": [
+        ["P209", "V  Tensão nominal do motor"],
+  	    ["P210", "A  Corrente nominal do motor"],
+        ["P212", "RPM  Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz  Frequência nominal do motor"]
+	],
+       
+      "observacoes": [
+        "Botão liga NA, ligado no borne ",
+        "Botão reversão NA, ligado no borne REV (Opcional)"
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     "Multi velocidade": {
