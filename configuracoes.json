@@ -482,45 +482,28 @@
     "CLP": {
       "link": "",
       "parametros": [
-        ["P101", "7"],
-        ["P102", "1"],
-        ["P501", "1"],
-        ["P502", "2"],
-        ["P503", "Multivelocidade 1"],
-        ["P504", "Multivelocidade 2"],
-        ["P505", "Multivelocidade 3"],
-        ["P518", "Tempo 1 de operação do CLP"],
-        ["P519", "Tempo 2 de operação do CLP"],
-        ["P520", "Tempo 3 de operação do CLP"]
+        
       ],
       "ligacoes": [
-        ["FWD + GND", "Botão liga (NA)"],
-        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+       
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
-        ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        
       ],
       "observacoes": [
-        "Botão liga NA, ligado no borne ",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
+       
       ]
     },
     "MODBUS": {
       "link": "",
       "parametros": [
-        ["P101", "5"],
-        ["P102", "2"],
-        ["P700", "1 (9600) - 2 (19200) - 3 (38400)"],
-        ["P701", "3 (8N1 - RTU) | 4 (8E1 - RTU) | 5 (8O1 - RTU)"],
-        ["P702", "Endereço MODBUS (ID Modbus)"]
+        ["P0.02", "2"],
+        ["P0.04", "9"],
+        ["PD.00", "5 (9600) - 6 (19200) - 7 (38400)"],
+        ["PD.01", "3 (8N1 - RTU)"],
+        ["PD.02", "Endereço MODBUS (ID Modbus)"]
       ],
       "ligacoes": [
-        ["FWD + GND", "Botão liga (NA)"],
-        ["REV + GND", "Botão reversão (NA) (Opcional)"],
         ["RS- e RS+", "Ligação cabos modbus"]
       ],
       "motor": [
@@ -531,26 +514,46 @@
         ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
-        "P700 = Velocidade de comunicação",
-        "P701 = Formato de comunicação",
-        "P702 = Endereço MODBUS (ID Modbus)",
-        "Valor frequência principal (2001H)",
-        "Enviando comando avanço (escreva 02H) em 2000H:",
-        "Enviando comando parada (escreva 01H) em 2000H:"
+        "PD.00 = Velocidade de comunicação",
+        "PD.01 = Formato de comunicação",
+        "PD.02 = Endereço MODBUS (ID Modbus)",
+        "Valor frequência principal (1000H)",
+        "Enviando comando avanço (escreva 01H) em 2000H:",
+        "Enviando comando parada (escreva 06H) em 2000H:"
       ]
     },
     "SPINDLER": {
       "link": "",
       "parametros": [
-        ["P101", "3"],
-        ["P102", "1"],
-        ["P105", "400"],
-        ["P110", "400"],
-        ["P215", "400"]
+       
       ],
       "ligacoes": [
-        ["FWD + GND", "Botão liga (NA)"],
-        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+       
+      ],
+      "motor": [
+       
+      ],
+      "observacoes": [
+      
+      ]
+    },
+    "MULTI VELOCIDADE": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "6"],
+        ["P5.04", "14"],
+        ["P5.03", "13"],
+        ["P5.02", "12"],
+        ["PC.00", "VELOCIDADE 1 *SEM S1 e S2*"],
+        ["PC.01", "VELOCIDADE 2 *S1 + GND*"],
+        ["PC.02", "VELOCIDADE 3 *S2 + GND*"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Liga"],
+        ["REV + GND", "Reversão"],
+        ["S1 + GND", " Velocidade 2"],
+        ["S2 + GND", "Velocidade 3"]
       ],
       "motor": [
         ["P2.01", "KW - Potência nominal do motor"],
@@ -560,41 +563,7 @@
         ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
-        "Botão liga NA, ligado no borne ",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
-      ]
-    },
-    "MULTI VELOCIDADE": {
-      "link": "",
-      "parametros": [
-        ["P101", "6"],
-        ["102", "1"],
-        ["318", "10"],
-        ["317", "9"],
-        ["316", "7"],
-        ["P100", "VELOCIDADE SEM S1 e S2"],
-        ["P503", "VELOCIDADE S1"],
-        ["P504", "VELOCIDADE S2"]
-      ],
-      "ligacoes": [
-        ["FWD + GND", "Liga"],
-        ["REV + GND", "Reversão"],
-        ["S1 + GND", "Mais Velocidade"],
-        ["S2 + GND", "Menos Velocidade"]
-      ],
-      "motor": [
-        ["P209", "Tensao Motor"],
-        ["P210", "A"],
-        ["P212", "RPM"],
-        ["P213", "Número de pólos do motor"]
-      ],
-      "observacoes": [
-        "ligação multi velocidade",
-        "Número de pólos do motor. Informação na placa do motor:",
-        "2 POLOS = 3600 RPM",
-        "4 POLOS = 1700 RPM",
-        "6 POLOS = 1200 RPM",
-        "8 POLOS = 900 RPM "
+
       ]
     },
     "PARÂMETROS BÁSICOS": {
@@ -622,19 +591,16 @@
     },
     "PID": {
       "parametros": [
-        ["P000", "7"],
-        ["P101", "8"],
-        ["P600", "0"],
-        ["P601", "0"],
-        ["P602", "1"],
-        ["P603", "2"],
-        ["P604", "Setpoint"],
-        ["P605", "Limite superior de alarme"],
-        ["P606", "Limite inferior de alarme"],
-        ["P607", "Banda proporcional"],
-        ["P608", "Tempo integral"],
-        ["P609", "Tempo diferencial"],
-        ["P614", "Valor do display quando sinal de entrada for 10V ou 20mA"]
+        ["P0.02", "1"],
+        ["P0.04", "2 analógica tensão (FIV) - 3  analógica corrente (FIC)"],
+        ["PA.00", "0"],
+        ["PA.01", "Valor de setup do PID"],
+        ["PA.02", "0 = tensão FIV - 1 = corrente FIC. Fonte do retorno do PID"],
+        ["PA.03", "Direção da ação do PID"],
+        ["PA.05", "Ganho proporcional"],
+        ["PA.06", "Tempo integral "],
+        ["PA.07", "Tempo diferencial"]
+        
       ],
       "ligacoes": [
         ["FWD + GND", "Liga"],
@@ -642,23 +608,24 @@
         ["AVI + GND", "Chave seletora para baixo 0-10V ou Chave seletora para baixo 4-20mA "]
       ],
       "motor": [
-        ["P2.01", "kW"],
-        ["P2.03", "A"],
-        ["P2.04", "Hz"],
-        ["P2.05", "RPM"]
+        ["P2.01", "KW - Potência nominal do motor"],
+        ["P2.02", "V - Tensão nominal do motor"],
+        ["P2.03", "A - Corrente nominal do motor"],
+        ["P2.04", "Hz - Frequência nominal do motor"],
+        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": []
     },
     "POTENCIÔMETRO E TERMINAL": {
       "link": "",
       "parametros": [
-        ["P101", "1"],
-        ["P102", "1"]
+        ["P0.02", "1"],
+        ["P0.04", "2"]
       ],
       "ligacoes": [
-        ["AVI + Terminal central pot.", "Sinal Inversor"],
-        ["+10V + Terminal positivo pot.", ""],
-        ["GNG + Terminal negativo pot.", ""],
+        ["borne FIV", "Terminal central potenciômetro"],
+        ["borne +10V", "Terminal positivo potenciômetro"],
+        ["borne GNG", "Terminal negativo potenciômetro"],
         ["FWD + GND", "Botão liga (NA)"],
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
