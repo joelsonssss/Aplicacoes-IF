@@ -439,11 +439,11 @@
         
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
-        ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P2.01", "KW - Potência nominal do motor"],
+        ["P2.02", "V - Tensão nominal do motor"],
+        ["P2.03", "A - Corrente nominal do motor"],
+        ["P2.04", "Hz - Frequência nominal do motor"],
+        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         "P1.03 define qual Hz vai acionar o Freio DC",
@@ -569,15 +569,17 @@
     "PARÂMETROS BÁSICOS": {
       "link": "",
       "parametros": [
-        ["P101", "'0' Frequência principal via teclado, = '1' Pot. Externo ou entrada analógica tensão ou corrente, = '3' Potenciômetro do teclado frontal local"],
-        ["P102", "'0' Painel de operação do inversor (FWD/ REV/ STOP) = '1' Terminais externos "],
-        ["105", "Frequência máxima de saída"],
-        ["107", "Tempo de aceleração principal"],
-        ["108", "Tempo de desaceleração principal"]
+        ["P0.02", "'0' Painel de operação do inversor (FWD/ REV/ STOP) = '1' Terminais externos"],
+        ["P0.04", "'1'  TECLADO / = '2' POTEMCIOMETRO OU 0 A 10 VOLTS"],
+        ["P0.08", "Tempo de aceleração "],
+        ["P0.09", "Tempo de desaceleração"],
+        ["P0.12", "Frequência máxima"],
+        ["P0.14", "Frequência frequência superior "]
       ],
       "ligacoes": [
         ["FWD + GND", "Liga"],
-        ["REV + GND", "Reversão"]
+        ["REV + GND", "Reversão"],
+        ["FIV + GND", "0 A 10V OU FIV + 10V + GND potenciômetro"]
       ],
       "motor": [
         ["P2.01", "KW - Potência nominal do motor"],
@@ -637,9 +639,105 @@
         ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": []
-    }
-  },
+    },
 
+    "TROCA VELOCIDADE X POTENCIÔMETRO, Y MULTISPEED": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "2"],
+        ["P0.04", "2"],
+        ["P0.05", "6"],
+        ["P5.02", "12"],
+        ["P5.03", "18"],
+        ["PC.01", "VALOR EM HZ"]
+
+      ],
+      "ligacoes": [
+        ["borne FIV", "Terminal central potenciômetro"],
+        ["borne +10V", "Terminal positivo potenciômetro"],
+        ["borne GNG", "Terminal negativo potenciômetro"],
+        ["FWD + GND", "Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+      ],
+      "motor": [
+        ["P2.01", "KW - Potência nominal do motor"],
+        ["P2.02", "V - Tensão nominal do motor"],
+        ["P2.03", "A - Corrente nominal do motor"],
+        ["P2.04", "Hz - Frequência nominal do motor"],
+        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": [
+        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S1 E S2"
+      ]
+    },
+
+    "TROCA VELOCIDADE X MULTISPEED Y POTENCIÔMETRO": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "2"],
+        ["P0.04", "6"],
+        ["P0.05", "2"],
+        ["P5.02", "12"],
+        ["P5.03", "18"],
+        ["PC.00", "VALOR EM HZ"]
+
+      ],
+      "ligacoes": [
+        ["borne FIV", "Terminal central potenciômetro"],
+        ["borne +10V", "Terminal positivo potenciômetro"],
+        ["borne GNG", "Terminal negativo potenciômetro"],
+        ["FWD + GND", "Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+      ],
+      "motor": [
+        ["P2.01", "KW - Potência nominal do motor"],
+        ["P2.02", "V - Tensão nominal do motor"],
+        ["P2.03", "A - Corrente nominal do motor"],
+        ["P2.04", "Hz - Frequência nominal do motor"],
+        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": [
+        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S1 E S2"
+      ]
+    },
+
+    "UP / DOWN": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "1"],
+        ["P0.10", "Valor Hz inicial"],
+        ["P0.23", "1"],
+        ["P5.00", "1"],
+        ["P5.01", "2"],
+        ["P5.02", "6"],
+        ["P5.03", "7"],
+        ["P5.12", "PULSO EM Hz"]
+
+
+
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"],
+        ["S1 + GND", " + Velocidade)"],
+        ["S2 + GND", "- Velocidade)"]
+      ],
+      "motor": [
+        ["P2.01", "KW - Potência nominal do motor"],
+        ["P2.02", "V - Tensão nominal do motor"],
+        ["P2.03", "A - Corrente nominal do motor"],
+        ["P2.04", "Hz - Frequência nominal do motor"],
+        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": [
+        
+      ]
+    }
+
+  },
 
   "IF30": {
     "3 FIOS": {
