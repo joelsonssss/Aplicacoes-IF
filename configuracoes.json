@@ -208,6 +208,28 @@
         "P207 define Segundos o tempo de atuação do freio DC"
       ]
     },
+
+    "Ganho de Torque": {
+      "link": "",
+      "parametros": [
+        ["P208", "0 a 20% Boost de torque"]
+        
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "É usado para compensar a característica de torque de baixa frequência no controle escalar (V/F). 4.0 Se P208 = 0, o inversor realiza o controle automático de torque. Neste caso, o inversor calcula o torque com base nos dados do motor. Este parâmetro compensa a queda de tensão na resistência do estator do motor. Portanto, o ajuste do parâmetro P208 permite aumentar a tensão para obter maior torque durante a partida."
+      
+       
+      ]
+    },
+
+
+
+
     "CLP": {
       "link": "",
       "parametros": [
@@ -397,11 +419,24 @@
         ["P214", "Hz Frequência nominal do motor"]
       ],
       "observacoes": []
-    }
+    },
+
+    "Reset de Fábrica": {
+      "link": "",
+      "parametros": [
+        ["P117", "8"]
+        
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "Para resetar o inversor no padrão de fábrica, altere P117 = 8"
+      ]
+
+  }
   },
-
-
-
   "IF20": {
     "3 FIOS": {
       "link": "",
