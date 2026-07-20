@@ -86,6 +86,78 @@
         "Botão troca de modo NA, ligado no borne S2"
       ]
     },
+
+    "Alterar Saída Relé NF / NA": {
+      "link": "",
+      "parametros": [
+        ["P331", "0: Contato normalmente aberto (NA) 1: Contato normalmente fechado (NF)"]
+        
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "P331 0: Contato normalmente aberto (NA) 1: Contato normalmente fechado (NF)"
+      
+       
+      ]
+    },
+
+
+    "Configura Saída Relé": {
+      "link": "",
+      "parametros": [
+        ["P325", "1: Em operação 3: Alarme (parada)"]
+        
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "P325 Para ver a lista completa, verificar no manual"
+      
+       
+      ]
+    },
+
+    "Configuração Motor": {
+      "link": "",
+      "parametros": [
+        ["P209", "V Tensão nominal do motor"],
+        ["P210", "A Corrente nominal do motor"],
+        ["P212", "RPM Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz Frequência nominal do motor"]
+ 
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "P213 = Número de pólos do motor. Informação na placa do motor: 2 POLOS = 3600 RPM 4 POLOS = 1700 RPM 6 POLOS = 1200 RPM 8 POLOS = 900 RPM "
+      
+       
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
     "Freio DC partida": {
       "link": "www.metaltex.com.br/sss.pdf",
       "parametros": [
