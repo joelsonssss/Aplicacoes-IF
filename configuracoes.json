@@ -1,6 +1,6 @@
 {
   "IF10": {
-    "3 FIOS": {
+    "3 Fios": {
       "link": "",
       "parametros": [
         ["P101", "3"],
@@ -26,7 +26,7 @@
         "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
     },
-    "3 FIOS + UP | DOWN": {
+    "3 Fios + Up | Down": {
       "link": "",
       "parametros": [
         ["P101", "4"],
@@ -56,7 +56,7 @@
         "Botão - Velocidade NA, ligado no borne S2"
       ]
     },
-    "3 FIOS + MULT VELOCIDADE": {
+    "3 Fios + mult velocidade": {
       "link": "",
       "parametros": [
         ["P101", "6"],
@@ -86,7 +86,7 @@
         "Botão troca de modo NA, ligado no borne S2"
       ]
     },
-    "FREIO DC PARTIDA": {
+    "Freio DC partida": {
       "link": "www.metaltex.com.br/sss.pdf",
       "parametros": [
         ["P102", "1"],
@@ -111,7 +111,7 @@
         "P205 define Segundos o tempo de atuação do freio DC"
       ]
     },
-    "FREIO DC PARADA": {
+    "Freio DC parada": {
       "link": "",
       "parametros": [
         ["P102", "1"],
@@ -166,7 +166,7 @@
         "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
     },
-    "MODBUS": {
+    "Modbus": {
       "link": "",
       "parametros": [
         ["P101", "5"],
@@ -196,7 +196,7 @@
         "Enviando comando parada (escreva 01H) em 2000H:"
       ]
     },
-    "SPINDLER": {
+    "Spindler": {
       "link": "",
       "parametros": [
         ["P101", "3"],
@@ -221,7 +221,7 @@
         "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
     },
-    "MULTI VELOCIDADE": {
+    "Multi Velocidade": {
       "link": "",
       "parametros": [
         ["P101", "6"],
@@ -254,7 +254,7 @@
         "8 POLOS = 900 RPM "
       ]
     },
-    "PARÂMETROS BÁSICOS": {
+    "Parâmetros Básicos": {
       "link": "",
       "parametros": [
         ["P101", "'0' Frequência principal via teclado, = '1' Pot. Externo ou entrada analógica tensão ou corrente, = '3' Potenciômetro do teclado frontal local"],
@@ -304,7 +304,7 @@
       ],
       "observacoes": []
     },
-    "POTENCIÔMETRO E TERMINAL": {
+    "Potenciômetro e Terminal": {
       "link": "",
       "parametros": [
         ["P101", "1"],
@@ -358,7 +358,7 @@
         "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
     },
-    "3 FIOS + UP | DOWN": {
+    "3 Fios + Up | Down": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -392,7 +392,7 @@
         "Botão - Velocidade NA, ligado no borne S3"
       ]
     },
-    "3 FIOS + MULT VELOCIDADE": {
+    "3 Fios + Mult Velocidade": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -427,7 +427,7 @@
       ]
 
     },
-    "FREIO DC PARTIDA": {
+    "Freio DC Partida": {
       "link": "",
       "parametros": [
         ["P1.03", "Frequência inicialização, 0,0 ~ 10,00 Hz"],
@@ -452,7 +452,7 @@
         "P1.06 define Segundos do tempo de atuação do freio DC"
       ]
     },
-    "FREIO DC PARADA": {
+    "Freio DC Parada": {
       "link": "",
       "parametros": [
         ["P102", "1"],
@@ -494,7 +494,7 @@
        
       ]
     },
-    "MODBUS": {
+    "Modbus": {
       "link": "",
       "parametros": [
         ["P0.02", "2"],
@@ -522,7 +522,7 @@
         "Enviando comando parada (escreva 06H) em 2000H:"
       ]
     },
-    "SPINDLER": {
+    "Spindler": {
       "link": "",
       "parametros": [
        
@@ -537,7 +537,7 @@
       
       ]
     },
-    "MULTI VELOCIDADE": {
+    "Multi Velocidade": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -566,7 +566,7 @@
 
       ]
     },
-    "PARÂMETROS BÁSICOS": {
+    "Parâmetros Básicos": {
       "link": "",
       "parametros": [
         ["P0.02", "'0' Painel de operação do inversor (FWD/ REV/ STOP) = '1' Terminais externos"],
@@ -618,7 +618,7 @@
       ],
       "observacoes": []
     },
-    "POTENCIÔMETRO E TERMINAL": {
+    "Potenciômetro e Terminal": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -641,7 +641,7 @@
       "observacoes": []
     },
 
-    "TROCA VELOCIDADE X POTENCIÔMETRO, Y MULTISPEED": {
+    "Troca Velocidade X Potenciômetro, Y Multispeed": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -672,7 +672,7 @@
       ]
     },
 
-    "TROCA VELOCIDADE X MULTISPEED Y POTENCIÔMETRO": {
+    "Troca Velocidade X Multispeed Y Potenciômetro": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -703,7 +703,7 @@
       ]
     },
 
-    "UP / DOWN": {
+    "Up / Down": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -740,7 +740,7 @@
   },
 
   "IF30": {
-    "3 FIOS": {
+    "3 Fios": {
       "parametros": [
         ["P2.01", "kW"],
         ["P2.03", "A"],
