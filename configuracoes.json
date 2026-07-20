@@ -109,7 +109,7 @@
     "Configura Saída Relé": {
       "link": "",
       "parametros": [
-        ["P325", "1: Em operação 3: Alarme (parada)"]
+        ["P325", "1: Em operação 3: Alarme"]
         
       ],
       "ligacoes": [
@@ -118,7 +118,7 @@
       "motor": [
       ],
       "observacoes": [
-        "P325 Para ver a lista completa, verificar no manual"
+        "Para ver a lista completa, verificar no manual"
       
        
       ]
