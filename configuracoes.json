@@ -1,7 +1,7 @@
 {
   "IF10": {
     "3 Fios": {
-      "link": "https://www.metaltex.com.br/",
+      "link": "https://drive.google.com/file/d/1slrw2Qwh0nOywM4Z5j_oaFpFFSOFj1vd/view?usp=drive_link",
       "parametros": [
         ["P101", "3"],
         ["P102", "1"],
@@ -472,8 +472,83 @@
       "observacoes": [
         "Para resetar o inversor no padrão de fábrica, altere P117 = 8"
       ]
-
   },
+
+    "Troca Velocidade (X = Potenciometro / Y = Multispeed)": {
+      "link": "",
+      "parametros": [
+        ["P100", "Velocidade 1 [Hz]"],
+        ["P101", "1"],
+        ["P102", "1"],
+        ["P120", "6"],
+        ["P121", "2"],
+        ["P315", "6"],
+        ["P317", "26"],
+        ["P318", "9"],
+        ["P503", "Velocidade 2 [Hz]"]
+
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão Liga (NA)"],
+        ["S1 + GND", "Alterna Frequência X e Y"],
+        ["S2 + GND.", "Multispeed 2 (NA)"],
+        ["AVI + Terminal Central do Potenciômetro", ""],
+        ["10V + Terminal Positivo do Potenciômetro", ""],
+        ["GND + Terminal Negativo do Potenciômetro", ""],
+        ["Chave Seletora para baixo em V", ""]
+      ],
+      "motor": [
+        ["P209", "V Tensão nominal do motor"],
+        ["P210", "A Corrente nominal do motor"],
+        ["P212", "RPM Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz Frequência nominal do motor"]
+      ],
+      "observacoes": [
+        "Funcionamento IF10: Fechar FWD + GND liga o inversor (partida do motor); fechar S1 + GND altera a referência de velocidade do potenciômetro para o modo Multispeed; com S2 desacionado opera na Velocidade 1, configurada em P100; com S2 acionado opera na Velocidade 2, configurada em P503."
+      ]
+    },
+
+    "Troca Velocidade (X = Multispeed / Y = Potenciometro)": {
+      "link": "",
+      "parametros": [
+        ["P100", "Velocidade 1 [Hz]"],
+        ["P101", "6"],
+        ["P102", "1"],
+        ["P120", "1"],
+        ["P121", "2"],
+        ["P315", "6"],
+        ["P317", "26"],
+        ["P318", "9"],
+        ["P503", "Velocidade 2 [Hz]"]
+
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão Liga (NA)"],
+        ["S1 + GND", "Alterna Frequência X e Y"],
+        ["S2 + GND.", "Multispeed 2 (NA)"],
+        ["AVI + Terminal Central do Potenciômetro", ""],
+        ["10V + Terminal Positivo do Potenciômetro", ""],
+        ["GND + Terminal Negativo do Potenciômetro", ""],
+        ["Chave Seletora para baixo em V", ""]
+      ],
+      "motor": [
+        ["P209", "V Tensão nominal do motor"],
+        ["P210", "A Corrente nominal do motor"],
+        ["P212", "RPM Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "Hz Frequência nominal do motor"]
+      ],
+      "observacoes": [
+        "Funcionamento IF10: Fechar FWD + GND liga o inversor (partida do motor); fechar S1 + GND altera a referência modo Multispeed para potenciômetro  ; com S2 desacionado opera na Velocidade 1, configurada em P100; com S2 acionado opera na Velocidade 2, configurada em P503."
+      ]
+    },
+
+
+
+
+
+
 
     "Últimos Alarme Inversor": {
       "link": "",
