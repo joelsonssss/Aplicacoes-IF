@@ -3,10 +3,7 @@ import json
 import os
 
 
-# Define a pasta onde está este arquivo .py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Define o caminho completo do arquivo de configurações JSON
 ARQUIVO_CONFIG = os.path.join(BASE_DIR, "configuracoes.json")
 
 
@@ -39,16 +36,11 @@ def carregar_configuracoes():
         return {}
 
 
-# Carrega as configurações uma única vez ao iniciar o programa
 CONFIGURACOES = carregar_configuracoes()
 
 
 def main(page: ft.Page):
-    """
-    Função principal da aplicação Flet.
-    Monta a interface gráfica, cria os controles e define os eventos.
-    """
-    page.title = "Configurador de Inversores"
+    page.title = "Aplicações IF"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.window_width = 400
     page.window_height = 700
@@ -56,13 +48,9 @@ def main(page: ft.Page):
     page.spacing = 0
     page.bgcolor = ft.Colors.GREY_100
 
-    # Armazena o link atualmente selecionado
     link_atual = {"url": ""}
 
     def obter_link_configuracao():
-        """
-        Retorna o link da configuração selecionada no momento.
-        """
         if not dd_inversor.value or not dd_configuracao.value:
             return ""
 
@@ -76,20 +64,11 @@ def main(page: ft.Page):
 
     def atualizar_linha_link():
         """
-        Atualiza a área visual do link na interface.
+        Mantém o link ativo no botão, sem mostrar a URL.
         """
         url = obter_link_configuracao()
-        link_atual["url"] = url
-
-        if url:
-            texto_link.value = url
-            texto_link.color = ft.Colors.BLUE_700
-            botao_abrir_link.disabled = False
-        else:
-            texto_link.value = "Nenhum link disponível para esta configuração."
-            texto_link.color = ft.Colors.GREY_700
-            botao_abrir_link.disabled = True
-
+        link_atual["url"] = url.strip() if isinstance(url, str) else ""
+        botao_abrir_link.disabled = not bool(link_atual["url"])
         page.update()
 
     def abrir_link(e):
@@ -108,20 +87,15 @@ def main(page: ft.Page):
         ),
     )
 
-
     dd_texto01 = ft.Text(
         "Defina Inversor e Aplicação",
         size=15,
-        
         color=ft.Colors.ORANGE_800,
-        #weight=ft.FontWeight.BOLD,
-        italic=False,
         text_align=ft.TextAlign.CENTER,
-        
-)
+    )
 
     dd_inversor = ft.Dropdown(
-        label="IF ",
+        label="IF",
         width=112,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
@@ -152,18 +126,11 @@ def main(page: ft.Page):
         ),
     )
 
-    texto_link = ft.Text(
-        "Nenhum link disponível para esta configuração.",
-        selectable=True,
-        color=ft.Colors.GREY_700,
-        size=14,
-        text_align=ft.TextAlign.CENTER,
-    )
-
     botao_abrir_link = ft.TextButton(
         text="abrir link",
         width=90,
         height=32,
+        disabled=True,
         on_click=abrir_link,
         style=ft.ButtonStyle(
             bgcolor=ft.Colors.ORANGE_800,
@@ -207,6 +174,10 @@ def main(page: ft.Page):
         if not lista:
             return
 
+        observacoes_filtradas = [obs for obs in lista if str(obs).strip()]
+        if not observacoes_filtradas:
+            return
+
         resultado.controls.append(
             ft.Card(
                 content=ft.Container(
@@ -214,7 +185,7 @@ def main(page: ft.Page):
                     content=ft.Column(
                         [
                             ft.Text("OBSERVAÇÕES", size=18, weight=ft.FontWeight.BOLD),
-                            *[ft.Text(f"• {obs}") for obs in lista],
+                            *[ft.Text(f"• {obs}") for obs in observacoes_filtradas],
                         ]
                     ),
                 )
@@ -247,9 +218,6 @@ def main(page: ft.Page):
 
     def ao_mudar_configuracao(e):
         atualizar_linha_link()
-
-    dd_inversor.on_change = ao_mudar_inversor
-    dd_configuracao.on_change = ao_mudar_configuracao
 
     def mostrar_configuracao(e):
         resultado.controls.clear()
@@ -295,6 +263,8 @@ def main(page: ft.Page):
         atualizar_linha_link()
         page.update()
 
+    dd_inversor.on_change = ao_mudar_inversor
+    dd_configuracao.on_change = ao_mudar_configuracao
     botao_mostrar.on_click = mostrar_configuracao
 
     linha_codigo = ft.Container(
@@ -312,10 +282,7 @@ def main(page: ft.Page):
         padding=4,
         alignment=ft.alignment.center,
         content=ft.Row(
-            [
-                texto_link,
-                botao_abrir_link,
-            ],
+            [botao_abrir_link],
             wrap=True,
             spacing=6,
             run_spacing=6,
@@ -378,6 +345,7 @@ def main(page: ft.Page):
     )
 
     ajustar_layout()
+    atualizar_linha_link()
 
 
-ft.app(target=main)
+ft.app(target=main, assets_dir="assets")
