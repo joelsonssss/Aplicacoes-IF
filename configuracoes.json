@@ -218,7 +218,25 @@
     },
 
 
-
+    "Limitar Hz": {
+      "link": "",
+      "parametros": [
+        ["P105", "Frequência máxima de saída "],
+        ["P106", "Frequência mínima de saída "],
+        ["P126", "Limite superior de frequência "]
+        
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "É usado para compensar a característica de torque de baixa frequência no controle escalar (V/F). 4.0 Se P208 = 0, o inversor realiza o controle automático de torque. Neste caso, o inversor calcula o torque com base nos dados do motor. Este parâmetro compensa a queda de tensão na resistência do estator do motor. Portanto, o ajuste do parâmetro P208 permite aumentar a tensão para obter maior torque durante a partida."
+      
+       
+      ]
+    },
 
     "CLP": {
       "link": "",
@@ -280,6 +298,33 @@
         "Enviando comando parada (escreva 01H) em 2000H:"
       ]
     },
+    "Motor Aquecendo": {
+      "link": "",
+      "parametros": [
+        ["P110", "[60Hz]"],
+        ["P111", "V/F Ajuste de tensão intermedia"],
+        ["P112", "V/F Ajuste de frequência intermedia"],
+        ["P113", "V/F Ajuste de tensão mínima"],
+        ["P114", "V/F Ajuste de frequência mínima"],
+        ["P115", "V/F Frequência de portadora"]
+        
+        
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+       "P110 = Hz do Motor",
+       "P111 = 20 ",
+       "P112 = 2.5",
+       "P113 = 5",
+       "P114 = 1.2",
+       "P115 = Depende do modelo do Inversor"
+      ]
+    },
+
     "Spindler": {
       "link": "",
       "parametros": [
@@ -478,21 +523,6 @@
       ]
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   },
   "IF20": {
     "3 FIOS": {
@@ -501,8 +531,8 @@
         ["P0.02", "1"],
         ["P5.00", "1"],
         ["P5.01", "2"],
-        ["P5.02", "2"],
-        ["P5.11", "3"]
+        ["P5.02", "3"],
+        ["P5.11", "2"]
       ],
       "ligacoes": [
         ["FWD + GND", "Botão liga (NA)"],
