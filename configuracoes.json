@@ -475,7 +475,7 @@
 
   },
 
-    "Últimos Erros Inversor": {
+    "Últimos Alarme Inversor": {
       "link": "",
       "parametros": [
         ["P010", "Alarme 1"],
@@ -569,7 +569,6 @@
         ["FWD + GND", "Botão liga (NA)"],
         ["REV + GND", "Botão + reversão (NA)"],
         ["S1 + GND", "Botão desliga (NC)"],
-        
         ["S2 + GND", "Botão - velocidade (NA)"]
       ],
       "motor": [
@@ -619,8 +618,44 @@
       "observacoes": [
         ""
       ]
-
     },
+
+    "Rele de saída (RA-RB-RC)": {
+      "link": "",
+      "parametros": [
+        ["P6.02", "1: Inversor funcionando 2: Falha"]
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "Para ver a lista completa, verificar no manual"
+      ]
+    },
+
+    "Configuração Motor": {
+      "link": "",
+      "parametros": [
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
+
+      ],
+      "observacoes": [
+        "Para ver a lista completa, verificar no manual"
+      ]
+    },
+
+
     "Freio DC Partida": {
       "link": "",
       "parametros": [
@@ -646,6 +681,7 @@
         "P1.06 define Segundos do tempo de atuação do freio DC"
       ]
     },
+
     "Freio DC Parada": {
       "link": "",
       "parametros": [
@@ -673,6 +709,52 @@
         "P1.14 define Segundos do tempo de atuação do freio DC"
       ]
     },
+
+    "Frequência Atingida Saída Relé": {
+      "link": "",
+      "parametros": [
+        ["P6.02", "3"],
+        ["P8.19", "Valor Limite"]  
+      ],
+      "ligacoes": [
+        ["RA + RC"]
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "P8.19 Valor para Fechamento Saída Relé"
+      ]
+    },
+
+    "Ganho de Torque": {
+      "link": "",
+      "parametros": [
+        ["P4.01", "0,1 ~ 30,0%"]
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "P8.19 Valor em [Hz] para Fechamento Saída Relé"
+      ]
+    },
+
+        "Limitar Frequência": {
+      "link": "",
+      "parametros": [
+        ["P0.12", "50,00 ~ 320,00Hz."],
+        ["P0.14", "Frequência limite inferior"],
+        ["P0.16", "Frequência de limite inferior"]
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+      ]
+    },
+
     "CLP": {
       "link": "",
       "parametros": [
@@ -835,6 +917,21 @@
       "observacoes": []
     },
 
+    "Reset de Fábrica": {
+      "link": "",
+      "parametros": [
+        ["PP.01", "1"]
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "PP.01 = 1 Para resetar o inversor no padrão de fábrica"
+      ]
+    },
+
+
     "Troca Velocidade X Potenciômetro, Y Multispeed": {
       "link": "",
       "parametros": [
@@ -898,25 +995,20 @@
     },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    "Últimos Alarmes Inversor": {
+      "link": "",
+      "parametros": [
+        ["P9.14", "1ª Alarme "],
+        ["P9.15", "2ª Alarme"],
+        ["P9.16", "3ª Alarme"]
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+      ]
+    },
 
 
     "Up / Down": {
