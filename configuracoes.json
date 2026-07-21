@@ -148,16 +148,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
     "Freio DC partida": {
       "link": "www.metaltex.com.br/sss.pdf",
       "parametros": [
@@ -438,7 +428,71 @@
         "Para resetar o inversor no padrão de fábrica, altere P117 = 8"
       ]
 
-  }
+  },
+
+    "Últimos Erros Inversor": {
+      "link": "",
+      "parametros": [
+        ["P010", "Alarme 1"],
+        ["P011", "Alarme 2"],
+        ["P012", "Alarme 3"],
+        ["P013", "Alarme 4"]
+     
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "`0000: Sem falhas | 0002: Sobrecorrente durante a aceleração | 0003: Sobrecorrente durante a desaceleração | 0004: Sobrecorrente na velocidade constante | 0005: Sobretensão durante a aceleração | 0006: Sobretensão durante a desaceleração | 0007: Sobretensão na velocidade constante | 0008: Sobrecarga do resistor | 0009: Subtensão | 0010: Sobrecarga do inversor | 0011: Sobrecarga do motor | 0014: Sobre aquecimento do módulo | 0015: Falha externa | 0016: Falha de comunicação | 0024: Baixa pressão no fornecimento de água* | 0027: Alta pressão no fornecimento de água* | 0028: Alarme por falta de água* | 0029: Tempo de acionamento alcançado | 0031: Perda de feedback do controle PID"
+
+      ]
+  },
+
+    "UP / DOWN ": {
+      "link": "",
+      "parametros": [
+        ["P101", "4"],
+        ["P102", "1"],
+        ["P318", "16"],
+        ["P317", "15"],
+        ["P330", "Valor em [Hz]"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão liga (NA)"],
+        ["S1 + GND", "Botão + velocidade (NA)"],
+        ["S2 + GND", "Botão - velocidade (NA)"]
+      ],
+      "motor": [
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "[Hz] Frequência nominal do motor"]
+      ],
+      "observacoes": [
+        "Botão liga NA, ligado no borne FWD",
+        "Botão + Velocidade NA, ligado no borne S1",
+        "Botão - Velocidade NA, ligado no borne S2",
+        "P330 Valor em Hz de cada Pulso"
+      ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   },
   "IF20": {
     "3 FIOS": {
@@ -812,6 +866,28 @@
         "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S1 E S2"
       ]
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     "Up / Down": {
       "link": "",
