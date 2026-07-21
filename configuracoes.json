@@ -1,7 +1,7 @@
 {
   "IF10": {
     "3 Fios": {
-      "link": "",
+      "link": "https://www.metaltex.com.br/",
       "parametros": [
         ["P101", "3"],
         ["P102", "1"],
@@ -14,11 +14,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne ",
@@ -43,11 +43,11 @@
         ["S2 + GND", "Botão - velocidade (NA)"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
@@ -74,11 +74,11 @@
         ["S2 + GND", "Botão Troca de Modo (NA)"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
@@ -127,11 +127,11 @@
     "Configuração Motor": {
       "link": "",
       "parametros": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
  
       ],
       "ligacoes": [
@@ -171,11 +171,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "P202 define qual Hz vai acionar o Freio DC",
@@ -196,11 +196,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "P203 define qual Hz vai acionar o Freio DC",
@@ -249,11 +249,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne ",
@@ -275,11 +275,11 @@
         ["RS- e RS+", "Ligação cabos modbus"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "P700 = Velocidade de comunicação",
@@ -304,11 +304,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P209", "V Tensão nominal do motor"],
-        ["P210", "A Corrente nominal do motor"],
-        ["P212", "RPM Velocidade nominal motor"],
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne ",
@@ -334,10 +334,11 @@
         ["S2 + GND", "Menos Velocidade"]
       ],
       "motor": [
-        ["P209", "Tensao Motor"],
-        ["P210", "A"],
-        ["P212", "RPM"],
-        ["P213", "Número de pólos do motor"]
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "ligação multi velocidade",
@@ -362,10 +363,11 @@
         ["REV + GND", "Reversão"]
       ],
       "motor": [
-        ["P209", "Tensao Motor"],
-        ["P210", "A"],
-        ["P212", "RPM"],
-        ["P213", "Número de pólos do motor"]
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": []
     },
@@ -391,10 +393,11 @@
         ["AVI + GND", "Chave seletora para baixo 0-10V ou Chave seletora para baixo 4-20mA "]
       ],
       "motor": [
-        ["P2.01", "kW"],
-        ["P2.03", "A"],
-        ["P2.04", "Hz"],
-        ["P2.05", "RPM"]
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": []
     },
@@ -453,11 +456,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne ",
@@ -486,11 +489,11 @@
         ["S2 + GND", "Botão - velocidade (NA)"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
@@ -523,11 +526,11 @@
 
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         ""
@@ -546,11 +549,11 @@
         
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         "P1.03 define qual Hz vai acionar o Freio DC",
@@ -573,11 +576,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         "P1.11 Define qual Hz vai acionar o Freio DC",
@@ -614,11 +617,11 @@
         ["RS- e RS+", "Ligação cabos modbus"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         "PD.00 = Velocidade de comunicação",
@@ -663,11 +666,11 @@
         ["S2 + GND", "Velocidade 3"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
 
@@ -689,11 +692,11 @@
         ["FIV + GND", "0 A 10V OU FIV + 10V + GND potenciômetro"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
 
       ],
       "observacoes": []
@@ -717,11 +720,11 @@
         ["AVI + GND", "Chave seletora para baixo 0-10V ou Chave seletora para baixo 4-20mA "]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": []
     },
@@ -739,11 +742,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": []
     },
@@ -768,11 +771,11 @@
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S1 E S2"
@@ -833,11 +836,11 @@
         ["S2 + GND", "- Velocidade)"]
       ],
       "motor": [
-        ["P2.01", "KW - Potência nominal do motor"],
-        ["P2.02", "V - Tensão nominal do motor"],
-        ["P2.03", "A - Corrente nominal do motor"],
-        ["P2.04", "Hz - Frequência nominal do motor"],
-        ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
         
