@@ -505,7 +505,10 @@
         ["P214", "Hz Frequência nominal do motor"]
       ],
       "observacoes": [
-        "Funcionamento IF10: Fechar FWD + GND liga o inversor (partida do motor); fechar S1 + GND altera a referência de velocidade do potenciômetro para o modo Multispeed; com S2 desacionado opera na Velocidade 1, configurada em P100; com S2 acionado opera na Velocidade 2, configurada em P503."
+        "Funcionamento IF10: Fechar FWD + GND liga o inversor (partida do motor).",
+        "Fechar S1 + GND altera a referência de velocidade do potenciômetro para o modo Multispeed.",
+        "Com S2 desacionado opera na Velocidade 1, configurada em P100.",
+        "Com S2 acionado opera na Velocidade 2, configurada em P503."
       ]
     },
 
@@ -540,7 +543,11 @@
         ["P214", "Hz Frequência nominal do motor"]
       ],
       "observacoes": [
-        "Funcionamento IF10: Fechar FWD + GND liga o inversor (partida do motor); fechar S1 + GND altera a referência modo Multispeed para potenciômetro  ; com S2 desacionado opera na Velocidade 1, configurada em P100; com S2 acionado opera na Velocidade 2, configurada em P503."
+        "Funcionamento IF10:",
+        "Fechar FWD + GND liga o inversor (partida do motor);",
+        "Fechar S1 + GND altera a referência modo Multispeed para potenciômetro;",
+        "Com S2 desacionado opera na Velocidade 1, configurada em P100;",
+        "Com S2 acionado opera na Velocidade 2, configurada em P503."
       ]
     },
 
