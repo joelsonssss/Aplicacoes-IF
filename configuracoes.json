@@ -56,6 +56,7 @@
         "Botão - Velocidade NA, ligado no borne S2"
       ]
     },
+
     "3 Fios + mult velocidade": {
       "link": "",
       "parametros": [
@@ -90,7 +91,7 @@
     "Alterar Saída Relé NF / NA": {
       "link": "",
       "parametros": [
-        ["P331", "0: Contato normalmente aberto (NA) 1: Contato normalmente fechado (NF)"]
+        ["P331", "0: Contato normalmente aberto (NA) / 1: Contato normalmente fechado (NF)"]
         
       ],
       "ligacoes": [
@@ -158,7 +159,6 @@
       ],
       "observacoes": [
         "P213 = Número de pólos do motor.",
-        " Informação na placa do motor:",
         "2 POLOS = 3600 RPM ",
         "4 POLOS = 1700 RPM ",
         "6 POLOS = 1200 RPM ",
@@ -231,7 +231,7 @@
       ],
       "observacoes": [
         "É usado para compensar a característica de torque de baixa frequência no controle escalar (V/F).",
-        "4.0 Se P208 = 0, o inversor realiza o controle automático de torque. Neste caso,",
+        "Se P208 = 0, o inversor realiza o controle automático de torque.",
         "O inversor calcula o torque com base nos dados do motor.",
         "Este parâmetro compensa a queda de tensão na resistência do estator do motor.", 
         "Portanto, o ajuste do parâmetro P208 permite aumentar a tensão para obter maior torque durante a partida."
@@ -327,7 +327,6 @@
         ["P114", "V/F Ajuste de frequência mínima"],
         ["P115", "V/F Frequência de portadora"]
         
-        
       ],
       "ligacoes": [
         
@@ -402,8 +401,8 @@
     "Parâmetros Básicos": {
       "link": "",
       "parametros": [
-        ["P101", "'0' Frequência principal via teclado, = '1' Pot. Externo ou entrada analógica tensão ou corrente, = '3' Potenciômetro do teclado frontal local"],
-        ["P102", "'0' Painel de operação do inversor (FWD/ REV/ STOP) = '1' Terminais externos "],
+        ["P101", "0 Frequência principal via teclado,/ = 1 Pot. Externo ou entrada analógica tensão ou corrente,/ = 3 Potenciômetro do teclado frontal local"],
+        ["P102", "0 Painel de operação do inversor./  = 1 Terminais externos "],
         ["105", "Frequência máxima de saída"],
         ["107", "Tempo de aceleração principal"],
         ["108", "Tempo de desaceleração principal"]
@@ -807,7 +806,6 @@
       ]
     },
 
-
     "Freio DC Partida": {
       "link": "",
       "parametros": [
@@ -927,12 +925,12 @@
       "parametros": [
         ["P0.02", "2"],
         ["P0.04", "9"],
-        ["PD.00", "5 (9600) - 6 (19200) - 7 (38400)"],
+        ["PD.00", "5 (9600) / 6 (19200) / 7 (38400)"],
         ["PD.01", "3 (8N1 - RTU)"],
         ["PD.02", "Endereço MODBUS (ID Modbus)"]
       ],
       "ligacoes": [
-        ["RS- e RS+", "Ligação cabos modbus"]
+        ["(RS- e RS+)", "Ligação cabo Modbus"]
       ],
       "motor": [
         ["P2.01", "[KW] - Potência nominal do motor"],
@@ -974,8 +972,8 @@
         ["P5.03", "13"],
         ["P5.02", "12"],
         ["PC.00", "VELOCIDADE 1 *SEM S1 e S2*"],
-        ["PC.01", "VELOCIDADE 2 *S1 + GND*"],
-        ["PC.02", "VELOCIDADE 3 *S2 + GND*"]
+        ["PC.01", "VELOCIDADE 2 S1 + GND"],
+        ["PC.02", "VELOCIDADE 3 S2 + GND"]
       ],
       "ligacoes": [
         ["FWD + GND", "Liga"],
@@ -998,17 +996,19 @@
     "Parâmetros Básicos": {
       "link": "",
       "parametros": [
-        ["P0.02", "'0' Painel de operação do inversor (FWD/ REV/ STOP) = '1' Terminais externos"],
-        ["P0.04", "'1'  TECLADO / = '2' POTEMCIOMETRO OU 0 A 10 VOLTS"],
-        ["P0.08", "Tempo de aceleração "],
+        ["P0.02", "0 Painel de operação do inversor / = 1 Terminais externos"],
+        ["P0.04", "1  TECLADO / = 2 POTEMCIOMETRO OU 0 A 10 VOLTS"],
+        ["P0.08", "Tempo de aceleração"],
         ["P0.09", "Tempo de desaceleração"],
         ["P0.12", "Frequência máxima"],
-        ["P0.14", "Frequência frequência superior "]
+        ["P0.14", "Frequência frequência superior"]
       ],
       "ligacoes": [
         ["FWD + GND", "Liga"],
         ["REV + GND", "Reversão"],
-        ["FIV + GND", "0 A 10V OU FIV + 10V + GND potenciômetro"]
+        ["FIV + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
       ],
       "motor": [
         ["P2.01", "[KW] - Potência nominal do motor"],
@@ -1024,10 +1024,10 @@
     "PID": {
       "parametros": [
         ["P0.02", "1"],
-        ["P0.04", "2 analógica tensão (FIV) - 3  analógica corrente (FIC)"],
+        ["P0.04", "2 analógica tensão (FIV) / 3  analógica corrente (FIC)"],
         ["PA.00", "0"],
         ["PA.01", "Valor de setup do PID"],
-        ["PA.02", "0 = tensão FIV - 1 = corrente FIC. Fonte do retorno do PID"],
+        ["PA.02", "0 = tensão FIV / 1 = corrente FIC. Fonte do retorno do PID"],
         ["PA.03", "Direção da ação do PID"],
         ["PA.05", "Ganho proporcional"],
         ["PA.06", "Tempo integral "],
@@ -1037,7 +1037,7 @@
       "ligacoes": [
         ["FWD + GND", "Liga"],
         ["REV + GND", "Reversão"],
-        ["AVI + GND", "Chave seletora para baixo 0-10V ou Chave seletora para baixo 4-20mA "]
+        ["AVI + GND", "Chave seletora para baixo 0-10V ou Chave seletora para cima 4-20mA "]
       ],
       "motor": [
         ["P2.01", "[KW] - Potência nominal do motor"],
@@ -1085,7 +1085,6 @@
         "PP.01 = 1 Para resetar o inversor no padrão de fábrica"
       ]
     },
-
 
     "Troca Velocidade X Potenciômetro, Y Multispeed": {
       "link": "",
