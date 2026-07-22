@@ -18,7 +18,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne FWD ",
@@ -47,7 +47,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
@@ -79,7 +79,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
@@ -149,7 +149,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
  
       ],
       "ligacoes": [
@@ -183,7 +183,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "P202 define qual Hz vai acionar o Freio DC",
@@ -209,7 +209,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "P203 define qual Hz vai acionar o Freio DC",
@@ -279,7 +279,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         
@@ -305,7 +305,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "P700 = Velocidade de comunicação",
@@ -361,7 +361,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
        
@@ -391,7 +391,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         
@@ -416,7 +416,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": []
     },
@@ -449,7 +449,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
 
       "observacoes": []
@@ -473,7 +473,7 @@
         ["P210", "A Corrente nominal do motor"],
         ["P212", "RPM Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P215", "Hz Frequência nominal do motor"]
       ],
       "observacoes": []
     },
@@ -521,7 +521,7 @@
         ["P210", "A Corrente nominal do motor"],
         ["P212", "RPM Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P215", "Hz Frequência nominal do motor"]
       ],
       "observacoes": [
         "Fechar FWD + GND liga o inversor (partida do motor).",
@@ -559,7 +559,7 @@
         ["P210", "A Corrente nominal do motor"],
         ["P212", "RPM Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "Hz Frequência nominal do motor"]
+        ["P215", "Hz Frequência nominal do motor"]
       ],
       "observacoes": [
         "Fechar FWD + GND liga o inversor (partida do motor);",
@@ -624,7 +624,7 @@
         ["P210", "[A] Corrente nominal do motor"],
         ["P212", "[RPM] Velocidade nominal motor"],
         ["P213", "Numero de polos do motor"],
-        ["P214", "[Hz] Frequência nominal do motor"]
+        ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
@@ -951,12 +951,22 @@
     "Spindler": {
       "link": "",
       "parametros": [
-       
+        ["P0.02", "1"],
+        ["P0.04", "2"],
+        ["P0.12", "320"],
+        ["P0.14", "320"]
       ],
       "ligacoes": [
+        ["FWD + GND", "Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]
        
       ],
       "motor": [
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"] 
        
       ],
       "observacoes": [
