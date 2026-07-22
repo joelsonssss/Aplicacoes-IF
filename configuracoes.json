@@ -21,7 +21,7 @@
         ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
-        "Botão liga NA, ligado no borne ",
+        "Botão liga NA, ligado no borne FWD ",
         "Botão desliga NF, ligado no borne S1",
         "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
@@ -99,12 +99,10 @@
       "motor": [
       ],
       "observacoes": [
-        "P331 0: Contato normalmente aberto (NA) 1: Contato normalmente fechado (NF)"
-      
-       
+        "P331 = 0 Contato normalmente aberto (NA)", 
+        "P331 = 1 Contato normalmente fechado (NF)"
       ]
     },
-
 
     "Configura Saída Relé": {
       "link": "",
@@ -118,9 +116,28 @@
       "motor": [
       ],
       "observacoes": [
-        "Para ver a lista completa, verificar no manual"
-      
-       
+        "P325 = 0   Inválido", 
+        "P325 = 2   Frequência de operação alcançada" ,
+        "P325 = 3   Alarme (parada)" ,
+        "P325 = 4   Velocidade “0” ",
+        "P325 = 5   Frequência 1 alcançada (definida em P425) ",
+        "P325 = 6   Frequência 2 alcançada (definida em P426) ",
+        "P325 = 7   Aceleração ",
+        "P325 = 8   Desaceleração",
+        "P325 = 9   Alarme por subtensão no barramento DC", 
+        "P325 = 10  Tempo 1 atingido (definido em P427)", 
+        "P325 = 11  Tempo 2 atingido (definido em P428)", 
+        "P325 = 12  Indicação de finalização de seção de procedimento", 
+        "P325 = 13  Indicação de finalização de procedimento", 
+        "P325 = 14  PID Máximo (P605)", 
+        "P325 = 15  PID Mínimo (P606)", 
+        "P325 = 16  Circuito 4 a 20mA aberto (Erro “20”)" ,
+        "P325 = 17  Sobrecarga do motor", 
+        "P325 = 18  Sobrecarga do inversor", 
+        "P325 = 27  Contagem de pulsos alcançada (definido em P407)", 
+        "P325 = 28  Valor de ajuste de pulso intermediário alcançado", 
+        "P325 = 29  Abastecimento de água com tensão constante", 
+        "P325 = 30  Pronto (“READY”)"  
       ]
     },
 
@@ -140,16 +157,17 @@
       "motor": [
       ],
       "observacoes": [
-        "P213 = Número de pólos do motor. Informação na placa do motor: 2 POLOS = 3600 RPM 4 POLOS = 1700 RPM 6 POLOS = 1200 RPM 8 POLOS = 900 RPM "
-      
-       
+        "P213 = Número de pólos do motor.",
+        " Informação na placa do motor:",
+        "2 POLOS = 3600 RPM ",
+        "4 POLOS = 1700 RPM ",
+        "6 POLOS = 1200 RPM ",
+        "8 POLOS = 900 RPM "
       ]
     },
 
-
-
     "Freio DC partida": {
-      "link": "www.metaltex.com.br/sss.pdf",
+      "link": "",
       "parametros": [
         ["P102", "1"],
         ["P202", "Hz Frequência inicial de partida"],
@@ -173,6 +191,7 @@
         "P205 define Segundos o tempo de atuação do freio DC"
       ]
     },
+
     "Freio DC parada": {
       "link": "",
       "parametros": [
@@ -211,12 +230,13 @@
       "motor": [
       ],
       "observacoes": [
-        "É usado para compensar a característica de torque de baixa frequência no controle escalar (V/F). 4.0 Se P208 = 0, o inversor realiza o controle automático de torque. Neste caso, o inversor calcula o torque com base nos dados do motor. Este parâmetro compensa a queda de tensão na resistência do estator do motor. Portanto, o ajuste do parâmetro P208 permite aumentar a tensão para obter maior torque durante a partida."
-      
-       
+        "É usado para compensar a característica de torque de baixa frequência no controle escalar (V/F).",
+        "4.0 Se P208 = 0, o inversor realiza o controle automático de torque. Neste caso,",
+        "O inversor calcula o torque com base nos dados do motor.",
+        "Este parâmetro compensa a queda de tensão na resistência do estator do motor.", 
+        "Portanto, o ajuste do parâmetro P208 permite aumentar a tensão para obter maior torque durante a partida."
       ]
     },
-
 
     "Limitar Hz": {
       "link": "",
@@ -232,9 +252,7 @@
       "motor": [
       ],
       "observacoes": [
-        "É usado para compensar a característica de torque de baixa frequência no controle escalar (V/F). 4.0 Se P208 = 0, o inversor realiza o controle automático de torque. Neste caso, o inversor calcula o torque com base nos dados do motor. Este parâmetro compensa a queda de tensão na resistência do estator do motor. Portanto, o ajuste do parâmetro P208 permite aumentar a tensão para obter maior torque durante a partida."
       
-       
       ]
     },
 
@@ -264,10 +282,10 @@
         ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
-        "Botão liga NA, ligado no borne ",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
+        
       ]
     },
+
     "Modbus": {
       "link": "",
       "parametros": [
@@ -298,6 +316,7 @@
         "Enviando comando parada (escreva 01H) em 2000H:"
       ]
     },
+
     "Motor Aquecendo": {
       "link": "",
       "parametros": [
@@ -317,7 +336,7 @@
       ],
       "observacoes": [
        "P110 = Hz do Motor",
-       "P111 = 20 ",
+       "P111 = 20",
        "P112 = 2.5",
        "P113 = 5",
        "P114 = 1.2",
@@ -346,10 +365,10 @@
         ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
-        "Botão liga NA, ligado no borne ",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
+       
       ]
     },
+
     "Multi Velocidade": {
       "link": "",
       "parametros": [
@@ -376,14 +395,10 @@
         ["P214", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
-        "ligação multi velocidade",
-        "Número de pólos do motor. Informação na placa do motor:",
-        "2 POLOS = 3600 RPM",
-        "4 POLOS = 1700 RPM",
-        "6 POLOS = 1200 RPM",
-        "8 POLOS = 900 RPM "
+        
       ]
     },
+
     "Parâmetros Básicos": {
       "link": "",
       "parametros": [
@@ -406,6 +421,7 @@
       ],
       "observacoes": []
     },
+
     "PID": {
       "parametros": [
         ["P000", "7"],
@@ -422,11 +438,13 @@
         ["P609", "Tempo diferencial"],
         ["P614", "Valor do display quando sinal de entrada for 10V ou 20mA"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga"],
         ["REV + GND", "Reversão"],
         ["AVI + GND", "Chave seletora para baixo 0-10V ou Chave seletora para baixo 4-20mA "]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal do motor"],
         ["P210", "[A] Corrente nominal do motor"],
@@ -434,8 +452,10 @@
         ["P213", "Numero de polos do motor"],
         ["P214", "[Hz] Frequência nominal do motor"]
       ],
+
       "observacoes": []
     },
+
     "Potenciômetro e Terminal": {
       "link": "",
       "parametros": [
@@ -564,8 +584,25 @@
       "motor": [
       ],
       "observacoes": [
-        "`0000: Sem falhas | 0002: Sobrecorrente durante a aceleração | 0003: Sobrecorrente durante a desaceleração | 0004: Sobrecorrente na velocidade constante | 0005: Sobretensão durante a aceleração | 0006: Sobretensão durante a desaceleração | 0007: Sobretensão na velocidade constante | 0008: Sobrecarga do resistor | 0009: Subtensão | 0010: Sobrecarga do inversor | 0011: Sobrecarga do motor | 0014: Sobre aquecimento do módulo | 0015: Falha externa | 0016: Falha de comunicação | 0024: Baixa pressão no fornecimento de água* | 0027: Alta pressão no fornecimento de água* | 0028: Alarme por falta de água* | 0029: Tempo de acionamento alcançado | 0031: Perda de feedback do controle PID"
-
+        "0000: Sem falhas",
+        "0002: Sobrecorrente durante a aceleração",
+        "0003: Sobrecorrente durante a desaceleração",
+        "0004: Sobrecorrente na velocidade constante",
+        "0005: Sobretensão durante a aceleração",
+        "0006: Sobretensão durante a desaceleração",
+        "0007: Sobretensão na velocidade constante",
+        "0008: Sobrecarga do resistor",
+        "0009: Subtensão",
+        "0010: Sobrecarga do inversor",
+        "0011: Sobrecarga do motor",
+        "0014: Sobre aquecimento do módulo",
+        "0015: Falha externa",
+        "0016: Falha de comunicação",
+        "0024: Baixa pressão no fornecimento de água*",
+        "0027: Alta pressão no fornecimento de água*",
+        "0028: Alarme por falta de água*",
+        "0029: Tempo de acionamento alcançado",
+        "0031: Perda de feedback do controle PID"
       ]
   },
 
@@ -691,7 +728,7 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
-        ""
+        
       ]
     },
 
@@ -706,7 +743,47 @@
       "motor": [
       ],
       "observacoes": [
-        "Para ver a lista completa, verificar no manual"
+        "P6.02 = 0 Sem função",
+        "P6.02 = 1 Inversor funcionando",
+        "P6.02 = 2 Falha (parado)",
+        "P6.02 = 3 Detecção da frequência FDT1",
+        "P6.02 = 4 Frequência atingida",
+        "P6.02 = 5 Velocidade zero em RUN (saída ligada se o comando RUN ativado e frequência = 0Hz saída desligada se estiver em STOP)",
+        "P6.02 = 6 Pré alarme de sobrecarga do motor",
+        "P6.02 = 7 Pré alarme de sobrecarga do inversor",
+        "P6.02 = 8 Valor da contagem atingido",
+        "P6.02 = 9 Valor da contagem designada atingido",
+        "P6.02 = 10 Comprimento atingido",
+        "P6.02 = 11 Ciclo do CLP completo",
+        "P6.02 = 12 Tempo acumulativo de funcionamentoatingido",
+        "P6.02 = 13 Frequência limitada" ,   
+        "P6.02 = 14 Torque limitado",
+        "P6.02 = 15 Pronto para rodar", 
+        "P6.02 = 16 FIV > FIC",
+        "P6.02 = 17 Limite superior da frequência atingido",
+        "P6.02 = 18 Limite inferior da frequência atingido",
+        "P6.02 = 19 Sub tensão",
+        "P6.02 = 20 Configuração de comunicação",
+        "P6.02 = 21 Reservado",
+        "P6.02 = 22 Reservado",
+        "P6.02 = 23 Velocidade zero em RUN (saída ligada se o comando RUN ativado e frequência = 0Hz; saída ligada se estiver em STOP)",
+        "P6.02 = 24 Tempo acumulativo de energização atingido",
+        "P6.02 = 25 Detecção da frequência FDT2. ",
+        "P6.02 = 26 Frequência 1 atingida",
+        "P6.02 = 27 Frequência 2 atingida",
+        "P6.02 = 28 Corrente 1 atingida",
+        "P6.02 = 29 Corrente 2 atingida",
+        "P6.02 = 30 Tempo atingido",
+        "P6.02 = 31 Limite da entrada FIV excedido",
+        "P6.02 = 32 Sem carga",
+        "P6.02 = 33 Reverso funcionando",
+        "P6.02 = 34 Estado de zero corrente",
+        "P6.02 = 35 Temperatura do módulo atingida",
+        "P6.02 = 36 Corrente limite de software excedida",
+        "P6.02 = 37 Limite mínimo da frequência atingido",
+        "P6.02 = 38 Saída de alarme",
+        "P6.02 = 39 Reservado. ",
+        "P6.02 = 40 Tempo de funcionamento atual atingido."
       ]
     },
 
@@ -726,7 +803,7 @@
 
       ],
       "observacoes": [
-        "Para ver a lista completa, verificar no manual"
+        
       ]
     },
 
@@ -917,6 +994,7 @@
 
       ]
     },
+
     "Parâmetros Básicos": {
       "link": "",
       "parametros": [
@@ -942,6 +1020,7 @@
       ],
       "observacoes": []
     },
+
     "PID": {
       "parametros": [
         ["P0.02", "1"],
@@ -969,6 +1048,7 @@
       ],
       "observacoes": []
     },
+
     "Potenciômetro e Terminal": {
       "link": "",
       "parametros": [
@@ -1082,9 +1162,43 @@
       "motor": [
       ],
       "observacoes": [
+        "1: Proteção do Inversor",
+        "2: Sobrecorrente na aceleração",
+        "3: Sobrecorrente na desaceleração",
+        "4: Sobrecorrente em velocidade constante",
+        "5: Sobretensão na aceleração",
+        "6: Sobretensão na desaceleração",
+        "7: Sobretensão em velocidade constante", 
+        "8: Sobrecarga no resistor do amortecimento",
+        "9: Subtensão",
+        "10: Sobrecarga no inversor",
+        "11: Sobrecarga no motor",
+        "12: Reservado",
+        "13: Falta de fase na saída",
+        "14: Sobreaquecimento do módulo",
+        "15: Falha de equipamento externo",
+        "16: Falha de comunicação",
+        "17: Falha do contator",
+        "18: Falha de detecção de corrente",
+        "19: Falha no auto-tuning do motor",
+        "20: Reservado",
+        "21: Falha de escrita/leitura da EEPROM",
+        "22:Falha de hardware do inversor",
+        "23: Curto-circuito à terra",
+        "24: Reservado",
+        "25: Reservado",
+        "26: Tempo acumulativo de funcionamento atingido",
+        "27: Reservado",
+        "28: Reservado",
+        "29: Tempo acumulativo de energização atingido",
+        "30: Sem carga",
+        "31: Perda do sinal de retorno do PID durante funcionamento",
+        "40: Falha do limite de corrente",
+        "41-43: Reservado",
+        "51: Reservado",
+        "0: Sem falha"
       ]
     },
-
 
     "Up / Down": {
       "link": "",
@@ -1098,8 +1212,6 @@
         ["P5.02", "6"],
         ["P5.03", "7"],
         ["P5.12", "PULSO EM Hz"]
-
-
 
       ],
       "ligacoes": [
