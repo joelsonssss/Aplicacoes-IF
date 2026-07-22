@@ -343,7 +343,7 @@
       ]
     },
 
-    "Spindler": {
+    "Spindle": {
       "link": "",
       "parametros": [
         ["P101", "3"],
@@ -948,7 +948,7 @@
         "Enviando comando parada (escreva 06H) em 2000H:"
       ]
     },
-    "Spindler": {
+    "Spindle": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
