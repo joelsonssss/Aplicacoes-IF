@@ -54,7 +54,7 @@
     },
 
     "3 Fios + mult velocidade": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1J7qAAfz6Q_H1Sd6R6mitnjsvtvoIK5ua/view?usp=sharing",
       "parametros": [
         ["P101", "6"],
         ["P102", "1"],
@@ -394,22 +394,21 @@
     },
 
     "Multi Velocidade": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1hMPdXuQ1a0nGEydPErZf6Dp2vBYtUoGE/view?usp=sharing",
       "parametros": [
         ["P101", "6"],
-        ["102", "1"],
+        ["P102", "1"],
         ["318", "10"],
         ["317", "9"],
-        ["316", "7"],
-        ["P100", "VELOCIDADE SEM S1 e S2"],
-        ["P503", "VELOCIDADE S1"],
-        ["P504", "VELOCIDADE S2"]
+        ["P100", "Primeira Velocidade [Hz]"],
+        ["P503", "Segunda Velocidade [Hz]"],
+        ["P504", "Terceira Velocidade [Hz]"]
       ],
       "ligacoes": [
-        ["FWD + GND", "Liga"],
-        ["REV + GND", "Reversão"],
-        ["S1 + GND", "Mais Velocidade"],
-        ["S2 + GND", "Menos Velocidade"]
+        ["FWD + GND", "Botão Liga (NA)"],
+        ["REV + GND", "Botão Reversão (NA) (Opcional)"],
+        ["S1 + GND", "Botão Segunda Velocidade (NA)"],
+        ["S2 + GND", "Botão Terceira Velocidade (NA)"]
       ],
       "motor": [
         ["P209", "[V] Tensão nominal do motor"],
@@ -419,7 +418,9 @@
         ["P215", "[Hz] Frequência nominal do motor"]
       ],
       "observacoes": [
-        
+        "S1 e S2 Aberto = Primeira Velocidade",
+        "S1 Fechado = Segunda Velocidade",
+        "S2 Fechado = Terceira Velocidade"
       ]
     },
 
@@ -1074,11 +1075,11 @@
       "link": "",
       "parametros": [
         ["P0.02", "0 Painel de operação do inversor / = 1 Terminais externos"],
-        ["P0.04", "1  TECLADO / = 2 POTEMCIOMETRO OU 0 A 10 VOLTS"],
+        ["P0.04", "1  Teclado / = 2 Potenciômetro ou 0 A 10V"],
         ["P0.08", "Tempo de aceleração"],
         ["P0.09", "Tempo de desaceleração"],
         ["P0.12", "Frequência máxima"],
-        ["P0.14", "Frequência frequência superior"]
+        ["P0.14", "Frequência Limite superior"]
       ],
       "ligacoes": [
         ["FWD + GND", "Liga"],
