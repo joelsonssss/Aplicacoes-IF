@@ -1,6 +1,33 @@
 {
   "IF10": {
-    "3 Fios e Potenciômetro Inversor": {
+    "3 Fios e Potenciômetro Externo": {
+      "link": "https://drive.google.com/file/d/1Fa5N96nAKf2KmHTVuPqLPnSlNC9pJHer/view?usp=sharing",
+      "parametros": [
+        ["P101", "1"],
+        ["P102", "1"],
+        ["P317", "8"],
+        ["P329", "2"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão liga (NA)"],
+        ["S1 + GND", "Botão desliga (NC)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+      ],
+      "motor": [
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P215", "[Hz] Frequência nominal do motor"]
+      ],
+      "observacoes": [
+        "Botão liga NA, ligado no borne FWD ",
+        "Botão desliga NF, ligado no borne S1",
+        "Botão reversão NA, ligado no borne REV (Opcional)"
+      ]
+    },
+
+    "3 Fios e Potenciômeto Frontal Local": {
       "link": "https://drive.google.com/file/d/1KAbxZbV_CsUPyM8fvmzbu-nv3_iBQBAN/view?usp=sharing",
       "parametros": [
         ["P101", "3"],
@@ -24,36 +51,6 @@
         "Botão liga NA, ligado no borne FWD ",
         "Botão desliga NF, ligado no borne S1",
         "Botão reversão NA, ligado no borne REV (Opcional)"
-      ]
-    },
-    "3 Fios + Up | Down": {
-      "link": "",
-      "parametros": [
-        ["P101", "4"],
-        ["P102", "1"],
-        ["P318", "15"],
-        ["P317", "8"],
-        ["P316", "16"],
-        ["P329", "2"]
-      ],
-      "ligacoes": [
-        ["FWD + GND", "Botão liga (NA)"],
-        ["S1 + GND", "Botão desliga (NC)"],
-        ["REV + GND", "Botão + velocidade (NA)"],
-        ["S2 + GND", "Botão - velocidade (NA)"]
-      ],
-      "motor": [
-        ["P209", "[V] Tensão nominal do motor"],
-        ["P210", "[A] Corrente nominal do motor"],
-        ["P212", "[RPM] Velocidade nominal motor"],
-        ["P213", "Numero de polos do motor"],
-        ["P215", "[Hz] Frequência nominal do motor"]
-      ],
-      "observacoes": [
-        "Botão liga NA, ligado no borne FWD",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão + Velocidade NA, ligado no borne REV",
-        "Botão - Velocidade NA, ligado no borne S2"
       ]
     },
 
@@ -85,6 +82,37 @@
         "Botão liga NA, ligado no borne FWD",
         "Botão desliga NF, ligado no borne S1",
         "Botão troca de modo NA, ligado no borne S2"
+      ]
+    },
+
+    "3 Fios + Up | Down": {
+      "link": "",
+      "parametros": [
+        ["P101", "4"],
+        ["P102", "1"],
+        ["P318", "15"],
+        ["P317", "8"],
+        ["P316", "16"],
+        ["P329", "2"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão liga (NA)"],
+        ["S1 + GND", "Botão desliga (NC)"],
+        ["REV + GND", "Botão + velocidade (NA)"],
+        ["S2 + GND", "Botão - velocidade (NA)"]
+      ],
+      "motor": [
+        ["P209", "[V] Tensão nominal do motor"],
+        ["P210", "[A] Corrente nominal do motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos do motor"],
+        ["P215", "[Hz] Frequência nominal do motor"]
+      ],
+      "observacoes": [
+        "Botão liga NA, ligado no borne FWD",
+        "Botão desliga NF, ligado no borne S1",
+        "Botão + Velocidade NA, ligado no borne REV",
+        "Botão - Velocidade NA, ligado no borne S2"
       ]
     },
 
@@ -493,7 +521,7 @@
       ]
   },
 
-    "Troca Velocidade (X = Potenciometro / Y = Multispeed)": {
+    "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "",
       "parametros": [
         ["P100", "Velocidade 1 [Hz]"],
@@ -531,7 +559,7 @@
       ]
     },
 
-    "Troca Velocidade (X = Multispeed / Y = Potenciometro)": {
+    "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
       "link": "",
       "parametros": [
         ["P100", "Velocidade 1 [Hz]"],
@@ -636,10 +664,12 @@
 
   },
   "IF20": {
-    "3 FIOS": {
+    "3 Fios + Potenciômetro Externo": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
+        ["P0.04", "2"],
+        ["P0.23", "1"],
         ["P5.00", "1"],
         ["P5.01", "2"],
         ["P5.02", "3"],
@@ -648,7 +678,11 @@
       "ligacoes": [
         ["FWD + GND", "Botão liga (NA)"],
         ["S1 + GND", "Botão desliga (NC)"],
-        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+        ["REV + GND", "Botão reversão (NA) (Opcional)"],
+        ["FIV + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+
       ],
       "motor": [
         ["P2.01", "[KW] - Potência nominal do motor"],
@@ -663,24 +697,26 @@
         "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
     },
-    "3 Fios + Up | Down": {
+
+    "3 Fios e Potenciômeto Frontal Local": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
-        ["P0.04", "1"],
+        ["P0.04", "4"],
         ["P0.23", "1"],
+        ["P5.00", "1"],
         ["P5.01", "2"],
         ["P5.02", "3"],
-        ["P5.03", "6"],
-        ["P5.04", "7"],
-        ["P5.11", "2"],
-        ["P5.12", "Hz por pulso"]
+        ["P5.11", "2"]
       ],
       "ligacoes": [
         ["FWD + GND", "Botão liga (NA)"],
-        ["REV + GND", "Botão + reversão (NA)"],
         ["S1 + GND", "Botão desliga (NC)"],
-        ["S2 + GND", "Botão - velocidade (NA)"]
+        ["REV + GND", "Botão reversão (NA) (Opcional)"],
+        ["FIV + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+
       ],
       "motor": [
         ["P2.01", "[KW] - Potência nominal do motor"],
@@ -690,12 +726,12 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
-        "Botão liga NA, ligado no borne FWD",
+        "Botão liga NA, ligado no borne ",
         "Botão desliga NF, ligado no borne S1",
-        "Botão + Velocidade NA, ligado no borne S2",
-        "Botão - Velocidade NA, ligado no borne S3"
+        "Botão reversão NA, ligado no borne REV (Opcional)"
       ]
     },
+
     "3 Fios + Mult Velocidade": {
       "link": "",
       "parametros": [
@@ -728,6 +764,40 @@
       ],
       "observacoes": [
         
+      ]
+    },
+
+    "3 Fios + Up | Down": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "1"],
+        ["P0.23", "1"],
+        ["P5.01", "2"],
+        ["P5.02", "3"],
+        ["P5.03", "6"],
+        ["P5.04", "7"],
+        ["P5.11", "2"],
+        ["P5.12", "Hz por pulso"]
+      ],
+      "ligacoes": [
+        ["FWD + GND", "Botão liga (NA)"],
+        ["REV + GND", "Botão + reversão (NA)"],
+        ["S1 + GND", "Botão desliga (NC)"],
+        ["S2 + GND", "Botão - velocidade (NA)"]
+      ],
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": [
+        "Botão liga NA, ligado no borne FWD",
+        "Botão desliga NF, ligado no borne S1",
+        "Botão + Velocidade NA, ligado no borne S2",
+        "Botão - Velocidade NA, ligado no borne S3"
       ]
     },
 
@@ -1096,7 +1166,7 @@
       ]
     },
 
-    "Troca Velocidade X Potenciômetro, Y Multispeed": {
+    "Troca Velocidade X Potenciômetro ou 0-10V, Y Multispeed": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -1127,7 +1197,7 @@
       ]
     },
 
-    "Troca Velocidade X Multispeed Y Potenciômetro": {
+    "Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
