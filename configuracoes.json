@@ -1,12 +1,11 @@
 {
   "IF10": {
     "3 Fios e Potenciômetro Externo": {
-      "link": "https://drive.google.com/file/d/1Fa5N96nAKf2KmHTVuPqLPnSlNC9pJHer/view?usp=sharing",
+      "link": "https://drive.google.com/file/d/1ZcZcYHtw-z4Qb7etojYXHsgjbi6KAGIO/view?usp=sharing",
       "parametros": [
         ["P101", "1"],
         ["P102", "1"],
-        ["P317", "8"],
-        ["P329", "2"]
+        ["P317", "8"],        ["P329", "2"]
       ],
       "ligacoes": [
         ["FWD + GND", "Botão liga (NA)"],
@@ -28,7 +27,7 @@
     },
 
     "3 Fios e Potenciômeto Frontal Local": {
-      "link": "https://drive.google.com/file/d/1KAbxZbV_CsUPyM8fvmzbu-nv3_iBQBAN/view?usp=sharing",
+      "link": "https://drive.google.com/file/d/14NstN72PCyCKWxqAQUveGMKWOCTU-ghI/view?usp=sharing",
       "parametros": [
         ["P101", "3"],
         ["P102", "1"],
@@ -55,21 +54,21 @@
     },
 
     "3 Fios + mult velocidade": {
-      "link": "https://drive.google.com/file/d/1cDsbEMTOOP2pLPoV6LyLnWjl-qWg-VZe/view?usp=sharing",
+      "link": "",
       "parametros": [
         ["P101", "6"],
         ["P102", "1"],
         ["P318", "9"],
         ["P317", "8"],
         ["P316", "7"],
-        ["P100", "Velocidade 1"],
-        ["P503", "Velocidade 2"]
+        ["P100", "Primeira Velocidade"],
+        ["P503", "Segunda Velocidade"]
       ],
       "ligacoes": [
         ["FWD + GND", "Botão liga (NA)"],
         ["S1 + GND", "Botão desliga (NF)"],
         ["REV + GND", "Botão reversão (NA) (Opcional)"],
-        ["S2 + GND", "Botão Troca de Modo (NA)"]
+        ["S2 + GND", "Botão Velocidade 2 (NA)"]
       ],
       "motor": [
         ["P209", "[V] Tensão nominal do motor"],
@@ -86,7 +85,7 @@
     },
 
     "3 Fios + Up | Down": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1J7qAAfz6Q_H1Sd6R6mitnjsvtvoIK5ua/view?usp=sharing",
       "parametros": [
         ["P101", "4"],
         ["P102", "1"],
@@ -315,7 +314,7 @@
     },
 
     "Modbus": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1IdrKWJSRjloRZ1N8Qd89AdiAAzEcOtyO/view?usp=sharing",
       "parametros": [
         ["P101", "5"],
         ["P102", "2"],
@@ -324,8 +323,6 @@
         ["P702", "Endereço MODBUS (ID Modbus)"]
       ],
       "ligacoes": [
-        ["FWD + GND", "Botão liga (NA)"],
-        ["REV + GND", "Botão reversão (NA) (Opcional)"],
         ["RS- e RS+", "Ligação cabos modbus"]
       ],
       "motor": [
@@ -524,7 +521,7 @@
     "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "",
       "parametros": [
-        ["P100", "Velocidade 1 [Hz]"],
+        ["P100", "Primeira Velocidade [Hz]"],
         ["P101", "1"],
         ["P102", "1"],
         ["P120", "6"],
@@ -532,7 +529,7 @@
         ["P315", "6"],
         ["P317", "26"],
         ["P318", "9"],
-        ["P503", "Velocidade 2 [Hz]"]
+        ["P503", "Segunda Velocidade [Hz]"]
 
       ],
       "ligacoes": [
@@ -562,7 +559,7 @@
     "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
       "link": "",
       "parametros": [
-        ["P100", "Velocidade 1 [Hz]"],
+        ["P100", "Primeira Velocidade [Hz]"],
         ["P101", "6"],
         ["P102", "1"],
         ["P120", "1"],
@@ -570,7 +567,7 @@
         ["P315", "6"],
         ["P317", "26"],
         ["P318", "9"],
-        ["P503", "Velocidade 2 [Hz]"]
+        ["P503", "Segunda Velocidade [Hz]"]
 
       ],
       "ligacoes": [
