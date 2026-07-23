@@ -55,7 +55,7 @@
     },
 
     "3 Fios + mult velocidade": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1cDsbEMTOOP2pLPoV6LyLnWjl-qWg-VZe/view?usp=sharing",
       "parametros": [
         ["P101", "6"],
         ["P102", "1"],
@@ -540,7 +540,7 @@
         ["S1 + GND", "Alterna Frequência X e Y"],
         ["S2 + GND.", "Multispeed 2 (NA)"],
         ["AVI + Terminal Central do Potenciômetro", ""],
-        ["10V + Terminal Positivo do Potenciômetro", ""],
+        ["+10V + Terminal Positivo do Potenciômetro", ""],
         ["GND + Terminal Negativo do Potenciômetro", ""],
         ["Chave Seletora para baixo em V", ""]
       ],
