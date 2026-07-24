@@ -1312,24 +1312,95 @@
   },
 
   "IF30": {
-    "3 Fios": {
+    "Reset de fábrica": {
       "parametros": [
-        ["P2.01", "kW"],
-        ["P2.03", "A"],
-        ["P2.04", "Hz"],
-        ["P2.05", "RPM"]
+        ["PP.01", "1"]
       ],
       "ligacoes": [
-        ["P2.01", "kW"],
-        ["P2.03", "A"],
-        ["P2.04", "Hz"],
-        ["P2.05", "RPM"]
       ],
       "observacoes": [
-        "Definir frequência inicial em P0.10",
-        "S1 aumenta velocidade",
-        "S2 diminui velocidade"
+        "PP.01 = 1 Para resetar o inversor no padrão de fábrica"
       ]
+    },
+
+    "Configuração Motor": {
+      "link": "",
+      "parametros": [
+      ],
+      "ligacoes": [
+        
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": [
+      ]
+    },
+
+        "Parâmetros Básicos": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "0 Painel de operação do inversor / = 1 Terminais externos"],
+        ["P0.03", ""],
+        ["P0.10", "Frequência máxima "],
+        ["P0.12", "Frequência limite superior"],
+        ["P0.14", "Frequência de limite inferior"],
+        ["P0.17", "Tempo de aceleração"],
+        ["P0.18", "Tempo de desaceleração"]
+      ],
+      "ligacoes": [
+        ["X1 + GND", "Liga"],
+        ["X2 + GND", "Reversão"],
+        ["FIC + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
+    },
+
+        "3 Fios + Potenciômetro Externo": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "3"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.02", "3"],
+        ["P4.11", "2"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão"],
+        ["X3 + COM"," Desliga (NF)"],
+        ["FIC + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
     }
+
+
+
+
+
+
   }
 }
