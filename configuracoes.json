@@ -522,7 +522,6 @@
     "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1jPYHF8D25pd2KawuisSjJQVBQUckFwOp/view?usp=sharing",
       "parametros": [
-        ["P100", "Primeira Velocidade [Hz]"],
         ["P101", "1"],
         ["P102", "1"],
         ["P120", "6"],
@@ -530,6 +529,7 @@
         ["P315", "6"],
         ["P317", "26"],
         ["P318", "9"],
+        ["P100", "Primeira Velocidade [Hz]"],
         ["P503", "Segunda Velocidade [Hz]"]
 
       ],
@@ -558,9 +558,8 @@
     },
 
     "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1-cpZw0r7jGxrv7owZdfh9dLvP8FFKDPR/view?usp=sharing",
       "parametros": [
-        ["P100", "Primeira Velocidade [Hz]"],
         ["P101", "6"],
         ["P102", "1"],
         ["P120", "1"],
@@ -568,6 +567,7 @@
         ["P315", "6"],
         ["P317", "26"],
         ["P318", "9"],
+        ["P100", "Primeira Velocidade [Hz]"],
         ["P503", "Segunda Velocidade [Hz]"]
 
       ],
@@ -576,7 +576,7 @@
         ["S1 + GND", "Alterna Frequência X e Y"],
         ["S2 + GND.", "Multispeed 2 (NA)"],
         ["AVI + Terminal Central do Potenciômetro", ""],
-        ["10V + Terminal Positivo do Potenciômetro", ""],
+        ["+10V + Terminal Positivo do Potenciômetro", ""],
         ["GND + Terminal Negativo do Potenciômetro", ""],
         ["Chave Seletora para baixo em V", ""]
       ],
@@ -632,7 +632,7 @@
   },
 
     "UP / DOWN ": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1m4YSvhgUze3oeZBCriVXsXwNI4qECej4/view?usp=sharing",
       "parametros": [
         ["P101", "4"],
         ["P102", "1"],
