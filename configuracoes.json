@@ -770,6 +770,7 @@
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "1"],
+        ["P0.10", "Valor Hz inicial"],
         ["P0.23", "1"],
         ["P5.01", "2"],
         ["P5.02", "3"],
@@ -1128,7 +1129,7 @@
     },
 
     "Potenciômetro e Terminal": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1zN5JKs1sz_pN9qdff3CG2LvRPa5zJbIU/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "2"]
@@ -1165,22 +1166,25 @@
     },
 
     "Troca Velocidade X Potenciômetro ou 0-10V, Y Multispeed": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1g_Q7gvk656rSXCL7cGkpnbX-HE36qdys/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "2"],
         ["P0.04", "2"],
         ["P0.05", "6"],
-        ["P5.02", "12"],
         ["P5.03", "18"],
-        ["PC.01", "VALOR EM HZ"]
+        ["P5.02", "12"],
+        ["PC.00", "Primeira velocidade EM %"],
+        ["PC.01", "Segunda velocidade EM %"]
       ],
       "ligacoes": [
-        ["borne FIV", "Terminal central potenciômetro"],
-        ["borne +10V", "Terminal positivo potenciômetro"],
-        ["borne GNG", "Terminal negativo potenciômetro"],
         ["FWD + GND", "Botão liga (NA)"],
-        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+        ["REV + GND", "Botão reversão (NA) (Opcional)"],
+        ["S1 + GND", "Segunda Velocidade (NA)"],
+        ["S2 + GND", "Alterna frequência X para Y (NA)"],
+        ["Borne FIV", "Terminal central potenciômetro"],
+        ["Borne +10V", "Terminal positivo potenciômetro"],
+        ["Borne GNG", "Terminal negativo potenciômetro"]
       ],
       "motor": [
         ["P2.01", "[KW] - Potência nominal do motor"],
@@ -1190,28 +1194,30 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
-        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S1 E S2"
+        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S2"
       ]
     },
 
     "Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1PTqjn7qQA24E1DZ6lWehqxpIQIWherAU/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "2"],
         ["P0.04", "6"],
         ["P0.05", "2"],
-        ["P5.02", "12"],
         ["P5.03", "18"],
-        ["PC.00", "VALOR EM HZ"]
-
+        ["P5.02", "12"],
+        ["PC.00", "Primeira velocidade EM %"],
+        ["PC.01", "Segunda velocidade EM %"]
       ],
       "ligacoes": [
-        ["borne FIV", "Terminal central potenciômetro"],
-        ["borne +10V", "Terminal positivo potenciômetro"],
-        ["borne GNG", "Terminal negativo potenciômetro"],
         ["FWD + GND", "Botão liga (NA)"],
-        ["REV + GND", "Botão reversão (NA) (Opcional)"]
+        ["REV + GND", "Botão reversão (NA) (Opcional)"],
+        ["S1 + GND", "Segunda Velocidade (NA)"],
+        ["S2 + GND", "Alterna frequência X para Y (NA)"],
+        ["Borne FIV", "Terminal central potenciômetro"],
+        ["Borne +10V", "Terminal positivo potenciômetro"],
+        ["Borne GNG", "Terminal negativo potenciômetro"]
       ],
       "motor": [
         ["P2.01", "KW - Potência nominal do motor"],
@@ -1221,7 +1227,7 @@
         ["P2.05", "RPM - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": [
-        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S1 E S2"
+        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S2"
       ]
     },
 
@@ -1276,7 +1282,7 @@
     },
 
     "Up / Down": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1W6c_l_39kGd8t4lDuvIuzYYFWnDUcD6b/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "1"],
