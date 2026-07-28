@@ -283,7 +283,7 @@
       ]
     },
 
-    "CLP": {
+    "Modo CLP": {
       "link": "",
       "parametros": [
         ["P101", "7"],
@@ -975,15 +975,29 @@
       ]
     },
 
-    "CLP": {
+    "Modo CLP": {
       "link": "",
       "parametros": [
-        
+        ["P0.02", "1"],
+        ["P0.04", "7"],
+        ["PC.00", "1ª Velocidade"],
+        ["PC.01", "2ª Velocidade"],
+        ["PC.02", "3ª Velocidade"],
+        ["PC.16", "0"],
+        ["PC.18", "Tempo de Operação 1ª Velocidade [s]"],
+        ["PC.20", "Tempo de Operação 2ª Velocidade [s]"],
+        ["PC.22", "Tempo de Operação 3ª Velocidade [s]"]
       ],
       "ligacoes": [
-       
+        ["FWD + GND", "Botão liga (NA)"],
+        ["REV + GND", "Botão reversão (NA) (Opcional)"]       
       ],
       "motor": [
+        ["P2.01", "[KW] - Potência nominal do motor"],
+        ["P2.02", "[V] - Tensão nominal do motor"],
+        ["P2.03", "[A] - Corrente nominal do motor"],
+        ["P2.04", "[Hz] - Frequência nominal do motor"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
         
       ],
       "observacoes": [
@@ -1396,6 +1410,273 @@
         ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
       "observacoes": []
+    },
+
+      "3 Fios + Potenciômetro Frontal Local": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "4"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.02", "3"],
+        ["P4.11", "2"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," Desliga (NF)"]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
+    },
+
+      "3 Fios + Multi Velocidade": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "6"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.02", "3"],
+        ["P4.04", "13"],
+        ["P4.03", "12"],
+        ["P4.11", "2"],
+        ["PC.00", "1ª Velocidade"],
+        ["PC.01", "2ª Velocidade"],
+        ["PC.02", "3ª Velocidade"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," Desliga (NF)"],
+        ["X4 + COM", "2ª Velocidade (NA)"],
+        ["X5 + COM", "3ª Velocidade (NA)"]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
+    },
+
+      "3 Fios + UP / DOWN": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "1"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.02", "3"],
+        ["P4.03", "6"],
+        ["P4.04", "7"],
+        ["P4.11", "2"],
+        ["P4.12", "Hz por pulso"],
+        ["PC.00", "1ª Velocidade"],
+        ["PC.01", "2ª Velocidade"],
+        ["PC.02", "3ª Velocidade"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," Desliga (NF)"],
+        ["X4 + COM", "+ Velocidade (NA)"],
+        ["X5 + COM", "- Velocidade (NA)"]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
+    },
+
+      "Relé de Saída (YA / YB / YC)": {
+      "link": "",
+      "parametros": [
+        ["P5.02", "1: Inversor funcionando 2: Falha"]
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "P5.02 = 0 Sem Função",
+        "P5.02 = 1 Sem Função",
+        "P5.02 = 2 Em falha - STOP",
+        "P5.02 = 3 Frequência FDT1 atingida",
+        "P5.02 = 4 Frequência atingida",
+        "P5.02 = 5Partida com 0Hz",
+        "P5.02 = 6 Pré aviso de sobrecarga no motor",
+        "P5.02 = 7 Pré aviso de sobrecarga no inversor",
+        "P5.02 = 8 Valor de contagem alcançado",
+        "P5.02 = 9 Valor de contagem designado",
+        "P5.02 = 10 Comprimento alcançado",
+        "P5.02 = 11 Ciclo de CLP completo",
+        "P5.02 = 12 Tempo acumulado de operação atingido",
+        "P5.02 = 13 Frequência limitada",
+        "P5.02 = 14 Torque limitado",
+        "P5.02 = 15 Pronto para partida",
+        "P5.02 = 16 FIV maior que FIC",
+        "P5.02 = 17 Limite superior de frequência atingido",
+        "P5.02 = 18 Limite inferior de frequência atingido",
+        "P5.02 = 19 Em subtensão",
+        "P5.02 = 20 Em comunicação",
+        "P5.02 = 21  Reservado",
+        "P5.02 = 22  Reservado",
+        "P5.02 = 23 Velocidade zero em operação (2)",
+        "P5.02 = 24 Tempo energizado alcançado (acumulativo)",
+        "P5.02 = 25 Detecção da frequência FDT2",
+        "P5.02 = 26 Frequência 1 atingida",
+        "P5.02 = 27 Frequência 2 atingida",
+        "P5.02 = 28 Corrente 1 atingida",
+        "P5.02 = 29 Corrente 2 atingida",
+        "P5.02 = 30 Tempo atingido",
+        "P5.02 = 31 FIV – Limite de entrada excedido",
+        "P5.02 = 32 Carga zero",
+        "P5.02 = 33 Rotação reversa",
+        "P5.02 = 34 Zero corrente",
+        "P5.02 = 35 Temperatura do módulo atingida",
+        "P5.02 = 36 Limite de corrente excedido",
+        "P5.02 = 37 Limite mínimo de frequência atingido",
+        "P5.02 = 38 Saída de alarme",
+        "P5.02 = 39 Reservado",
+        "P5.02 = 40 Tempo de operação atingido",
+        "P5.02 = 41 Falha na saída (sem tensão)"
+      ]
+    },
+
+      "Freio DC Partida": {
+      "link": "",
+      "parametros": [
+        ["P6.03", "Frequência de inicialização do freio DC, 0,0 ~ 10,00 Hz"],
+        ["P6.04", "Tempo de espera da frequência de inicialização do freio DC, 0,0 ~ 100,0s"],
+        ["P6.05", "Corrente do freio DC, 0,0 ~ 100%"],
+        ["P6.06", "Tempo do freio DC, tempo de pré-excitação, 0,0 ~ 100,0s"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," Desliga (NA)"]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
+    },
+
+      "Freio DC Parada": {
+      "link": "",
+      "parametros": [
+        ["P6.11", "Frequência de inicialização do freio DC, 0,0 ~ 10,00 Hz"],
+        ["P6.12", "Tempo de espera da frequência de inicialização do freio DC, 0,0 ~ 100,0s"],
+        ["P6.13", "Corrente do freio DC, 0,0 ~ 100%"],
+        ["P6.14", "Tempo do freio DC, tempo de pré-excitação, 0,0 ~ 100,0s"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," Desliga (NA)"]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
+    },
+
+      "Frequência Atingida (Aciona Saída Relé)": {
+      "link": "",
+      "parametros": [
+        ["P5.02", "3: Frequência FDT1 atingida"],
+        ["P8.19", "Valor Frequência de detecção (FDT1)"]
+      ],
+      "ligacoes": [
+        ["YA + YC", "(NA)"]
+
+      ],
+      "motor": [
+      ],
+      "observacoes": []
+    },
+
+      "Ganho de Torque": {
+      "link": "",
+      "parametros": [
+        ["P3.01", "0.0% ～ 30%"]
+        
+      ],
+      "ligacoes": [
+      
+      ],
+      "motor": [
+      ],
+      "observacoes": []
+    },
+
+      "Limitar Frequência": {
+      "link": "",
+      "parametros": [
+        ["P0.10", "Frequência Máxima"],
+        ["P0.12", "Frequência Limite Superior"],
+        ["P0.14", "Frequência Limite Inferior"]
+        
+      ],
+      "ligacoes": [
+      
+      ],
+      "motor": [
+      ],
+      "observacoes": []
+    },
+
+      "Modo CLP": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "7"],
+        ["PC.00", "1ª Velocidade"],
+        ["PC.01", "2ª Velocidade"],
+        ["PC.02", "3ª Velocidade"],
+        ["PC.16", "0"],
+        ["PC.18", "Tempo de Operação 1ª Velocidade [s]"],
+        ["PC.20", "Tempo de Operação 2ª Velocidade [s]"],
+        ["PC.22", "Tempo de Operação 3ª Velocidade [s]"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal do motor"],
+        ["P1.02", "[V] - Tensão nominal do motor"],
+        ["P1.03", "[A] - Corrente nominal do motor"],
+        ["P1.04", "[Hz] - Frequência nominal do motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal do motor"]
+      ],
+      "observacoes": []
     }
+
+
+
+
   }
 }
