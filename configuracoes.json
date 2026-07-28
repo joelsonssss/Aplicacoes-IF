@@ -1329,7 +1329,7 @@
   "IF30": {
 
         "3 Fios + Potenciômetro Externo": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1gNjFEcWMt-nH535h2M_wK1Ka1LcQZeAh/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "3"],
@@ -1357,7 +1357,7 @@
     },
 
       "3 Fios + Potenciômetro Frontal Local": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1V6PoliL3P8wt5AN3omuwlAk-rxdyXH5-/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "4"],
@@ -1382,7 +1382,7 @@
     },
 
       "3 Fios + Multi Velocidade": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/14QxPwUbxd7yvUxrxzDN1P3m-yCVtYxi-/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "6"],
@@ -1415,7 +1415,7 @@
 
 
       "3 Fios + UP / DOWN": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/176Vx6y6JJq-AwvuuhbCKKecHVscIEHlH/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "1"],
@@ -1639,7 +1639,7 @@
     },
 
       "Modbus": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1j-FpceK3G3yWkEXk85pAqGQRAPOawkYj/view?usp=sharing",
       "parametros": [
         ["P0.02", "2"],
         ["P0.03", "9"],
@@ -1752,7 +1752,7 @@
     },
 
       "Multi Velocidade": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1vKX_Irbr5CbDkOGadvYpi0fgrJaK-sr4/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "6"],
@@ -1782,7 +1782,7 @@
     },
 
       "Potenciômetro externo e terminal": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/19OYfXRL22FZerovBG6qit68yuSnsEwKW/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "3"],
@@ -1820,7 +1820,7 @@
     },
 
       "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1zTqIGnV62nHefDwtLoRseb7Vj7Mp0B72/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "3"],
@@ -1854,7 +1854,7 @@
 
 
       "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/16bBxW2vfTREGQqEOBcsB6HN-MdIFKyHZ/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "6"],
@@ -1939,7 +1939,7 @@
   },
 
       "UP / DOWN": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1evDywWSuj1LsZlDwMZX5yyuIAGYyFWlT/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "1"],
@@ -1966,7 +1966,5 @@
       ],
       "observacoes": []
     }
-
-
   }
 }
