@@ -1661,21 +1661,11 @@
       "observacoes": [
         "1000H: Valor da Frequência Principal",
         "2000H: Escreva 01H (Partida sentido horário)",
-        "2001H: Escreva 02H (Partida sentido anti-horário)",
+        "2000H: Escreva 02H (Partida sentido anti-horário)",
         "2000H: Escreva 06h (Parada rampa desaceleração)"
       ]
     },
 
-    "Reset de fábrica": {
-      "parametros": [
-        ["PP.01", "1"]
-      ],
-      "ligacoes": [
-      ],
-      "observacoes": [
-        "PP.01 = 1 Para resetar o inversor no padrão de fábrica"
-      ]
-    },
 
 
         "Spindle": {
@@ -1720,6 +1710,36 @@
         ["FIC + Potenciômetro","Terminal central pot."], 
         ["+10V + Potenciômetro","Terminal positivo pot."],
         ["GND + Potenciômetro", "Terminal negativo pot."]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal motor"],
+        ["P1.02", "[V] - Tensão nominal motor"],
+        ["P1.03", "[A] - Corrente nominal motor"],
+        ["P1.04", "[Hz] - Frequência nominal motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal motor"]
+      ],
+      "observacoes": []
+    },
+
+      "PID": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "8"],
+        ["PA.00", "0"],
+        ["PA.01", "Valor de setpoint do PID"],
+        ["PA.02", "Fonte de realimentação PID (1: FIC)"],
+        ["PA.03", "Direção ação PID (0: Ação direta / 1: Ação reversa)"],
+        ["PA.05", "Ganho proporcional"],
+        ["PA.06", "Tempo integral"],
+        ["PA.07", "Tempo diferencial"]
+
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["FIC","Jumper J3 (Chave seletora para cima 0 -10V / Chave seletora para baixo 4 a 20mA"],
+        ["X4 + COM", "3ª Velocidade (NA)"] 
       ],
       "motor": [
         ["P1.01", "[KW] - Potência nominal motor"],
@@ -1787,6 +1807,85 @@
       "observacoes": []
     },
 
+
+    "Reset de fábrica": {
+      "parametros": [
+        ["PP.01", "1"]
+      ],
+      "ligacoes": [
+      ],
+      "observacoes": [
+        "PP.01 = 1 Para resetar o inversor no padrão de fábrica"
+      ]
+    },
+
+      "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "3"],
+        ["P0.04", "6"],
+        ["P0.07", "2"],
+        ["P4.03", "18"],
+        ["P4.02", "12"],
+        ["PC.00", "1ª Velocidade [%]"],
+        ["PC.01", "2ª Velocidade [%]"]
+        
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," 2ª Velocidade (NA)"],
+        ["X4 + COM", "Altera frequência X e Y"],
+        ["FIC + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+        
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal motor"],
+        ["P1.02", "[V] - Tensão nominal motor"],
+        ["P1.03", "[A] - Corrente nominal motor"],
+        ["P1.04", "[Hz] - Frequência nominal motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal motor"]
+      ],
+      "observacoes": []
+    },
+
+
+      "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "6"],
+        ["P0.04", "3"],
+        ["P0.07", "2"],
+        ["P4.03", "18"],
+        ["P4.02", "12"],
+        ["PC.00", "1ª Velocidade [%]"],
+        ["PC.01", "2ª Velocidade [%]"]
+        
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," 2ª Velocidade (NA)"],
+        ["X4 + COM", "Altera Frequência X e Y"],
+        ["FIC + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+        
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal motor"],
+        ["P1.02", "[V] - Tensão nominal motor"],
+        ["P1.03", "[A] - Corrente nominal motor"],
+        ["P1.04", "[Hz] - Frequência nominal motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal motor"]
+      ],
+      "observacoes": []
+    },
+
     "Últimos alarme inversor": {
       "link": "",
       "parametros": [
@@ -1837,7 +1936,37 @@
         "44: Sobrecorrente em velocidade constante",
         "45: Reservado"
       ]
-  }
-  
+  },
+
+      "UP / DOWN": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "1"],
+        ["P0.08", "Valor Frequência inicial [Hz]"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.02", "6"],
+        ["P4.03", "7"],
+        ["P4.12", "Hz por pulso"]
+
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM", "+ Velocidade (NA)"],
+        ["X4 + COM", "- Velocidade (NA)"]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal motor"],
+        ["P1.02", "[V] - Tensão nominal motor"],
+        ["P1.03", "[A] - Corrente nominal motor"],
+        ["P1.04", "[Hz] - Frequência nominal motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal motor"]
+      ],
+      "observacoes": []
+    }
+
+
   }
 }
