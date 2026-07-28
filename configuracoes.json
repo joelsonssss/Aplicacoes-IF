@@ -1702,7 +1702,7 @@
       ],
       "observacoes": []
     },
-    
+
         "Parâmetros Básicos": {
       "link": "",
       "parametros": [
@@ -1729,16 +1729,115 @@
         ["P1.05", "[RPM] - Velocidade de rotação nominal motor"]
       ],
       "observacoes": []
-    }
+    },
 
+      "Multi Velocidade": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "6"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.04", "14"],
+        ["P4.03", "13"],
+        ["P4.02", "12"],
+        ["PC.00", "1ª Velocidade"],
+        ["PC.01", "2ª Velocidade"],
+        ["PC.02", "3ª Velocidade"]
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM","2ª Velocidade (NA)"],
+        ["X4 + COM", "3ª Velocidade (NA)"] 
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal motor"],
+        ["P1.02", "[V] - Tensão nominal motor"],
+        ["P1.03", "[A] - Corrente nominal motor"],
+        ["P1.04", "[Hz] - Frequência nominal motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal motor"]
+      ],
+      "observacoes": []
+    },
 
+      "Potenciômetro externo e terminal": {
+      "link": "",
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "3"],
+        ["P4.00", "1"],
+        ["P4.01", "2"]
 
+      ],
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["FIC + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+      ],
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal motor"],
+        ["P1.02", "[V] - Tensão nominal motor"],
+        ["P1.03", "[A] - Corrente nominal motor"],
+        ["P1.04", "[Hz] - Frequência nominal motor"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal motor"]
+      ],
+      "observacoes": []
+    },
 
-
-
-
-
-
-
+    "Últimos alarme inversor": {
+      "link": "",
+      "parametros": [
+        ["P9.14", "1º Alarme"],
+        ["P9.15", "2º Alarme"],
+        ["P9.16", "3º Alarme"]
+      ],
+      "ligacoes": [
+      ],
+      "motor": [
+      ],
+      "observacoes": [
+        "0: Sem falha",
+        "1: Reservado",
+        "2: Sobrecorrente durante a aceleração",
+        "3: Sobrecorrente durante a desaceleração",
+        "5: Sobretensão durante a aceleração",
+        "6: Sobretensão durante a desaceleração",
+        "7: Sobretensão em velocidade constante",
+        "8: Resistor de pré carga sobrecarregado",
+        "9: Subtensão",
+        "10: Sobrecarga no inversor",
+        "11: Sobrecarga no motor",
+        "12: Perda de fase na entrada",
+        "13: Perda de fase na saída",
+        "14: Superaquecimento do módulo",
+        "15: Falha externa",
+        "16: Falha de comunicação",
+        "17: Falha no contator",
+        "18: Falha na detecção de corrente",
+        "19: Falha no auto ajuste",
+        "20: Falha na placa de encoder",
+        "21: Falha na leitura/escrita de parâmetros",
+        "22: Falha de hardware no inversor",
+        "23: Curto circuito à terra",
+        "24: Reservado",
+        "25: Reservado",
+        "26:Tempo acumulativo alcançado",
+        "27: Reservado",
+        "28: Reservado",
+        "29: Tempo energizado acumulativo alcançado",
+        "30: Carga zero",
+        "31: Perda de retorno do PID (em operação)",
+        "40: Tempo de limite rápido excedido",
+        "41: Troca de motor durante o funcionamento",
+        "42: Alto desvio de velocidade",
+        "43: Excesso de velocidade no motor",
+        "44: Sobrecorrente em velocidade constante",
+        "45: Reservado"
+      ]
+  }
+  
   }
 }
