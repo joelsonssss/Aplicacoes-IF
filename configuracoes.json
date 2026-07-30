@@ -8,11 +8,13 @@
         ["P317", "8"],        
         ["P329", "2"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Desliga (NC)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -20,6 +22,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "Botão liga NA, ligado no borne FWD ",
         "Botão desliga NF, ligado no borne S1",
@@ -35,11 +38,13 @@
         ["P317", "8"],
         ["P329", "2"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Desliga (NC)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal motor"],
         ["P210", "[A] Corrente nominal motor"],
@@ -47,6 +52,7 @@
         ["P213", "Numero de polos motor"],
         ["P215", "[Hz] Frequência nominal motor"]
       ],
+
       "observacoes": [
         "Botão liga NA, ligado no borne FWD ",
         "Botão desliga NF, ligado no borne S1",
@@ -54,7 +60,7 @@
       ]
     },
 
-    "3 Fios + mult velocidade": {
+    "3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1J7qAAfz6Q_H1Sd6R6mitnjsvtvoIK5ua/view?usp=sharing",
       "parametros": [
         ["P101", "6"],
@@ -65,12 +71,14 @@
         ["P100", "Primeira Velocidade"],
         ["P503", "Segunda Velocidade"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Desliga (NF)"],
         ["REV + GND", "Reversão (NA) (Opcional)"],
         ["S2 + GND", "2ª Velocidade (NA)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -78,6 +86,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
         "Botão desliga NF, ligado no borne S1",
@@ -96,12 +105,14 @@
         ["P329", "2"],
         ["P330", "Valor em [Hz]"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Desliga (NC)"],
         ["REV + GND", "+ Velocidade (NA)"],
         ["S2 + GND", "- Velocidade (NA)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal motor"],
         ["P210", "[A] Corrente nominal motor"],
@@ -109,6 +120,7 @@
         ["P213", "Numero de polos motor"],
         ["P215", "[Hz] Frequência nominal motor"]
       ],
+
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
         "Botão desliga NF, ligado no borne S1",
@@ -123,28 +135,34 @@
         ["P331", "0: Contato normalmente aberto (NA) / 1: Contato normalmente fechado (NF)"]
         
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "P331 = 0 Contato normalmente aberto (NA)", 
         "P331 = 1 Contato normalmente fechado (NF)"
       ]
     },
 
-    "Configura Saída Relé": {
+    "Configuração Saída Relé ": {
       "link": "",
       "parametros": [
         ["P325", "1: Em operação 3: Alarme"]
         
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "P325 = 0   Inválido", 
         "P325 = 2   Frequência de operação alcançada" ,
@@ -181,11 +199,14 @@
         ["P215", "[Hz] Frequência nominal"]
  
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "P213 = Número de pólos do motor.",
         "2 POLOS = 3600 RPM ",
@@ -195,18 +216,21 @@
       ]
     },
 
-    "Freio DC partida": {
+    "Freio DC Partida": {
       "link": "",
+
       "parametros": [
         ["P102", "1"],
         ["P202", "Hz Frequência inicial de partida"],
         ["P204", "% Tensão de operação freio DC partida"],
         ["P205", "s Tempo de operação freio DC partida"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -214,6 +238,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "P202 define qual Hz vai acionar o Freio DC",
         "P204 define % Tensão de operação do freio DC",
@@ -221,18 +246,21 @@
       ]
     },
 
-    "Freio DC parada": {
+    "Freio DC Parada": {
       "link": "",
+
       "parametros": [
         ["P102", "1"],
         ["P203", "Hz Frequência inicial de partida"],
         ["P206", "% Corrente de operação freio DC partida"],
         ["P207", "s Tempo de operação freio DC partida"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -240,6 +268,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "P203 define qual Hz vai acionar o Freio DC",
         "P206 define % Tensão de operação do freio DC",
@@ -249,13 +278,16 @@
 
     "Ganho de Torque": {
       "link": "",
+
       "parametros": [
         ["P208", "0 a 20% Boost de torque"]
         
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
       ],
       "observacoes": [
@@ -275,11 +307,14 @@
         ["P126", "Limite superior de frequência "]
         
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
       ],
+
       "observacoes": [
       ]
     },
@@ -291,17 +326,19 @@
         ["P102", "1"],
         ["P501", "1"],
         ["P502", "2"],
-        ["P503", "Multivelocidade 1"],
-        ["P504", "Multivelocidade 2"],
-        ["P505", "Multivelocidade 3"],
+        ["P503", "1ª Multivelocidade"],
+        ["P504", "2ª Multivelocidade"],
+        ["P505", "3ª Multivelocidade"],
         ["P518", "Tempo 1 de operação do CLP"],
         ["P519", "Tempo 2 de operação do CLP"],
         ["P520", "Tempo 3 de operação do CLP"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -309,6 +346,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         
       ]
@@ -323,9 +361,11 @@
         ["P701", "3 (8N1 - RTU) | 4 (8E1 - RTU) | 5 (8O1 - RTU)"],
         ["P702", "Endereço MODBUS (ID Modbus)"]
       ],
+
       "ligacoes": [
         ["RS- e RS+", "Ligação cabos modbus"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -333,6 +373,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "P700 = Velocidade de comunicação",
         "P701 = Formato de comunicação",
@@ -345,6 +386,7 @@
 
     "Motor Aquecendo": {
       "link": "",
+
       "parametros": [
         ["P110", "[60Hz]"],
         ["P111", "V/F Ajuste de tensão intermedia"],
@@ -354,11 +396,14 @@
         ["P115", "V/F Frequência de portadora"]
         
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
       ],
+
       "observacoes": [
        "P110 = Hz do motor",
        "P111 = 20",
@@ -371,6 +416,7 @@
 
     "Spindle": {
       "link": "",
+
       "parametros": [
         ["P101", "3"],
         ["P102", "1"],
@@ -378,10 +424,12 @@
         ["P110", "400"],
         ["P215", "400"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -389,6 +437,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
        
       ]
@@ -396,6 +445,7 @@
 
     "Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1hMPdXuQ1a0nGEydPErZf6Dp2vBYtUoGE/view?usp=sharing",
+
       "parametros": [
         ["P101", "6"],
         ["P102", "1"],
@@ -405,12 +455,14 @@
         ["P503", "Segunda velocidade [Hz]"],
         ["P504", "Terceira velocidade [Hz]"]
       ],
+
       "ligacoes": [
         ["FWD + GND", " Liga (NA)"],
         ["REV + GND", "Reversão (NA) (opcional)"],
         ["S1 + GND", "Segunda velocidade (NA)"],
         ["S2 + GND", "Terceira velocidade (NA)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -418,6 +470,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "S1 e S2 Aberto = Primeira velocidade",
         "S1 Fechado = Segunda velocidade",
@@ -427,6 +480,7 @@
 
     "Parâmetros Básicos": {
       "link": "",
+
       "parametros": [
         ["P101", "0 Frequência principal via teclado,/ = 1 Pot. Externo ou entrada analógica tensão ou corrente,/ = 3 Potenciômetro do teclado frontal local"],
         ["P102", "0 Painel de operação do inversor./  = 1 Terminais externos "],
@@ -434,10 +488,12 @@
         ["107", "Tempo de aceleração principal"],
         ["108", "Tempo de desaceleração principal"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga"],
         ["REV + GND", "Reversão"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -445,10 +501,13 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": []
     },
 
     "PID": {
+      "link": "",
+
       "parametros": [
         ["P000", "7"],
         ["P101", "8"],
@@ -484,10 +543,12 @@
 
     "Potenciômetro e Terminal": {
       "link": "https://drive.google.com/file/d/1ip576QtBOV4n56LxeYi5MLsbnESod-Iu/view?usp=sharing",
+
       "parametros": [
         ["P101", "1"],
         ["P102", "1"]
       ],
+
       "ligacoes": [
         ["AVI + Terminal central pot.", "Sinal inversor"],
         ["+10V + Terminal positivo pot.", ""],
@@ -495,6 +556,7 @@
         ["FWD + GND", "Botão liga (NA)"],
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -502,19 +564,24 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": []
     },
 
     "Reset de Fábrica": {
       "link": "",
+
       "parametros": [
         ["P117", "8"]
         
       ],
+
       "ligacoes": [
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "Para resetar o inversor no padrão de fábrica, altere P117 = 8"
       ]
@@ -530,10 +597,11 @@
         ["P315", "6"],
         ["P317", "26"],
         ["P318", "9"],
-        ["P100", "Primeira velocidade [Hz]"],
-        ["P503", "Segunda velocidade [Hz]"]
+        ["P100", "1ª Velocidade [Hz]"],
+        ["P503", "2ª Velocidade [Hz]"]
 
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Alterna frequência X e Y"],
@@ -543,6 +611,7 @@
         ["GND + Terminal Negativo do potenciômetro", ""],
         ["Chave Seletora para baixo em V", ""]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -550,6 +619,7 @@
         ["P213", "[Numero] de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "Fechar FWD + GND liga o inversor (partida do motor).",
         "Fechar S1 + GND altera a referência de velocidade do potenciômetro para o modo Multispeed.",
@@ -560,6 +630,7 @@
 
     "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
       "link": "https://drive.google.com/file/d/1-cpZw0r7jGxrv7owZdfh9dLvP8FFKDPR/view?usp=sharing",
+
       "parametros": [
         ["P101", "6"],
         ["P102", "1"],
@@ -568,10 +639,11 @@
         ["P315", "6"],
         ["P317", "26"],
         ["P318", "9"],
-        ["P100", "Primeira velocidade [Hz]"],
-        ["P503", "Segunda velocidade [Hz]"]
+        ["P100", "1ª Velocidade [Hz]"],
+        ["P503", "2ª Velocidade [Hz]"]
 
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Alterna frequência X e Y"],
@@ -581,6 +653,7 @@
         ["GND + Terminal negativo do potenciômetro", ""],
         ["Chave seletora para baixo em V", ""]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -588,6 +661,7 @@
         ["P213", "Numero de polos motor"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "Fechar FWD + GND liga o inversor (partida do motor);",
         "Fechar S1 + GND altera a referência modo Multispeed para potenciômetro;",
@@ -596,7 +670,7 @@
       ]
     },
 
-    "Últimos Alarme Inversor": {
+    "Últimos Alarmes Inversor": {
       "link": "",
       "parametros": [
         ["P010", "Alarme 1"],
@@ -605,10 +679,13 @@
         ["P013", "Alarme 4"]
      
       ],
+
       "ligacoes": [
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "0000: Sem falhas",
         "0002: Sobrecorrente durante a aceleração",
@@ -641,11 +718,13 @@
         ["P317", "15"],
         ["P330", "Valor em [Hz]"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "+ Velocidade (NA)"],
         ["S2 + GND", "- Velocidade (NA)"]
       ],
+
       "motor": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -653,6 +732,7 @@
         ["P213", "Numero de polos"],
         ["P215", "[Hz] Frequência nominal"]
       ],
+
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
         "Botão + Velocidade NA, ligado no borne S1",
@@ -674,6 +754,7 @@
         ["P5.02", "3"],
         ["P5.11", "2"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Desliga (NC)"],
@@ -683,6 +764,7 @@
         ["GND + Potenciômetro", "Terminal negativo pot."]
 
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -690,6 +772,7 @@
         ["P2.04", "[Hz] - Frequência nominal"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [
         "Botão liga NA, ligado no borne",
         "Botão desliga NF, ligado no borne S1",
@@ -708,6 +791,7 @@
         ["P5.02", "3"],
         ["P5.11", "2"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Desliga (NC)"],
@@ -717,6 +801,7 @@
         ["GND + Potenciômetro", "Terminal negativo pot."]
 
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -747,6 +832,7 @@
         ["PC.02", "Velocidade 3"]
 
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["S1 + GND", "Desliga (NF)"],
@@ -754,6 +840,7 @@
         ["S3 + GND", "Troca Velocidade 3 (NA)"]
 
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -780,6 +867,7 @@
         ["P5.11", "2"],
         ["P5.12", "Hz por pulso"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA)"],
@@ -787,6 +875,7 @@
         ["S2 + GND", "+ Velocidade (NA)"],
         ["S3 + GND", "- Velocidade (NA)"]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -794,6 +883,7 @@
         ["P2.04", "[Hz] - Frequência nominal "],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [
         "Botão liga NA, ligado no borne FWD",
         "Botão desliga NF, ligado no borne S1",
@@ -807,11 +897,14 @@
       "parametros": [
         ["P6.02", "1: Inversor funcionando 2: Falha"]
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "P6.02 = 0 Sem função",
         "P6.02 = 1 Inversor funcionando",
@@ -861,9 +954,11 @@
       "link": "",
       "parametros": [
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -872,6 +967,7 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
 
       ],
+
       "observacoes": [
         
       ]
@@ -885,9 +981,11 @@
         ["P1.05", "Corrente freio DC, 0,0 ~ 100%"],
         ["P1.06", "Tempo freio DC, tempo de pré-excitação, 0,0 ~ 100,0s "]
       ],
+
       "ligacoes": [
         
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal do motor"],
         ["P2.02", "[V] - Tensão nominal do motor"],
@@ -895,6 +993,7 @@
         ["P2.04", "[Hz] - Frequência nominal do motor"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal do motor"]
       ],
+
       "observacoes": [
         "P1.03 define qual Hz vai acionar o Freio DC",
         "P1.04 Tempo de espera de atuação do freio DC",
@@ -912,10 +1011,12 @@
         ["P1.13", "Corrente parada freio DC, 0 ~ 100%"],
         ["P1.14", "Tempo parada freio DC, 0 ~ 100,0s"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -923,6 +1024,7 @@
         ["P2.04", "[Hz] - Frequência nominal"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [
         "P1.11 Define qual Hz vai acionar o Freio DC",
         "P1.12 Tempo de espera de atuação do freio DC",
@@ -937,11 +1039,14 @@
         ["P6.02", "3"],
         ["P8.19", "Valor limite"]  
       ],
+
       "ligacoes": [
         ["RA + RC"]
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "P8.19 Valor para fechamento saída relé"
       ]
@@ -952,10 +1057,13 @@
       "parametros": [
         ["P4.01", "0,1 ~ 30,0%"]
       ],
+
       "ligacoes": [
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "P8.19 Valor em [Hz] para fechamento saída relé"
       ]
@@ -968,10 +1076,13 @@
         ["P0.14", "Frequência limite inferior"],
         ["P0.16", "Frequência de limite inferior"]
       ],
+
       "ligacoes": [
       ],
+
       "motor": [
       ],
+
       "observacoes": [
       ]
     },
@@ -989,10 +1100,12 @@
         ["PC.20", "Tempo de Operação 2ª Velocidade [s]"],
         ["PC.22", "Tempo de Operação 3ª Velocidade [s]"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Botão liga (NA)"],
         ["REV + GND", "Botão reversão (NA) (Opcional)"]       
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1001,10 +1114,12 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
         
       ],
+
       "observacoes": [
        
       ]
     },
+    
     "Modbus": {
       "link": "https://drive.google.com/file/d/1jre4TFNmLZ2rXKdp-7KeMkyA3ZofY52R/view?usp=sharing",
       "parametros": [
@@ -1014,9 +1129,11 @@
         ["PD.01", "3 (8N1 - RTU)"],
         ["PD.02", "Endereço MODBUS (ID Modbus)"]
       ],
+
       "ligacoes": [
         ["(RS- e RS+)", "Ligação cabo Modbus"]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1024,6 +1141,7 @@
         ["P2.04", "[Hz] - Frequência nominal"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [
         "PD.00 = Velocidade de comunicação",
         "PD.01 = Formato de comunicação",
@@ -1033,19 +1151,23 @@
         "Enviando comando parada (escreva 06H) em 2000H:"
       ]
     },
+
     "Spindle": {
       "link": "",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "2"],
         ["P0.12", "320"],
         ["P0.14", "320"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
        
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1054,10 +1176,12 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"] 
        
       ],
+
       "observacoes": [
       
       ]
     },
+
     "Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1m5pEE3neKetRjkqKmltix7Hl7Ym7WZgz/view?usp=sharing",
       "parametros": [
@@ -1070,12 +1194,14 @@
         ["PC.01", "Segunda velocidade S1 + GND"],
         ["PC.02", "Terceira velocidade S2 + GND"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga"],
         ["REV + GND", "Reversão"],
         ["S1 + GND", "Segunda velocidade"],
         ["S2 + GND", "Terceira velocidade"]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1083,12 +1209,14 @@
         ["P2.04", "[Hz] - Frequência nominal"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [
       ]
     },
 
     "Parâmetros Básicos": {
       "link": "",
+
       "parametros": [
         ["P0.02", "0 Painel de operação do inversor / = 1 Terminais externos"],
         ["P0.04", "1  Teclado / = 2 Potenciômetro ou 0 A 10V"],
@@ -1097,6 +1225,7 @@
         ["P0.12", "Frequência máxima"],
         ["P0.14", "Frequência Limite superior"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga"],
         ["REV + GND", "Reversão"],
@@ -1104,6 +1233,7 @@
         ["+10V + Potenciômetro","Terminal positivo pot."],
         ["GND + Potenciômetro", "Terminal negativo pot."]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1112,6 +1242,7 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
 
       ],
+
       "observacoes": []
     },
 
@@ -1128,11 +1259,13 @@
         ["PA.07", "Tempo diferencial"]
         
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga"],
         ["REV + GND", "Reversão"],
         ["AVI + GND", "Chave seletora para baixo 0-10V ou Chave seletora para cima 4-20mA "]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1140,6 +1273,7 @@
         ["P2.04", "[Hz] - Frequência nominal"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": []
     },
 
@@ -1149,6 +1283,7 @@
         ["P0.02", "1"],
         ["P0.04", "2"]
       ],
+
       "ligacoes": [
         ["FIV", "Terminal central potenciômetro"],
         ["+10V", "Terminal positivo potenciômetro"],
@@ -1156,6 +1291,7 @@
         ["FWD + GND", "Botão liga (NA)"],
         ["REV + GND", "Botão reversão (NA) (Opcional)"]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1163,14 +1299,17 @@
         ["P2.04", "[Hz] - Frequência nominal"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": []
     },
 
     "Reset de Fábrica": {
       "link": "",
+
       "parametros": [
         ["PP.01", "1"]
       ],
+
       "ligacoes": [
       ],
       "motor": [
@@ -1192,6 +1331,7 @@
         ["PC.00", "Primeira velocidade EM %"],
         ["PC.01", "Segunda velocidade EM %"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"],
@@ -1201,6 +1341,7 @@
         ["+10V", "Terminal positivo potenciômetro"],
         ["GND", "Terminal negativo potenciômetro"]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1215,6 +1356,7 @@
 
     "Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
       "link": "https://drive.google.com/file/d/1PTqjn7qQA24E1DZ6lWehqxpIQIWherAU/view?usp=sharing",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "2"],
@@ -1225,6 +1367,7 @@
         ["PC.00", "Primeira velocidade EM %"],
         ["PC.01", "Segunda velocidade EM %"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"],
@@ -1234,6 +1377,7 @@
         ["+10V", "Terminal positivo potenciômetro"],
         ["GND", "Terminal negativo potenciômetro"]
       ],
+
       "motor": [
         ["P2.01", "KW - Potência nominal motor"],
         ["P2.02", "V - Tensão nominal motor"],
@@ -1241,6 +1385,7 @@
         ["P2.04", "Hz - Frequência nominal motor"],
         ["P2.05", "RPM - Velocidade de rotação nominal motor"]
       ],
+
       "observacoes": [
         "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S2"
       ]
@@ -1248,15 +1393,19 @@
 
     "Últimos Alarmes Inversor": {
       "link": "",
+
       "parametros": [
         ["P9.14", "1ª Alarme "],
         ["P9.15", "2ª Alarme"],
         ["P9.16", "3ª Alarme"]
       ],
+
       "ligacoes": [
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "1: Proteção do Inversor",
         "2: Sobrecorrente na aceleração",
@@ -1298,6 +1447,7 @@
 
     "Up / Down": {
       "link": "https://drive.google.com/file/d/1W6c_l_39kGd8t4lDuvIuzYYFWnDUcD6b/view?usp=sharing",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "1"],
@@ -1309,12 +1459,14 @@
         ["P5.03", "7"],
         ["P5.12", "PULSO EM Hz"]
       ],
+
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA) (Opcional)"],
         ["S1 + GND", " + Velocidade)"],
         ["S2 + GND", "- Velocidade)"]
       ],
+
       "motor": [
         ["P2.01", "[KW] - Potência nominal"],
         ["P2.02", "[V] - Tensão nominal"],
@@ -1322,6 +1474,7 @@
         ["P2.04", "[Hz] - Frequência nominal"],
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [ 
       ]
     }
@@ -1329,8 +1482,9 @@
 
   "IF30": {
 
-        "3 Fios + Potenciômetro Externo": {
+      "3 Fios + Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1gNjFEcWMt-nH535h2M_wK1Ka1LcQZeAh/view?usp=drive_link",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "3"],
@@ -1339,6 +1493,7 @@
         ["P4.02", "3"],
         ["P4.11", "2"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão"],
@@ -1347,6 +1502,7 @@
         ["+10V + Potenciômetro","Terminal positivo pot."],
         ["GND + Potenciômetro", "Terminal negativo pot."]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal "],
@@ -1354,11 +1510,13 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": []
     },
 
       "3 Fios + Potenciômetro Frontal Local": {
       "link": "https://drive.google.com/file/d/1V6PoliL3P8wt5AN3omuwlAk-rxdyXH5-/view?usp=drive_link",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "4"],
@@ -1367,11 +1525,13 @@
         ["P4.02", "3"],
         ["P4.11", "2"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
         ["X3 + COM"," Desliga (NF)"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1379,11 +1539,15 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/14QxPwUbxd7yvUxrxzDN1P3m-yCVtYxi-/view?usp=sharing",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "6"],
@@ -1397,6 +1561,7 @@
         ["PC.01", "2ª Velocidade"],
         ["PC.02", "3ª Velocidade"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
@@ -1404,6 +1569,7 @@
         ["X4 + COM", "2ª Velocidade (NA)"],
         ["X5 + COM", "3ª Velocidade (NA)"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1411,12 +1577,15 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
-    },
 
+      "observacoes": [
+
+      ]
+    },
 
       "3 Fios + UP / DOWN": {
       "link": "https://drive.google.com/file/d/176Vx6y6JJq-AwvuuhbCKKecHVscIEHlH/view?usp=drive_link",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "1"],
@@ -1431,6 +1600,7 @@
         ["PC.01", "2ª Velocidade"],
         ["PC.02", "3ª Velocidade"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
@@ -1438,6 +1608,7 @@
         ["X4 + COM", "+ Velocidade (NA)"],
         ["X5 + COM", "- Velocidade (NA)"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1445,18 +1616,25 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+      
+      "observacoes": [
+
+      ]
     },
 
       "Relé de Saída (YA / YB / YC)": {
       "link": "",
+
       "parametros": [
         ["P5.02", "1: Inversor funcionando 2: Falha"]
       ],
+
       "ligacoes": [
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "P5.02 = 0 Sem Função",
         "P5.02 = 1 Sem Função",
@@ -1505,11 +1683,13 @@
 
     "Configuração Motor": {
       "link": "",
+
       "parametros": [
       ],
+
       "ligacoes": [
-        
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1517,6 +1697,7 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [
       ]
     },
@@ -1529,11 +1710,13 @@
         ["P6.05", "Corrente do freio DC, 0,0 ~ 100%"],
         ["P6.06", "Tempo do freio DC, tempo de pré-excitação, 0,0 ~ 100,0s"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
         ["X3 + COM"," Desliga (NA)"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1541,22 +1724,28 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "Freio DC Parada": {
       "link": "",
+
       "parametros": [
         ["P6.11", "Frequência de inicialização do freio DC, 0,0 ~ 10,00 Hz"],
         ["P6.12", "Tempo de espera da frequência de inicialização do freio DC, 0,0 ~ 100,0s"],
         ["P6.13", "Corrente do freio DC, 0,0 ~ 100%"],
         ["P6.14", "Tempo do freio DC, tempo de pré-excitação, 0,0 ~ 100,0s"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
         ["X3 + COM"," Desliga (NA)"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1564,15 +1753,20 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "Frequência Atingida (Aciona Saída Relé)": {
       "link": "",
+
       "parametros": [
         ["P5.02", "3: Frequência FDT1 atingida"],
         ["P8.19", "Valor Frequência de detecção (FDT1)"]
       ],
+
       "ligacoes": [
         ["YA + YC", "(NA)"]
 
@@ -1584,36 +1778,45 @@
 
       "Ganho de Torque": {
       "link": "",
+
       "parametros": [
-        ["P3.01", "0.0% ～ 30%"]
-        
+        ["P3.01", "0.0% ～ 30%"] 
       ],
+
       "ligacoes": [
-      
       ],
+
       "motor": [
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "Limitar Frequência": {
       "link": "",
+
       "parametros": [
         ["P0.10", "Frequência Máxima"],
         ["P0.12", "Frequência Limite Superior"],
         ["P0.14", "Frequência Limite Inferior"]
-        
       ],
+
       "ligacoes": [
-      
       ],
+
       "motor": [
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "Modo CLP": {
       "link": "",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "7"],
@@ -1625,10 +1828,12 @@
         ["PC.20", "Tempo de Operação 2ª Velocidade [s]"],
         ["PC.22", "Tempo de Operação 3ª Velocidade [s]"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1636,22 +1841,25 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": []
     },
 
       "Modbus": {
       "link": "https://drive.google.com/file/d/1j-FpceK3G3yWkEXk85pAqGQRAPOawkYj/view?usp=sharing",
+
       "parametros": [
         ["P0.02", "2"],
         ["P0.03", "9"],
         ["PD.00", "5 [9600]"],
         ["PD.01", "3 [8,N,1]"],
         ["PD.02", "Endereço MODBUS"]
-        
       ],
+
       "ligacoes": [
         ["RS+ e RS-", "Ligação cabo MODBUS"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1659,6 +1867,7 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+
       "observacoes": [
         "1000H: Valor da Frequência Principal",
         "2000H: Escreva 01H (Partida sentido horário)",
@@ -1666,8 +1875,6 @@
         "2000H: Escreva 06h (Parada rampa desaceleração)"
       ]
     },
-
-
 
         "Spindle": {
       "link": "",
@@ -1677,6 +1884,7 @@
         ["P0.10", "400"],
         ["P0.12", "400"]
       ],
+
       "ligacoes": [
         ["X1 + GND", "Liga"],
         ["X2 + GND", "Reversão"],
@@ -1684,6 +1892,7 @@
         ["+10V + Potenciômetro","Terminal positivo pot."],
         ["GND + Potenciômetro", "Terminal negativo pot."]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1691,11 +1900,15 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
         "Parâmetros Básicos": {
       "link": "",
+
       "parametros": [
         ["P0.02", "0 Painel de operação do inversor / = 1 Terminais externos"],
         ["P0.03", ""],
@@ -1705,6 +1918,7 @@
         ["P0.17", "Tempo de aceleração"],
         ["P0.18", "Tempo de desaceleração"]
       ],
+
       "ligacoes": [
         ["X1 + GND", "Liga"],
         ["X2 + GND", "Reversão"],
@@ -1712,6 +1926,7 @@
         ["+10V + Potenciômetro","Terminal positivo pot."],
         ["GND + Potenciômetro", "Terminal negativo pot."]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1719,7 +1934,10 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "PID": {
@@ -1736,12 +1954,14 @@
         ["PA.07", "Tempo diferencial"]
 
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
         ["FIC","Jumper J3 (Chave seletora para cima 0 -10V / Chave seletora para baixo 4 a 20mA"],
         ["X4 + COM", "3ª Velocidade (NA)"] 
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1749,11 +1969,15 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1vKX_Irbr5CbDkOGadvYpi0fgrJaK-sr4/view?usp=sharing",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "6"],
@@ -1764,12 +1988,14 @@
         ["PC.01", "2ª Velocidade"],
         ["PC.02", "3ª Velocidade"]
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
         ["X3 + COM","2ª Velocidade (NA)"],
         ["X4 + COM", "3ª Velocidade (NA)"] 
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1777,7 +2003,10 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+
+      "observacoes": [
+
+      ]
     },
 
       "Potenciômetro externo e terminal": {
@@ -1789,6 +2018,7 @@
         ["P4.01", "2"]
 
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
@@ -1796,6 +2026,7 @@
         ["+10V + Potenciômetro","Terminal positivo pot."],
         ["GND + Potenciômetro", "Terminal negativo pot."]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1803,9 +2034,11 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
-    },
 
+      "observacoes": [
+
+      ]
+    },
 
     "Reset de fábrica": {
       "parametros": [
@@ -1820,6 +2053,7 @@
 
       "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1zTqIGnV62nHefDwtLoRseb7Vj7Mp0B72/view?usp=drive_link",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "3"],
@@ -1848,12 +2082,14 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
-    },
+      "observacoes": [
 
+      ]
+    },
 
       "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
       "link": "https://drive.google.com/file/d/16bBxW2vfTREGQqEOBcsB6HN-MdIFKyHZ/view?usp=drive_link",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "6"],
@@ -1865,6 +2101,7 @@
         ["PC.01", "2ª Velocidade [%]"]
         
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
@@ -1875,6 +2112,7 @@
         ["GND + Potenciômetro", "Terminal negativo pot."]
         
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1882,20 +2120,26 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
-      "observacoes": []
+      "observacoes": [
+
+      ]
     },
 
     "Últimos alarme inversor": {
       "link": "",
+
       "parametros": [
         ["P9.14", "1º Alarme"],
         ["P9.15", "2º Alarme"],
         ["P9.16", "3º Alarme"]
       ],
+
       "ligacoes": [
       ],
+
       "motor": [
       ],
+
       "observacoes": [
         "0: Sem falha",
         "1: Reservado",
@@ -1939,6 +2183,7 @@
 
       "UP / DOWN": {
       "link": "https://drive.google.com/file/d/1evDywWSuj1LsZlDwMZX5yyuIAGYyFWlT/view?usp=drive_link",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "1"],
@@ -1950,12 +2195,14 @@
         ["P4.12", "Hz por pulso"]
 
       ],
+
       "ligacoes": [
         ["X1 + COM", "Liga (NA)"],
         ["X2 + COM", "Reversão (NA)"],
         ["X3 + COM", "+ Velocidade (NA)"],
         ["X4 + COM", "- Velocidade (NA)"]
       ],
+
       "motor": [
         ["P1.01", "[KW] - Potência nominal"],
         ["P1.02", "[V] - Tensão nominal"],
@@ -1963,6 +2210,7 @@
         ["P1.04", "[Hz] - Frequência nominal"],
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
+      
       "observacoes": []
     }
   }
