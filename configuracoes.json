@@ -94,7 +94,7 @@
       ]
     },
 
-    "3 Fios + Up | Down": {
+    "3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1oays2ngpKYikS3-CKDU0blhJjVGbNuFN/view?usp=sharing",
       "parametros": [
         ["P101", "4"],
@@ -816,7 +816,7 @@
       ]
     },
 
-    "3 Fios + Mult Velocidade": {
+    "3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1HutMlpjAz7TZUM4D8RR-gos_L7hn1_BS/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
@@ -853,7 +853,7 @@
       ]
     },
 
-    "3 Fios + Up | Down": {
+    "3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1rXP0_pxt_OjTuJ_M47yIj3swQ2CVg-N0/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -892,7 +892,7 @@
       ]
     },
 
-    "Rele de saída (RA-RB-RC)": {
+    "Rele de Saída (RA-RB-RC)": {
       "link": "",
       "parametros": [
         ["P6.02", "1: Inversor funcionando 2: Falha"]
@@ -1122,6 +1122,7 @@
     
     "Modbus": {
       "link": "https://drive.google.com/file/d/1jre4TFNmLZ2rXKdp-7KeMkyA3ZofY52R/view?usp=sharing",
+
       "parametros": [
         ["P0.02", "2"],
         ["P0.04", "9"],
@@ -2009,7 +2010,7 @@
       ]
     },
 
-      "Potenciômetro externo e terminal": {
+      "Potenciômetro Externo e Terminal": {
       "link": "https://drive.google.com/file/d/19OYfXRL22FZerovBG6qit68yuSnsEwKW/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -2040,7 +2041,7 @@
       ]
     },
 
-    "Reset de fábrica": {
+    "Reset de Fábrica": {
       "parametros": [
         ["PP.01", "1"]
       ],
@@ -2125,7 +2126,7 @@
       ]
     },
 
-    "Últimos alarme inversor": {
+    "Últimos Alarme Inversor": {
       "link": "",
 
       "parametros": [
