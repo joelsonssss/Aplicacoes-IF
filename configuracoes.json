@@ -1,6 +1,6 @@
 {
   "IF10": {
-    "3 Fios e Potenciômetro Externo": {
+    "  3 Fios e Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1ZcZcYHtw-z4Qb7etojYXHsgjbi6KAGIO/view?usp=sharing",
       "parametros": [
         ["P101", "1"],
@@ -30,7 +30,7 @@
       ]
     },
 
-    "3 Fios e Potenciômeto Frontal Local": {
+    " 3 Fios e Potenciômeto Frontal Local": {
       "link": "https://drive.google.com/file/d/14NstN72PCyCKWxqAQUveGMKWOCTU-ghI/view?usp=sharing",
       "parametros": [
         ["P101", "3"],
@@ -60,7 +60,7 @@
       ]
     },
 
-    "3 Fios + Multi Velocidade": {
+    " 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1J7qAAfz6Q_H1Sd6R6mitnjsvtvoIK5ua/view?usp=sharing",
       "parametros": [
         ["P101", "6"],
@@ -94,7 +94,7 @@
       ]
     },
 
-    "3 Fios + Up / Down": {
+    " 3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1oays2ngpKYikS3-CKDU0blhJjVGbNuFN/view?usp=sharing",
       "parametros": [
         ["P101", "4"],
@@ -129,7 +129,7 @@
       ]
     },
 
-    "Alterar Saída Relé NF / NA": {
+    " Alterar Saída Relé NF / NA": {
       "link": "",
       "parametros": [
         ["P331", "0: Contato normalmente aberto (NA) / 1: Contato normalmente fechado (NF)"]
@@ -149,7 +149,7 @@
       ]
     },
 
-    "Configuração Saída Relé ": {
+    " Configuração Saída Relé ": {
       "link": "",
       "parametros": [
         ["P325", "1: Em operação 3: Alarme"]
@@ -189,7 +189,7 @@
       ]
     },
 
-    "Configuração Motor": {
+    " Configuração Motor": {
       "link": "",
       "parametros": [
         ["P209", "[V] Tensão nominal"],
@@ -216,7 +216,7 @@
       ]
     },
 
-    "Freio DC Partida": {
+    " Freio DC Partida": {
       "link": "",
 
       "parametros": [
@@ -246,7 +246,7 @@
       ]
     },
 
-    "Freio DC Parada": {
+    " Freio DC Parada": {
       "link": "",
 
       "parametros": [
@@ -276,7 +276,7 @@
       ]
     },
 
-    "Ganho de Torque": {
+    " Ganho de Torque": {
       "link": "",
 
       "parametros": [
@@ -299,7 +299,7 @@
       ]
     },
 
-    "Limitar Hz": {
+    " Limitar Hz": {
       "link": "",
       "parametros": [
         ["P105", "Frequência máxima de saída "],
@@ -319,7 +319,7 @@
       ]
     },
 
-    "Modo CLP": {
+    " Modo CLP": {
       "link": "",
       "parametros": [
         ["P101", "7"],
@@ -352,7 +352,7 @@
       ]
     },
 
-    "Modbus": {
+    " Modbus": {
       "link": "https://drive.google.com/file/d/1IdrKWJSRjloRZ1N8Qd89AdiAAzEcOtyO/view?usp=sharing",
       "parametros": [
         ["P101", "5"],
@@ -384,7 +384,7 @@
       ]
     },
 
-    "Motor Aquecendo": {
+    " Motor Aquecendo": {
       "link": "",
 
       "parametros": [
@@ -414,7 +414,7 @@
       ]
     },
 
-    "Spindle": {
+    " Spindle": {
       "link": "",
 
       "parametros": [
@@ -443,7 +443,7 @@
       ]
     },
 
-    "Multi Velocidade": {
+    " Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1hMPdXuQ1a0nGEydPErZf6Dp2vBYtUoGE/view?usp=sharing",
 
       "parametros": [
@@ -478,7 +478,7 @@
       ]
     },
 
-    "Parâmetros Básicos": {
+    " Parâmetros Básicos": {
       "link": "",
 
       "parametros": [
@@ -505,7 +505,7 @@
       "observacoes": []
     },
 
-    "PID": {
+    " PID": {
       "link": "",
 
       "parametros": [
@@ -541,7 +541,7 @@
       "observacoes": []
     },
 
-    "Potenciômetro e Terminal": {
+    " Potenciômetro e Terminal": {
       "link": "https://drive.google.com/file/d/1ip576QtBOV4n56LxeYi5MLsbnESod-Iu/view?usp=sharing",
 
       "parametros": [
@@ -568,7 +568,7 @@
       "observacoes": []
     },
 
-    "Reset de Fábrica": {
+    " Reset de Fábrica": {
       "link": "",
 
       "parametros": [
@@ -587,7 +587,7 @@
       ]
   },
 
-    "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
+    " Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1jPYHF8D25pd2KawuisSjJQVBQUckFwOp/view?usp=sharing",
       "parametros": [
         ["P101", "1"],
@@ -628,7 +628,7 @@
       ]
     },
 
-    "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
+    " Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
       "link": "https://drive.google.com/file/d/1-cpZw0r7jGxrv7owZdfh9dLvP8FFKDPR/view?usp=sharing",
 
       "parametros": [
@@ -670,7 +670,7 @@
       ]
     },
 
-    "Últimos Alarmes Inversor": {
+    " Últimos Alarmes Inversor": {
       "link": "",
       "parametros": [
         ["P010", "Alarme 1"],
@@ -709,7 +709,7 @@
       ]
   },
 
-    "UP / DOWN ": {
+    " UP / DOWN ": {
       "link": "https://drive.google.com/file/d/1m4YSvhgUze3oeZBCriVXsXwNI4qECej4/view?usp=sharing",
       "parametros": [
         ["P101", "4"],
@@ -743,7 +743,7 @@
 
   },
   "IF20": {
-    "3 Fios + Potenciômetro Externo": {
+    " 3 Fios + Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1oiecj_7vau5vQlwYtUwO7-YDjwu1zG2h/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -780,7 +780,7 @@
       ]
     },
 
-    "3 Fios e Potenciômeto Frontal Local": {
+    " 3 Fios e Potenciômeto Frontal Local": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -816,7 +816,7 @@
       ]
     },
 
-    "3 Fios + Multi Velocidade": {
+    " 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1HutMlpjAz7TZUM4D8RR-gos_L7hn1_BS/view?usp=drive_link",
       "parametros": [
         ["P0.02", "1"],
@@ -853,7 +853,7 @@
       ]
     },
 
-    "3 Fios + Up / Down": {
+    " 3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1rXP0_pxt_OjTuJ_M47yIj3swQ2CVg-N0/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -892,7 +892,7 @@
       ]
     },
 
-    "Rele de Saída (RA-RB-RC)": {
+    " Rele de Saída (RA-RB-RC)": {
       "link": "",
       "parametros": [
         ["P6.02", "1: Inversor funcionando 2: Falha"]
@@ -950,7 +950,7 @@
       ]
     },
 
-    "Configuração Motor": {
+    " Configuração Motor": {
       "link": "",
       "parametros": [
       ],
@@ -973,7 +973,7 @@
       ]
     },
 
-    "Freio DC Partida": {
+    " Freio DC Partida": {
       "link": "",
       "parametros": [
         ["P1.03", "Frequência inicialização, 0,0 ~ 10,00 Hz"],
@@ -1002,7 +1002,7 @@
       ]
     },
 
-    "Freio DC Parada": {
+    " Freio DC Parada": {
       "link": "",
       "parametros": [
         ["P102", "1"],
@@ -1033,7 +1033,7 @@
       ]
     },
 
-    "Frequência Atingida Saída Relé": {
+    " Frequência Atingida Saída Relé": {
       "link": "",
       "parametros": [
         ["P6.02", "3"],
@@ -1052,7 +1052,7 @@
       ]
     },
 
-    "Ganho de Torque": {
+    " Ganho de Torque": {
       "link": "",
       "parametros": [
         ["P4.01", "0,1 ~ 30,0%"]
@@ -1069,7 +1069,7 @@
       ]
     },
 
-        "Limitar Frequência": {
+    " Limitar Frequência": {
       "link": "",
       "parametros": [
         ["P0.12", "50,00 ~ 320,00Hz."],
@@ -1087,7 +1087,7 @@
       ]
     },
 
-    "Modo CLP": {
+    " Modo CLP": {
       "link": "",
       "parametros": [
         ["P0.02", "1"],
@@ -1120,7 +1120,7 @@
       ]
     },
     
-    "Modbus": {
+    " Modbus": {
       "link": "https://drive.google.com/file/d/1jre4TFNmLZ2rXKdp-7KeMkyA3ZofY52R/view?usp=sharing",
 
       "parametros": [
@@ -1131,7 +1131,7 @@
         ["PD.02", "Endereço MODBUS (ID Modbus)"]
       ],
 
-      "ligacoes": [
+      " ligacoes": [
         ["(RS- e RS+)", "Ligação cabo Modbus"]
       ],
 
@@ -1153,7 +1153,7 @@
       ]
     },
 
-    "Spindle": {
+    " Spindle": {
       "link": "",
 
       "parametros": [
@@ -1183,7 +1183,7 @@
       ]
     },
 
-    "Multi Velocidade": {
+    " Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1m5pEE3neKetRjkqKmltix7Hl7Ym7WZgz/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -1215,7 +1215,7 @@
       ]
     },
 
-    "Parâmetros Básicos": {
+    " Parâmetros Básicos": {
       "link": "",
 
       "parametros": [
@@ -1247,7 +1247,7 @@
       "observacoes": []
     },
 
-    "PID": {
+    " PID": {
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "2 analógica tensão (FIV) / 3  analógica corrente (FIC)"],
@@ -1278,7 +1278,7 @@
       "observacoes": []
     },
 
-    "Potenciômetro e Terminal": {
+    " Potenciômetro e Terminal": {
       "link": "https://drive.google.com/file/d/1zN5JKs1sz_pN9qdff3CG2LvRPa5zJbIU/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -1304,7 +1304,7 @@
       "observacoes": []
     },
 
-    "Reset de Fábrica": {
+    " Reset de Fábrica": {
       "link": "",
 
       "parametros": [
@@ -1320,7 +1320,7 @@
       ]
     },
 
-    "Troca Velocidade X Potenciômetro ou 0-10V, Y Multispeed": {
+    " Troca Velocidade X Potenciômetro ou 0-10V, Y Multispeed": {
       "link": "https://drive.google.com/file/d/1g_Q7gvk656rSXCL7cGkpnbX-HE36qdys/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -1355,7 +1355,7 @@
       ]
     },
 
-    "Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
+    " Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
       "link": "https://drive.google.com/file/d/1PTqjn7qQA24E1DZ6lWehqxpIQIWherAU/view?usp=sharing",
 
       "parametros": [
@@ -1392,7 +1392,7 @@
       ]
     },
 
-    "Últimos Alarmes Inversor": {
+    " Últimos Alarmes Inversor": {
       "link": "",
 
       "parametros": [
@@ -1446,7 +1446,7 @@
       ]
     },
 
-    "Up / Down": {
+    " Up / Down": {
       "link": "https://drive.google.com/file/d/1W6c_l_39kGd8t4lDuvIuzYYFWnDUcD6b/view?usp=sharing",
 
       "parametros": [
@@ -1483,7 +1483,7 @@
 
   "IF30": {
 
-      "3 Fios + Potenciômetro Externo": {
+    " 3 Fios + Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1gNjFEcWMt-nH535h2M_wK1Ka1LcQZeAh/view?usp=drive_link",
 
       "parametros": [
@@ -1515,7 +1515,7 @@
       "observacoes": []
     },
 
-      "3 Fios + Potenciômetro Frontal Local": {
+    " 3 Fios + Potenciômetro Frontal Local": {
       "link": "https://drive.google.com/file/d/1V6PoliL3P8wt5AN3omuwlAk-rxdyXH5-/view?usp=drive_link",
 
       "parametros": [
@@ -1546,7 +1546,7 @@
       ]
     },
 
-      "3 Fios + Multi Velocidade": {
+    " 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/14QxPwUbxd7yvUxrxzDN1P3m-yCVtYxi-/view?usp=sharing",
 
       "parametros": [
@@ -1584,7 +1584,7 @@
       ]
     },
 
-      "3 Fios + UP / DOWN": {
+    " 3 Fios + UP / DOWN": {
       "link": "https://drive.google.com/file/d/176Vx6y6JJq-AwvuuhbCKKecHVscIEHlH/view?usp=drive_link",
 
       "parametros": [
@@ -1623,7 +1623,7 @@
       ]
     },
 
-      "Relé de Saída (YA / YB / YC)": {
+    " Relé de Saída (YA / YB / YC)": {
       "link": "",
 
       "parametros": [
@@ -1682,7 +1682,7 @@
       ]
     },
 
-    "Configuração Motor": {
+    " Configuração Motor": {
       "link": "",
 
       "parametros": [
@@ -1703,8 +1703,9 @@
       ]
     },
 
-      "Freio DC Partida": {
+    " Freio DC Partida": {
       "link": "",
+
       "parametros": [
         ["P6.03", "Frequência de inicialização do freio DC, 0,0 ~ 10,00 Hz"],
         ["P6.04", "Tempo de espera da frequência de inicialização do freio DC, 0,0 ~ 100,0s"],
@@ -1731,7 +1732,7 @@
       ]
     },
 
-      "Freio DC Parada": {
+    " Freio DC Parada": {
       "link": "",
 
       "parametros": [
@@ -1760,7 +1761,7 @@
       ]
     },
 
-      "Frequência Atingida (Aciona Saída Relé)": {
+    " Frequência Atingida (Aciona Saída Relé)": {
       "link": "",
 
       "parametros": [
@@ -1777,7 +1778,7 @@
       "observacoes": []
     },
 
-      "Ganho de Torque": {
+    " Ganho de Torque": {
       "link": "",
 
       "parametros": [
@@ -1795,7 +1796,7 @@
       ]
     },
 
-      "Limitar Frequência": {
+    " Limitar Frequência": {
       "link": "",
 
       "parametros": [
@@ -1815,7 +1816,7 @@
       ]
     },
 
-      "Modo CLP": {
+    " Modo CLP": {
       "link": "",
 
       "parametros": [
@@ -1846,7 +1847,7 @@
       "observacoes": []
     },
 
-      "Modbus": {
+    " Modbus": {
       "link": "https://drive.google.com/file/d/1j-FpceK3G3yWkEXk85pAqGQRAPOawkYj/view?usp=sharing",
 
       "parametros": [
@@ -1877,8 +1878,9 @@
       ]
     },
 
-        "Spindle": {
+    " Spindle": {
       "link": "",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "3"],
@@ -1907,7 +1909,7 @@
       ]
     },
 
-        "Parâmetros Básicos": {
+    " Parâmetros Básicos": {
       "link": "",
 
       "parametros": [
@@ -1941,8 +1943,9 @@
       ]
     },
 
-      "PID": {
+    "PID": {
       "link": "",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "8"],
@@ -1976,7 +1979,7 @@
       ]
     },
 
-      "Multi Velocidade": {
+    " Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1vKX_Irbr5CbDkOGadvYpi0fgrJaK-sr4/view?usp=sharing",
 
       "parametros": [
@@ -2010,7 +2013,7 @@
       ]
     },
 
-      "Potenciômetro Externo e Terminal": {
+    " Potenciômetro Externo e Terminal": {
       "link": "https://drive.google.com/file/d/19OYfXRL22FZerovBG6qit68yuSnsEwKW/view?usp=sharing",
       "parametros": [
         ["P0.02", "1"],
@@ -2041,7 +2044,7 @@
       ]
     },
 
-    "Reset de Fábrica": {
+    " Reset de Fábrica": {
       "parametros": [
         ["PP.01", "1"]
       ],
@@ -2052,7 +2055,7 @@
       ]
     },
 
-      "Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
+    " Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1zTqIGnV62nHefDwtLoRseb7Vj7Mp0B72/view?usp=drive_link",
 
       "parametros": [
@@ -2088,7 +2091,7 @@
       ]
     },
 
-      "Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
+    " Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
       "link": "https://drive.google.com/file/d/16bBxW2vfTREGQqEOBcsB6HN-MdIFKyHZ/view?usp=drive_link",
 
       "parametros": [
@@ -2126,7 +2129,7 @@
       ]
     },
 
-    "Últimos Alarme Inversor": {
+    " Últimos Alarme Inversor": {
       "link": "",
 
       "parametros": [
@@ -2182,7 +2185,7 @@
       ]
   },
 
-      "UP / DOWN": {
+    "UP / DOWN": {
       "link": "https://drive.google.com/file/d/1evDywWSuj1LsZlDwMZX5yyuIAGYyFWlT/view?usp=drive_link",
 
       "parametros": [
