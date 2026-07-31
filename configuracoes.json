@@ -24,9 +24,9 @@
       ],
 
       "observacoes": [
-        "Botão liga NA, ligado no borne FWD ",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
+        "FWD fechado → motor liga",
+        "Pulso em S1 → motor para",
+        "Potenciômetro externo → ajusta velocidade"
       ]
     },
 
@@ -54,9 +54,12 @@
       ],
 
       "observacoes": [
-        "Botão liga NA, ligado no borne FWD ",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
+        "Aplicação do Inversor ",
+        "Ao fechar o borne FWD, o inversor aciona o motor no sentido direto.",
+        "Parada (STOP):",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "Controle de velocidade:",
+        "A rotação é ajustada por um potenciômetro externo, que fornece a referência analógica de frequência ao inversor."
       ]
     },
 
@@ -1250,7 +1253,7 @@
     " PID": {
       "parametros": [
         ["P0.02", "1"],
-        ["P0.04", "2 analógica tensão (FIV) / 3  analógica corrente (FIC)"],
+        ["P0.04", "8"],
         ["PA.00", "0"],
         ["PA.01", "Valor de setup do PID"],
         ["PA.02", "0 = tensão FIV / 1 = corrente FIC. Fonte do retorno do PID"],
