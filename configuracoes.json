@@ -24,7 +24,7 @@
       ],
 
       "observacoes": [
-        "Ao fechar o borne FWD, o inversor aciona o motor no sentido direto.",
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
         "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
         "A rotação é ajustada por um potenciômetro externo do inversor."
       ]
@@ -54,7 +54,7 @@
       ],
 
       "observacoes": [
-        "Ao fechar o borne FWD, o inversor aciona o motor no sentido direto.",
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
         "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
         "A rotação é ajustada por um potenciômetro frontal do inversor."
       ]
@@ -88,9 +88,11 @@
       ],
 
       "observacoes": [
-        "Botão liga NA, ligado no borne FWD",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão troca de modo NA, ligado no borne S2"
+	    "Ao fechar o borne FWD, o inversor aciona o motor.",
+	    "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+	    "Acionando o borne REV, o inversor recebe comando de aumento de frequência.",
+	    "Acionando o borne S2, o inversor recebe comando de redução da velocidade/frequência.",
+	    "O parâmetro P330 define o valor do pulso de frequência." 
       ]
     },
 
@@ -774,9 +776,10 @@
       ],
 
       "observacoes": [
-        "Botão liga NA, ligado no borne",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
+
       ]
     },
 
@@ -810,9 +813,10 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
       "observacoes": [
-        "Botão liga NA, ligado no borne ",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão reversão NA, ligado no borne REV (Opcional)"
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro frontal do inversor."
+
       ]
     },
 
@@ -849,7 +853,11 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
       "observacoes": [
-        
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+	      "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+	      "Sem acionar S2 e S3, a 1ª velocidade é controlada pelo parâmetro PC.00.",
+	      "Acionando S2, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando S3, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
       ]
     },
 
@@ -1512,7 +1520,11 @@
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
 
-      "observacoes": []
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
+      ]
     },
 
     " 3 Fios + Potenciômetro Frontal Local": {
@@ -1542,6 +1554,9 @@
       ],
 
       "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro frontal do inversor."
 
       ]
     },
@@ -1580,6 +1595,11 @@
       ],
 
       "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+	      "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
+	      "Sem acionar X4 e X5, a 1ª velocidade é controlada pelo parâmetro PC.00.",
+	      "Acionando X4, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando X5, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
 
       ]
     },
