@@ -88,11 +88,10 @@
       ],
 
       "observacoes": [
-	    "Ao fechar o borne FWD, o inversor aciona o motor.",
-	    "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-	    "Acionando o borne REV, o inversor recebe comando de aumento de frequência.",
-	    "Acionando o borne S2, o inversor recebe comando de redução da velocidade/frequência.",
-	    "O parâmetro P330 define o valor do pulso de frequência." 
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+	      "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+	      "Sem acionar o S2, a 1ª velocidade é controlada pelo parâmetro P100.",
+	      "Acionando o S2, a 2ª velocidade passa a ser controlada pelo parâmetro P503."
       ]
     },
 
@@ -124,10 +123,12 @@
       ],
 
       "observacoes": [
-        "Botão liga NA, ligado no borne FWD",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão + Velocidade NA, ligado no borne REV",
-        "Botão - Velocidade NA, ligado no borne S2"
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+	      "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+	      "Acionando o borne REV, o inversor recebe comando de aumento de velocidade/frequência.",
+	      "Acionando o borne S2, o inversor recebe comando de redução da velocidade/frequência.",
+	      "O parâmetro P330 define o valor do pulso de frequência."        
+
       ]
     },
 
@@ -893,10 +894,12 @@
       ],
 
       "observacoes": [
-        "Botão liga NA, ligado no borne FWD",
-        "Botão desliga NF, ligado no borne S1",
-        "Botão + Velocidade NA, ligado no borne S2",
-        "Botão - Velocidade NA, ligado no borne S3"
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+	      "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+	      "Acionando o borne S2, o inversor recebe comando de aumento de velocidade/frequência.",
+	      "Acionando o borne S3, o inversor recebe comando de redução da velocidade/frequência.",
+	      "O parâmetro P5.12 define o valor do pulso de frequência."        
+
       ]
     },
 
@@ -1639,6 +1642,12 @@
       ],
       
       "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+	      "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
+	      "Acionando o borne X4, o inversor recebe comando de aumento de velocidade/frequência.",
+	      "Acionando o borne X5, o inversor recebe comando de redução da velocidade/frequência.",
+	      "O parâmetro P4.12 define o valor do pulso de frequência."        
+
 
       ]
     },
