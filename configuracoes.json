@@ -24,9 +24,9 @@
       ],
 
       "observacoes": [
-        "FWD fechado → motor liga",
-        "Pulso em S1 → motor para",
-        "Potenciômetro externo → ajusta velocidade"
+        "Ao fechar o borne FWD, o inversor aciona o motor no sentido direto.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
       ]
     },
 
@@ -54,12 +54,9 @@
       ],
 
       "observacoes": [
-        "Aplicação do Inversor ",
         "Ao fechar o borne FWD, o inversor aciona o motor no sentido direto.",
-        "Parada (STOP):",
         "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-        "Controle de velocidade:",
-        "A rotação é ajustada por um potenciômetro externo, que fornece a referência analógica de frequência ao inversor."
+        "A rotação é ajustada por um potenciômetro frontal do inversor."
       ]
     },
 
