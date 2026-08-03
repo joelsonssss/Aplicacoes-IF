@@ -1,8 +1,9 @@
 {
-  "manual_url": "www.metaltex.com.br",
+
   "IF10": {
     "  3 Fios e Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1ZcZcYHtw-z4Qb7etojYXHsgjbi6KAGIO/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
         ["P101", "1"],
         ["P102", "1"],
@@ -33,6 +34,7 @@
 
     " 3 Fios e Potenciômeto Frontal Local": {
       "link": "https://drive.google.com/file/d/14NstN72PCyCKWxqAQUveGMKWOCTU-ghI/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
         ["P101", "3"],
         ["P102", "1"],
@@ -63,6 +65,7 @@
 
     " 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1J7qAAfz6Q_H1Sd6R6mitnjsvtvoIK5ua/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
         ["P101", "6"],
         ["P102", "1"],
@@ -98,6 +101,8 @@
 
     " 3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1oays2ngpKYikS3-CKDU0blhJjVGbNuFN/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+
       "parametros": [
         ["P101", "4"],
         ["P102", "1"],
@@ -135,6 +140,8 @@
 
     " Alterar Saída Relé NF / NA": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+
       "parametros": [
         ["P331", "0: Contato normalmente aberto (NA) / 1: Contato normalmente fechado (NF)"]
         
@@ -155,6 +162,7 @@
 
     " Configuração Saída Relé ": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
         ["P325", "1: Em operação 3: Alarme"]
         
@@ -195,6 +203,7 @@
 
     " Configuração Motor": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
       "parametros": [
         ["P209", "[V] Tensão nominal"],
         ["P210", "[A] Corrente nominal"],
@@ -222,6 +231,7 @@
 
     " Freio DC Partida": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P102", "1"],
@@ -253,7 +263,7 @@
 
     " Freio DC Parada": {
       "link": "",
-
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
       "parametros": [
         ["P102", "1"],
         ["P203", "Hz Frequência inicial de partida"],
@@ -284,6 +294,7 @@
 
     " Ganho de Torque": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P208", "0 a 20% Boost de torque"]
@@ -307,6 +318,7 @@
 
     " Limitar Hz": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
       "parametros": [
         ["P105", "Frequência máxima de saída "],
         ["P106", "Frequência mínima de saída "],
@@ -327,6 +339,8 @@
 
     " Modo CLP": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+
       "parametros": [
         ["P101", "7"],
         ["P102", "1"],
@@ -363,6 +377,8 @@
 
     " Modbus": {
       "link": "https://drive.google.com/file/d/1IdrKWJSRjloRZ1N8Qd89AdiAAzEcOtyO/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
+
       "parametros": [
         ["P101", "5"],
         ["P102", "2"],
@@ -395,6 +411,7 @@
 
     " Motor Aquecendo": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P110", "[60Hz]"],
@@ -415,14 +432,14 @@
 
       "observacoes": [
         "A função geral dos parâmetros P110 a P114 é customizar a curva V/F (Tensão/Frequência) do inversor para garantir que o motor elétrico receba a quantidade exata de torque e potência em qualquer faixa de velocidade, evitando sobreaquecimento ou perda de força.",
-        "Complementando essa dinâmica, o parâmetro P115 ajusta a frequência de chaveamento interna, equilibrando a redução do ruído acústico do motor com a eficiência térmica do próprio inversor.",
-        "Ou",
-        "Os parâmetros P110 a P114 moldam a curva de força (V/F) do motor para garantir torque correto em qualquer velocidade. O P115 ajusta o chaveamento interno, equilibrando o ruído do motor e o aquecimento do inversor."
+        "Complementando essa dinâmica, o parâmetro P115 ajusta a frequência de chaveamento interna, equilibrando a redução do ruído acústico do motor com a eficiência térmica do próprio inversor."
+        
       ]
     },
 
     " Spindle": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P101", "3"],
@@ -455,6 +472,7 @@
 
     " Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1hMPdXuQ1a0nGEydPErZf6Dp2vBYtUoGE/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P101", "6"],
@@ -493,6 +511,7 @@
 
     " Parâmetros Básicos": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P101", "0 Frequência principal via teclado,/ = 1 Pot. Externo ou entrada analógica tensão ou corrente,/ = 3 Potenciômetro do teclado frontal local"],
@@ -520,6 +539,7 @@
 
     " PID": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P000", "7"],
@@ -561,6 +581,7 @@
 
     " Potenciômetro e Terminal": {
       "link": "https://drive.google.com/file/d/1ip576QtBOV4n56LxeYi5MLsbnESod-Iu/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P101", "1"],
@@ -592,6 +613,7 @@
 
     " Reset de Fábrica": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P117", "8"]
@@ -611,6 +633,8 @@
 
     " Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1jPYHF8D25pd2KawuisSjJQVBQUckFwOp/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+
       "parametros": [
         ["P101", "1"],
         ["P102", "1"],
@@ -654,6 +678,7 @@
 
     " Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
       "link": "https://drive.google.com/file/d/1-cpZw0r7jGxrv7owZdfh9dLvP8FFKDPR/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
       "parametros": [
         ["P101", "6"],
@@ -699,6 +724,8 @@
 
     " Últimos Alarmes Inversor": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+      
       "parametros": [
         ["P010", "Alarme 1"],
         ["P011", "Alarme 2"],
@@ -738,6 +765,8 @@
 
     " UP / DOWN ": {
       "link": "https://drive.google.com/file/d/1m4YSvhgUze3oeZBCriVXsXwNI4qECej4/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+
       "parametros": [
         ["P101", "4"],
         ["P102", "1"],
@@ -772,6 +801,8 @@
   "IF20": {
     " 3 Fios + Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1oiecj_7vau5vQlwYtUwO7-YDjwu1zG2h/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "2"],
@@ -802,17 +833,16 @@
 
       "observacoes": [
         "Ao fechar o borne FWD, o inversor aciona o motor.",
-        "Para desligar, é necessário abrir o borne FWD.",
-        "Acionando o borne S1, o inversor recebe comando de aumento de frequência.",
-        "Acionando o borne S2, o inversor recebe comando de redução de frequência.",
-        "O parâmetro P330 define o valor do pulso de frequência."
-
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
 
       ]
     },
 
     " 3 Fios e Potenciômeto Frontal Local": {
-      "link": "",
+      "link": "https://drive.google.com/file/d/1lzo5ptKIuBH6jbodGQYo3ZIl6OS7yPZC/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "4"],
@@ -843,13 +873,15 @@
       "observacoes": [
         "Ao fechar o borne FWD, o inversor aciona o motor.",
         "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-        "A rotação é ajustada por um potenciômetro frontal do inversor."
+        "A rotação é ajustada pelo potenciômetro frontal do inversor."
 
       ]
     },
 
     " 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1HutMlpjAz7TZUM4D8RR-gos_L7hn1_BS/view?usp=drive_link",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "6"],
@@ -882,15 +914,18 @@
       ],
       "observacoes": [
         "Ao fechar o borne FWD, o inversor aciona o motor.",
-	      "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-	      "Sem acionar S2 e S3, a 1ª velocidade é controlada pelo parâmetro PC.00.",
-	      "Acionando S2, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
-        "Acionando S3, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "Sem acionar o S2 e o S3, a 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o S2, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando o S3, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
+
       ]
     },
 
     " 3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1rXP0_pxt_OjTuJ_M47yIj3swQ2CVg-N0/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "1"],
@@ -922,16 +957,18 @@
 
       "observacoes": [
         "Ao fechar o borne FWD, o inversor aciona o motor.",
-	      "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-	      "Acionando o borne S2, o inversor recebe comando de aumento de velocidade/frequência.",
-	      "Acionando o borne S3, o inversor recebe comando de redução da velocidade/frequência.",
-	      "O parâmetro P5.12 define o valor do pulso de frequência."        
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "Acionando o borne S2, o inversor recebe comando de aumento de frequência.",
+        "Acionando o borne S3, o inversor recebe comando de redução da frequência.",
+        "O parâmetro P5.12 define o valor do pulso de frequência."
 
       ]
     },
 
     " Rele de Saída (RA-RB-RC)": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P6.02", "1: Inversor funcionando 2: Falha"]
       ],
@@ -990,6 +1027,8 @@
 
     " Configuração Motor": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
       ],
 
@@ -1013,6 +1052,8 @@
 
     " Freio DC Partida": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P1.03", "Frequência inicialização, 0,0 ~ 10,00 Hz"],
         ["P1.04", "Tempo espera frequência inicializção, 0,0 ~ 100,0s"],
@@ -1033,15 +1074,18 @@
       ],
 
       "observacoes": [
-        "P1.03 define qual Hz vai acionar o Freio DC",
-        "P1.04 Tempo de espera de atuação do freio DC",
-        "P1.05 define % corrente do freio DC",
-        "P1.06 define Segundos do tempo de atuação do freio DC"
+        "P1.03 (Frequência de inicialização): Define a frequência inicial (0,00 a 10,00 Hz) na qual o motor começa a girar assim que o comando de partida é acionado.",
+        "P1.04 (Tempo de espera da frequência de inicialização): Determina o tempo (0,0 a 100,0 segundos) em que o inversor permanece mantendo essa frequência inicial antes de iniciar a rampa de aceleração.",
+        "P1.05 (Corrente do freio DC / Corrente de pré-excitação): Ajusta a porcentagem (0 a 100%) de corrente contínua aplicada ao motor.",
+        "P1.06 (Tempo do freio DC / Tempo de pré-excitação): Define o tempo (0,0 a 100,0 segundos) de duração dessa injeção de corrente. Se ajustado em 0, a função é desativada."
+
       ]
     },
 
     " Freio DC Parada": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019   ",
+
       "parametros": [
         ["P102", "1"],
         ["P1.11", "Freq. Ini. Freio DC, 0 ~ freq. máx. (Hz)"],
@@ -1064,15 +1108,18 @@
       ],
 
       "observacoes": [
-        "P1.11 Define qual Hz vai acionar o Freio DC",
-        "P1.12 Tempo de espera de atuação do freio DC",
-        "P1.13 define % corrente do freio DC",
-        "P1.14 define Segundos do tempo de atuação do freio DC"
+        "P1.11 (Frequência inicial de parada do freio CC): Define o limite de frequência em Hz em que o inversor desliga a rampa normal e ativa o freio CC durante a desaceleração para a parada.",
+        "P1.12 (Tempo de espera de parada do freio CC): Determina o tempo de pausa (em segundos) entre o fim da desaceleração por rampa e o início efetivo da aplicação da corrente de frenagem CC.",
+        "P1.13 (Corrente de parada do freio CC): Ajusta a intensidade da corrente contínua injetada no motor (em porcentagem da corrente nominal) para segurar o eixo parado.",
+        "P1.14 (Tempo de parada do freio CC): Define por quanto tempo (em segundos) a corrente contínua permanecerá aplicada ao motor. Se ajustado em 0, essa função fica desabilitada."
+
       ]
     },
 
     " Frequência Atingida Saída Relé": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P6.02", "3"],
         ["P8.19", "Valor limite"]  
@@ -1086,12 +1133,14 @@
       ],
 
       "observacoes": [
-        "P8.19 Valor para fechamento saída relé"
+        "O Parâmetro P8.19 define o nível de detecção de frequência (FDT1). Ele serve para sinalizar quando a frequência de saída do inversor atinge um valor específico configurado pelo usuário."
       ]
     },
 
     " Ganho de Torque": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P4.01", "0,1 ~ 30,0%"]
       ],
@@ -1103,12 +1152,18 @@
       ],
 
       "observacoes": [
-        "P8.19 Valor em [Hz] para fechamento saída relé"
+        "Ajuste Automático (P4.01 = 0): O inversor calcula e aplica o torque necessário com base nos dados nominais do motor.",
+        "Aumento do Valor (P4.01 > 0): Usado para cargas pesadas na partida onde o motor demonstra falta de força ou travamento inicial.",
+        "Valores Excessivos: Ajustar um valor muito alto pode causar superaquecimento do motor e disparo por sobrecorrente no inversor.",
+        "Cargas Leves: Recomenda-se manter o valor baixo caso a aplicação não exija alto torque de partida."
+
       ]
     },
 
     " Limitar Frequência": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.12", "50,00 ~ 320,00Hz."],
         ["P0.14", "Frequência limite inferior"],
@@ -1127,6 +1182,8 @@
 
     " Modo CLP": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019 ",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "7"],
@@ -1154,12 +1211,17 @@
       ],
 
       "observacoes": [
-       
+        "O modo CLP serve para executar ciclos automáticos de velocidades e tempos programados, dispensando o uso de um CLP externo para tarefas sequenciais simples.",
+        "Permite configurar várias multi-velocidades (frequências em Hz) e os respectivos tempos de operação em cada uma delas.",
+        "O motor acelera, mantém a velocidade por um tempo determinado, muda para outra velocidade ou para, conforme o perfil programado.",
+        "Pode rodar o ciclo uma vez e parar, repetir o processo de forma infinita ou manter a última frequência ao fim do ciclo."
+          
       ]
     },
     
     " Modbus": {
       "link": "https://drive.google.com/file/d/1jre4TFNmLZ2rXKdp-7KeMkyA3ZofY52R/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019   ",
 
       "parametros": [
         ["P0.02", "2"],
@@ -1193,6 +1255,7 @@
 
     " Spindle": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1217,12 +1280,17 @@
       ],
 
       "observacoes": [
-      
+        "Atenção à faixa de frequência estendida de até 320Hz, ao tipo de controle escalar V/F e às rampas de aceleração adequadas para evitar falhas de sobrecorrente.",
+        "Não ligar o equipamento com a configuração padrão de fábrica, pois pode queimar o spindle devido à incompatibilidade de tensão em baixas frequências.",
+        "Configuração de Frequência (Crítico): Altere a Frequência Máxima e a Frequência Base do Motor de 60Hz (padrão de fábrica) para 320Hz (frequência típica de spindles de 24.000 RPM). Se ligar em 60Hz, o motor queimará por excesso de tensão.",
+        "Ajuste de Rampas e Limites: Configure o tempo de aceleração e desaceleração entre 5 e 10 segundos para evitar erros de sobrecorrente ou sobretensão."
       ]
     },
 
     " Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1m5pEE3neKetRjkqKmltix7Hl7Ym7WZgz/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019   ",
+      
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "6"],
@@ -1250,11 +1318,17 @@
       ],
 
       "observacoes": [
+        "Ao manter o borne FWD fechado, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Sem acionar o S1 e o S2, a 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o S1, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando o S2, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
       ]
     },
 
     " Parâmetros Básicos": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
       "parametros": [
         ["P0.02", "0 Painel de operação do inversor / = 1 Terminais externos"],
@@ -1282,10 +1356,15 @@
 
       ],
 
-      "observacoes": []
+      "observacoes": [
+
+      ]
     },
 
     " PID": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "8"],
@@ -1313,11 +1392,18 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
 
-      "observacoes": []
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "A função PID (Grupo de Parâmetros PA) ajusta automaticamente a rotação do motor para manter o setpoint de pressão, vazão ou temperatura. Ela ajusta a velocidade do motor em malha fechada sem precisar de um CLP externo.",
+        "A entrada analógica FIV (Tensão) ou FIC (Corrente) é utilizada para feedback do sistema."
+      ]
     },
 
     " Potenciômetro e Terminal": {
       "link": "https://drive.google.com/file/d/1zN5JKs1sz_pN9qdff3CG2LvRPa5zJbIU/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.04", "2"]
@@ -1339,11 +1425,16 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
 
-      "observacoes": []
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
+      ]
     },
 
     " Reset de Fábrica": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
       "parametros": [
         ["PP.01", "1"]
@@ -1354,12 +1445,14 @@
       "motor": [
       ],
       "observacoes": [
-        "PP.01 = 1 Para resetar o inversor no padrão de fábrica"
+        "Restauração padrão: Retorna todos os parâmetros aos valores originais de fábrica, preservando as configurações do motor e dados acumulativos."
       ]
     },
 
     " Troca Velocidade X Potenciômetro ou 0-10V, Y Multispeed": {
       "link": "https://drive.google.com/file/d/1g_Q7gvk656rSXCL7cGkpnbX-HE36qdys/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "2"],
@@ -1389,12 +1482,19 @@
         ["P2.05", "[RPM] - Velocidade de rotação nominal"]
       ],
       "observacoes": [
-        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S2"
+        "Ao manter o borne FWD fechado, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Acionando o S1, a referência da velocidade é alterada do Potenciômetro para o modo Multispeed.",
+        "Sem acionar o S2, 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o S2, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01."
+
       ]
     },
 
     " Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
       "link": "https://drive.google.com/file/d/1PTqjn7qQA24E1DZ6lWehqxpIQIWherAU/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1426,12 +1526,19 @@
       ],
 
       "observacoes": [
-        "PARA TROCA MODO DE VELOCIDADE TEM ACIONAR S2"
+        "Ao manter o borne FWD fechado, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Sem acionar o S2, 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o S2, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando o S1, a referência da velocidade é alterada do modo Multispeed para o Potenciômetro.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
       ]
+      
     },
 
     " Últimos Alarmes Inversor": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
       "parametros": [
         ["P9.14", "1ª Alarme "],
@@ -1486,6 +1593,7 @@
 
     " Up / Down": {
       "link": "https://drive.google.com/file/d/1W6c_l_39kGd8t4lDuvIuzYYFWnDUcD6b/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1515,6 +1623,12 @@
       ],
 
       "observacoes": [ 
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Acionando o borne S1, o inversor recebe comando de aumento de frequência.",
+        "Acionando o borne S2, o inversor recebe comando de redução de frequência.",
+        "O parâmetro P5.12 define o valor do pulso de frequência."
+
       ]
     }
   },
@@ -1523,6 +1637,7 @@
 
     " 3 Fios + Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1gNjFEcWMt-nH535h2M_wK1Ka1LcQZeAh/view?usp=drive_link",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1559,6 +1674,7 @@
 
     " 3 Fios + Potenciômetro Frontal Local": {
       "link": "https://drive.google.com/file/d/1V6PoliL3P8wt5AN3omuwlAk-rxdyXH5-/view?usp=drive_link",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1593,6 +1709,7 @@
 
     " 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/14QxPwUbxd7yvUxrxzDN1P3m-yCVtYxi-/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1636,6 +1753,7 @@
 
     " 3 Fios + UP / DOWN": {
       "link": "https://drive.google.com/file/d/176Vx6y6JJq-AwvuuhbCKKecHVscIEHlH/view?usp=drive_link",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1681,6 +1799,7 @@
 
     " Relé de Saída (YA / YB / YC)": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P5.02", "1: Inversor funcionando 2: Falha"]
@@ -1740,6 +1859,7 @@
 
     " Configuração Motor": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
       ],
@@ -1761,6 +1881,7 @@
 
     " Freio DC Partida": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P6.03", "Frequência de inicialização do freio DC, 0,0 ~ 10,00 Hz"],
@@ -1790,6 +1911,7 @@
 
     " Freio DC Parada": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P6.11", "Frequência de inicialização do freio DC, 0,0 ~ 10,00 Hz"],
@@ -1819,6 +1941,7 @@
 
     " Frequência Atingida (Aciona Saída Relé)": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P5.02", "3: Frequência FDT1 atingida"],
@@ -1836,6 +1959,7 @@
 
     " Ganho de Torque": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P3.01", "0.0% ～ 30%"] 
@@ -1854,6 +1978,7 @@
 
     " Limitar Frequência": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.10", "Frequência Máxima"],
@@ -1874,6 +1999,7 @@
 
     " Modo CLP": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",  
 
       "parametros": [
         ["P0.02", "1"],
@@ -1905,6 +2031,7 @@
 
     " Modbus": {
       "link": "https://drive.google.com/file/d/1j-FpceK3G3yWkEXk85pAqGQRAPOawkYj/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "2"],
@@ -1936,6 +2063,7 @@
 
     " Spindle": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -1967,7 +2095,8 @@
 
     " Parâmetros Básicos": {
       "link": "",
-
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+      
       "parametros": [
         ["P0.02", "0 Painel de operação do inversor / = 1 Terminais externos"],
         ["P0.03", ""],
@@ -2001,6 +2130,7 @@
 
     "PID": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -2037,6 +2167,7 @@
 
     " Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1vKX_Irbr5CbDkOGadvYpi0fgrJaK-sr4/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",  
 
       "parametros": [
         ["P0.02", "1"],
@@ -2071,6 +2202,8 @@
 
     " Potenciômetro Externo e Terminal": {
       "link": "https://drive.google.com/file/d/19OYfXRL22FZerovBG6qit68yuSnsEwKW/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
       "parametros": [
         ["P0.02", "1"],
         ["P0.03", "3"],
@@ -2101,6 +2234,9 @@
     },
 
     " Reset de Fábrica": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
       "parametros": [
         ["PP.01", "1"]
       ],
@@ -2113,6 +2249,7 @@
 
     " Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1zTqIGnV62nHefDwtLoRseb7Vj7Mp0B72/view?usp=drive_link",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -2149,6 +2286,7 @@
 
     " Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
       "link": "https://drive.google.com/file/d/16bBxW2vfTREGQqEOBcsB6HN-MdIFKyHZ/view?usp=drive_link",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
@@ -2187,6 +2325,7 @@
 
     " Últimos Alarme Inversor": {
       "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",  
 
       "parametros": [
         ["P9.14", "1º Alarme"],
@@ -2243,6 +2382,7 @@
 
     "UP / DOWN": {
       "link": "https://drive.google.com/file/d/1evDywWSuj1LsZlDwMZX5yyuIAGYyFWlT/view?usp=drive_link",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
       "parametros": [
         ["P0.02", "1"],
