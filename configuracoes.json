@@ -1054,6 +1054,30 @@
       ]
     },
 
+    "Resistor de Frenagem": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P4.10", "0"],
+        ["P9.03", "0"]
+       
+      ],
+
+      "ligacoes": [
+        ""
+      ],
+
+      "motor": [],
+
+      "observacoes": [
+        "Em inversores de 0,75 a 1,5 kW: ligar o resistor nos terminais PR e +",
+        "Em inversores acima de 1,5 kW (com módulo integrado): ligar nos terminais B1 e B2",
+        "Para modelos que exigem módulo externo: conectar o módulo aos terminais – e +/B1"
+        
+      ]
+    },
+
     " Configuração Motor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
@@ -1917,6 +1941,30 @@
       ]
     },
 
+
+    "Resistor de Frenagem": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P3.10", "0"],
+        ["P9.03", "0"]
+       
+      ],
+
+      "ligacoes": [
+        ""
+      ],
+
+      "motor": [],
+
+      "observacoes": [
+        "Para conexões do resistor de frenagem, ( * +/B1 e B2 * para faixa de aplicação 1 a 10 CV - 220V  e 1 a 20 CV - 380/480V)",
+        "Para conexões do resistor de frenagem, ( * + e PB * para faixa de aplicação 15 a 40 CV - 220V  e 25 a 50 CV - 380/480V)"
+        
+      ]
+    },
+
     " Configuração Motor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
@@ -1938,7 +1986,6 @@
       "observacoes": [
       ]
     },
-
 
     " Elevador de Carga - Modo Escalar": {
       "link": "https://drive.google.com/file/d/14KKIQy_hUzIGma9XI6jjAMoXeWcT48tS/view?usp=sharing",
