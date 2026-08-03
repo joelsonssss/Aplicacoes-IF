@@ -1,4 +1,5 @@
 {
+  "manual_url": "www.metaltex.com.br",
   "IF10": {
     "  3 Fios e Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1ZcZcYHtw-z4Qb7etojYXHsgjbi6KAGIO/view?usp=sharing",
@@ -124,10 +125,10 @@
 
       "observacoes": [
         "Ao fechar o borne FWD, o inversor aciona o motor.",
-	      "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-	      "Acionando o borne REV, o inversor recebe comando de aumento de velocidade/frequência.",
-	      "Acionando o borne S2, o inversor recebe comando de redução da velocidade/frequência.",
-	      "O parâmetro P330 define o valor do pulso de frequência."        
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "Acionando o borne REV, o inversor recebe comando de aumento de frequência.",
+        "Acionando o borne S2, o inversor recebe comando de redução da velocidade/frequência.",
+        "O parâmetro P330 define o valor do pulso de frequência."
 
       ]
     },
@@ -147,8 +148,8 @@
       ],
 
       "observacoes": [
-        "P331 = 0 Contato normalmente aberto (NA)", 
-        "P331 = 1 Contato normalmente fechado (NF)"
+        "Ao manter o Parâmetro P331 = 0, a Saída Relé fica com o contato normalmente aberto (NA).", 
+        "Ao colocar o Parâmetro P331 = 1, a Saída Relé fica com o contato normalmente fechado (NF)"
       ]
     },
 
@@ -243,9 +244,10 @@
       ],
 
       "observacoes": [
-        "P202 define qual Hz vai acionar o Freio DC",
-        "P204 define % Tensão de operação do freio DC",
-        "P205 define Segundos o tempo de atuação do freio DC"
+        "P204 (Força do freio): Define o (aperto) do freio elétrico. Comece com valores baixos e aumente aos poucos até que o motor fique totalmente parado e firme antes de ligar.",
+        "P205 (Tempo do freio): Define por quantos segundos o inversor vai segurar o motor parado antes de deixá-lo girar. Colocar 0 desliga essa proteção.",
+        "P202 (Frequência inicial): É a velocidade inicial de partida (em Hz) assim que o tempo do freio acaba, o motor já começa a girar a partir desse valor para dar um arranque suave."
+
       ]
     },
 
@@ -273,9 +275,10 @@
       ],
 
       "observacoes": [
-        "P203 define qual Hz vai acionar o Freio DC",
-        "P206 define % Tensão de operação do freio DC",
-        "P207 define Segundos o tempo de atuação do freio DC"
+        "P203 (Frequência de parada): Define a velocidade baixa (em Hz) em que o motor já quase parou e o freio elétrico deve entrar em ação para travá-lo de vez.",
+        "P206 (Força do freio na parada): Regula a potência do (aperto) para segurar o motor quando ele está parando. Suba aos poucos se a carga for pesada e tender a continuar girando por inércia.",
+        "P207 (Tempo do freio na parada): Define por quantos segundos o inversor mantém o motor travado após ele parar totalmente. Ajustar em 0 desliga esse freio final."
+
       ]
     },
 
@@ -351,7 +354,10 @@
       ],
 
       "observacoes": [
-        
+        "O modo CLP serve para executar ciclos automáticos de velocidades e tempos programados, dispensando o uso de um CLP externo para tarefas sequenciais simples.",
+        "Permite configurar várias multi-velocidades (frequências em Hz) e os respectivos tempos de operação em cada uma delas.",
+        "O motor acelera, mantém a velocidade por um tempo determinado, muda para outra velocidade ou para, conforme o perfil programado.",
+        "Pode rodar o ciclo uma vez e parar, repetir o processo de forma infinita ou manter a última frequência ao fim do ciclo."
       ]
     },
 
@@ -408,12 +414,10 @@
       ],
 
       "observacoes": [
-       "P110 = Hz do motor",
-       "P111 = 20",
-       "P112 = 2.5",
-       "P113 = 5",
-       "P114 = 1.2",
-       "P115 = Depende do modelo do inversor"
+        "A função geral dos parâmetros P110 a P114 é customizar a curva V/F (Tensão/Frequência) do inversor para garantir que o motor elétrico receba a quantidade exata de torque e potência em qualquer faixa de velocidade, evitando sobreaquecimento ou perda de força.",
+        "Complementando essa dinâmica, o parâmetro P115 ajusta a frequência de chaveamento interna, equilibrando a redução do ruído acústico do motor com a eficiência térmica do próprio inversor.",
+        "Ou",
+        "Os parâmetros P110 a P114 moldam a curva de força (V/F) do motor para garantir torque correto em qualquer velocidade. O P115 ajusta o chaveamento interno, equilibrando o ruído do motor e o aquecimento do inversor."
       ]
     },
 
@@ -442,7 +446,10 @@
       ],
 
       "observacoes": [
-       
+        "Atenção à faixa de frequência estendida de até 400Hz, ao tipo de controle escalar V/F e às rampas de aceleração adequadas para evitar falhas de sobrecorrente.",
+        "Não ligar o equipamento com a configuração padrão de fábrica, pois pode queimar o spindle devido à incompatibilidade de tensão em baixas frequências.",
+        "Configuração de Frequência (Crítico): Altere a Frequência Máxima e a Frequência Base do Motor de 60Hz (padrão de fábrica) para 400Hz (frequência típica de spindles de 24.000 RPM). Se ligar em 60Hz, o motor queimará por excesso de tensão.",
+        "Ajuste de Rampas e Limites: Configure o tempo de aceleração e desaceleração entre 5 e 10 segundos para evitar erros de sobrecorrente ou sobretensão."
       ]
     },
 
@@ -475,9 +482,12 @@
       ],
 
       "observacoes": [
-        "S1 e S2 Aberto = Primeira velocidade",
-        "S1 Fechado = Segunda velocidade",
-        "S2 Fechado = Terceira velocidade"
+        "Ao manter o borne FWD fechado, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Sem acionar o S1 e o S2, a 1ª velocidade é controlada pelo parâmetro P100.",
+        "Acionando o S1, a 2ª velocidade passa a ser controlada pelo parâmetro P503.",
+        "Acionando o S2, a 3ª velocidade passa a ser controlada pelo parâmetro P504."
+
       ]
     },
 
@@ -541,7 +551,12 @@
         ["P215", "[Hz] Frequência nominal motor"]
       ],
 
-      "observacoes": []
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "A função PID (Grupo de Parâmetros P6) ajusta automaticamente a rotação do motor para manter o setpoint de pressão, vazão ou volume.",
+        "A entrada analógica AVI é utilizada para feedback do sistema."
+      ]
     },
 
     " Potenciômetro e Terminal": {
@@ -568,7 +583,11 @@
         ["P215", "[Hz] Frequência nominal"]
       ],
 
-      "observacoes": []
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
+      ]
     },
 
     " Reset de Fábrica": {
@@ -624,10 +643,12 @@
       ],
 
       "observacoes": [
-        "Fechar FWD + GND liga o inversor (partida do motor).",
-        "Fechar S1 + GND altera a referência de velocidade do potenciômetro para o modo Multispeed.",
-        "Com S2 desacionado opera na velocidade 1, configurada em P100.",
-        "Com S2 acionado opera na velocidade 2, configurada em P503."
+        "Ao manter o borne FWD fechado, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Acionando o S1, a referência da velocidade é alterada do Potenciômetro para o modo Multispeed.",
+        "Sem acionar o S2, 1ª velocidade é controlada pelo parâmetro P100.",
+        "Acionando o S2, a 2ª velocidade passa a ser controlada pelo parâmetro P503."
       ]
     },
 
@@ -666,10 +687,13 @@
       ],
 
       "observacoes": [
-        "Fechar FWD + GND liga o inversor (partida do motor);",
-        "Fechar S1 + GND altera a referência modo Multispeed para potenciômetro;",
-        "Com S2 desacionado opera na velocidade 1, configurada em P100;",
-        "Com S2 acionado opera na velocidade 2, configurada em P503."
+        "Ao manter o borne FWD fechado, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Sem acionar o S2, 1ª velocidade é controlada pelo parâmetro P100.",
+        "Acionando o S2, a 2ª velocidade passa a ser controlada pelo parâmetro P503.",
+        "Acionando o S1, a referência da velocidade é alterada do modo Multispeed para o Potenciômetro.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
+
       ]
     },
 
@@ -778,8 +802,11 @@
 
       "observacoes": [
         "Ao fechar o borne FWD, o inversor aciona o motor.",
-        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-        "A rotação é ajustada por um potenciômetro externo do inversor."
+        "Para desligar, é necessário abrir o borne FWD.",
+        "Acionando o borne S1, o inversor recebe comando de aumento de frequência.",
+        "Acionando o borne S2, o inversor recebe comando de redução de frequência.",
+        "O parâmetro P330 define o valor do pulso de frequência."
+
 
       ]
     },
