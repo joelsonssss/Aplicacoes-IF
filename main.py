@@ -339,7 +339,7 @@ def main(page: ft.Page):
                 bgcolor=ft.Colors.ORANGE_800,
                 padding=4,
                 content=ft.Text(
-                    "Metaltex - IF Aplicações ferramenta oficial. © 2026. Todos os direitos reservados.",
+                    "Metaltex – Ferramenta oficial de aplicações IF © 2026. Todos os direitos reservados. Versão 1.00.",
                     color=ft.Colors.WHITE,
                     size=9,
                     text_align=ft.TextAlign.CENTER,
