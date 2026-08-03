@@ -48,35 +48,56 @@ def main(page: ft.Page):
     page.spacing = 0
     page.bgcolor = ft.Colors.GREY_100
 
-    link_atual = {"url": ""}
+    link_aplicacao = {"url": ""}
+    link_manual = {"url": ""}
 
-    def obter_link_configuracao():
+    def obter_links_aplicacao():
+        """
+        Retorna os links (aplicação e manual) da configuração selecionada.
+        """
         if not dd_inversor.value or not dd_configuracao.value:
-            return ""
+            return {"link": "", "manual": ""}
 
         grupo = CONFIGURACOES.get(dd_inversor.value, {})
         dados = grupo.get(dd_configuracao.value, {})
 
         if isinstance(dados, dict):
-            return dados.get("link", "")
+            return {
+                "link": dados.get("link", ""),
+                "manual": dados.get("manual", "")
+            }
 
-        return ""
+        return {"link": "", "manual": ""}
 
     def atualizar_linha_link():
         """
-        Mantém o link ativo no botão, sem mostrar a URL.
+        Atualiza os botões de aplicação e manual conforme a configuração selecionada.
         """
-        url = obter_link_configuracao()
-        link_atual["url"] = url.strip() if isinstance(url, str) else ""
-        botao_abrir_link.disabled = not bool(link_atual["url"])
+        links = obter_links_aplicacao()
+
+        link_aplicacao["url"] = links["link"].strip() if isinstance(links["link"], str) else ""
+        botao_aplicacao.disabled = not bool(link_aplicacao["url"])
+        botao_aplicacao.visible = bool(link_aplicacao["url"])
+
+        link_manual["url"] = links["manual"].strip() if isinstance(links["manual"], str) else ""
+        botao_manual.disabled = not bool(link_manual["url"])
+        botao_manual.visible = bool(link_manual["url"])
+
         page.update()
 
-    def abrir_link(e):
+    def abrir_aplicacao(e):
         """
-        Abre o link atual no navegador, se houver URL válida.
+        Abre o link da aplicação no navegador, se houver URL válida.
         """
-        if link_atual["url"]:
-            page.launch_url(link_atual["url"])
+        if link_aplicacao["url"]:
+            page.launch_url(link_aplicacao["url"])
+
+    def abrir_manual(e):
+        """
+        Abre o manual da aplicação no navegador, se houver URL válida.
+        """
+        if link_manual["url"]:
+            page.launch_url(link_manual["url"])
 
     imagem_topo = ft.Container(
         alignment=ft.alignment.bottom_left,
@@ -126,12 +147,26 @@ def main(page: ft.Page):
         ),
     )
 
-    botao_abrir_link = ft.TextButton(
-        text="abrir link",
+    botao_aplicacao = ft.TextButton(
+        text="Aplicação",
         width=90,
         height=32,
         disabled=True,
-        on_click=abrir_link,
+        on_click=abrir_aplicacao,
+        style=ft.ButtonStyle(
+            bgcolor=ft.Colors.ORANGE_800,
+            color="#F7F8F3",
+            shape=ft.RoundedRectangleBorder(radius=5),
+        ),
+    )
+
+    botao_manual = ft.TextButton(
+        text="Manual",
+        width=90,
+        height=32,
+        disabled=True,
+        visible=False,
+        on_click=abrir_manual,
         style=ft.ButtonStyle(
             bgcolor=ft.Colors.ORANGE_800,
             color="#F7F8F3",
@@ -212,6 +247,7 @@ def main(page: ft.Page):
             return
 
         nomes = list(grupo.keys())
+        nomes = [n for n in nomes if n != "manual_url"]
         dd_configuracao.options = [ft.dropdown.Option(nome) for nome in nomes]
         atualizar_linha_link()
         page.update()
@@ -282,7 +318,7 @@ def main(page: ft.Page):
         padding=4,
         alignment=ft.alignment.center,
         content=ft.Row(
-            [botao_abrir_link],
+            [botao_aplicacao, botao_manual],
             wrap=True,
             spacing=6,
             run_spacing=6,
