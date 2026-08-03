@@ -1666,9 +1666,10 @@
       ],
 
       "observacoes": [
-        "Ao fechar o borne FWD, o inversor aciona o motor.",
-        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-        "A rotação é ajustada por um potenciômetro externo do inversor."
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."  
+
       ]
     },
 
@@ -1700,9 +1701,9 @@
       ],
 
       "observacoes": [
-        "Ao fechar o borne FWD, o inversor aciona o motor.",
-        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
-        "A rotação é ajustada por um potenciômetro frontal do inversor."
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro local do inversor."
 
       ]
     },
@@ -1743,10 +1744,10 @@
 
       "observacoes": [
         "Ao fechar o borne X1, o inversor aciona o motor.",
-	      "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
-	      "Sem acionar X4 e X5, a 1ª velocidade é controlada pelo parâmetro PC.00.",
-	      "Acionando X4, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
-        "Acionando X5, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
+        "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
+        "Sem acionar o X4 e o X5, a 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o X4, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando o X5, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
 
       ]
     },
@@ -1788,11 +1789,10 @@
       
       "observacoes": [
         "Ao fechar o borne X1, o inversor aciona o motor.",
-	      "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
-	      "Acionando o borne X4, o inversor recebe comando de aumento de velocidade/frequência.",
-	      "Acionando o borne X5, o inversor recebe comando de redução da velocidade/frequência.",
-	      "O parâmetro P4.12 define o valor do pulso de frequência."        
-
+        "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
+        "Acionando o borne X4, o inversor recebe comando de aumento de frequência.",
+        "Acionando o borne X5, o inversor recebe comando de redução da frequência.",
+        "O parâmetro P4.11 define o valor do pulso de frequência."
 
       ]
     },
@@ -1905,6 +1905,10 @@
       ],
 
       "observacoes": [
+        "P6.03 (Frequência de inicialização): Define a frequência inicial (0,00 a 10,00 Hz) na qual o motor começa a girar assim que o comando de partida é acionado.",
+        "P6.04 (Tempo de espera da frequência de inicialização): Determina o tempo (0,0 a 100,0 segundos) em que o inversor permanece mantendo essa frequência inicial antes de iniciar a rampa de aceleração.",
+        "P6.05 (Corrente do freio DC / Corrente de pré-excitação): Ajusta a porcentagem (0 a 100%) de corrente contínua aplicada ao motor.",
+        "P6.06 (Tempo do freio DC / Tempo de pré-excitação): Define o tempo (0,0 a 100,0 segundos) de duração dessa injeção de corrente. Se ajustado em 0, a função é desativada." 
 
       ]
     },
@@ -1935,6 +1939,10 @@
       ],
 
       "observacoes": [
+        "P6.11 (Frequência inicial de parada do freio CC): Define o limite de frequência em Hz em que o inversor desliga a rampa normal e ativa o freio CC durante a desaceleração para a parada.",
+        "P6.12 (Tempo de espera de parada do freio CC): Determina o tempo de pausa (em segundos) entre o fim da desaceleração por rampa e o início efetivo da aplicação da corrente de frenagem CC.",
+        "P6.13 (Corrente de parada do freio CC): Ajusta a intensidade da corrente contínua injetada no motor (em porcentagem da corrente nominal) para segurar o eixo parado.",
+        "P6.14 (Tempo de parada do freio CC): Define por quanto tempo (em segundos) a corrente contínua permanecerá aplicada ao motor. Se ajustado em 0, essa função fica desabilitada."  
 
       ]
     },
@@ -1972,6 +1980,9 @@
       ],
 
       "observacoes": [
+        "Aumento do Valor (P3.01 > 0): Usado para cargas pesadas na partida onde o motor demonstra falta de força ou travamento inicial.",
+        "Valores Excessivos: Ajustar um valor muito alto pode causar superaquecimento do motor e disparo por sobrecorrente no inversor.",
+        "Cargas Leves: Recomenda-se manter o valor baixo caso a aplicação não exija alto torque de partida."
 
       ]
     },
@@ -2026,7 +2037,13 @@
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
 
-      "observacoes": []
+      "observacoes": [
+        "O modo CLP serve para executar ciclos automáticos de velocidades e tempos programados, dispensando o uso de um CLP externo para tarefas sequenciais simples.",
+        "Permite configurar várias multi-velocidades (frequências em Hz) e os respectivos tempos de operação em cada uma delas.",
+        "O motor acelera, mantém a velocidade por um tempo determinado, muda para outra velocidade ou para, conforme o perfil programado.",
+        "Pode rodar o ciclo uma vez e parar, repetir o processo de forma infinita ou manter a última frequência ao fim do ciclo."
+
+      ]
     },
 
     " Modbus": {
@@ -2089,6 +2106,10 @@
       ],
 
       "observacoes": [
+        "Atenção à faixa de frequência estendida de até 400Hz, ao tipo de controle escalar V/F e às rampas de aceleração adequadas para evitar falhas de sobrecorrente.",
+        "Não ligar o equipamento com a configuração padrão de fábrica, pois pode queimar o spindle devido à incompatibilidade de tensão em baixas frequências.",
+        "Configuração de Frequência (Crítico): Altere a Frequência Máxima e a Frequência Base do Motor de 60Hz (padrão de fábrica) para 400Hz (frequência típica de spindles de 24.000 RPM). Se ligar em 60Hz, o motor queimará por excesso de tensão.",
+        "Ajuste de Rampas e Limites: Configure o tempo de aceleração e desaceleração entre 5 e 10 segundos para evitar erros de sobrecorrente ou sobretensão. "
 
       ]
     },
@@ -2161,6 +2182,10 @@
       ],
 
       "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne X1.",
+        "A função PID (Grupo de Parâmetros PA) ajusta automaticamente a rotação do motor para manter o setpoint de pressão, vazão ou temperatura. Ela ajusta a velocidade do motor em malha fechada sem precisar de um CLP externo.",
+        "A entrada analógica FIC é utilizada para feedback do sistema."
 
       ]
     },
@@ -2196,8 +2221,13 @@
       ],
 
       "observacoes": [
-
+        "Ao manter o borne X1 fechado, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne X1.",
+        "Sem acionar o X3 e o X4, a 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o X3, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando o X4, a 3ª velocidade passa a ser controlada pelo parâmetro PC.02."
       ]
+
     },
 
     " Potenciômetro Externo e Terminal": {
@@ -2229,7 +2259,9 @@
       ],
 
       "observacoes": [
-
+        "Ao manter o borne X1 fechado, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne X1.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
       ]
     },
 
@@ -2243,7 +2275,8 @@
       "ligacoes": [
       ],
       "observacoes": [
-        "PP.01 = 1 Para resetar o inversor no padrão de fábrica"
+        "Restauração padrão: Retorna todos os parâmetros aos valores originais de fábrica, preservando as configurações do motor e dados acumulativos."
+      
       ]
     },
 
@@ -2280,6 +2313,12 @@
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
       "observacoes": [
+        "Ao manter o borne X1 fechado, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor.",
+        "Para desligar, é necessário abrir o borne X1.",
+        "Acionando o X4, a referência da velocidade é alterada do Potenciômetro para o modo Multispeed.",
+        "Sem acionar o X3, 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o X3, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01."
 
       ]
     },
@@ -2319,6 +2358,12 @@
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
       "observacoes": [
+        "Ao manter o borne X1 fechado, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne X1.",
+        "Sem acionar o X3, 1ª velocidade é controlada pelo parâmetro PC.00.",
+        "Acionando o X3, a 2ª velocidade passa a ser controlada pelo parâmetro PC.01.",
+        "Acionando o X4, a referência da velocidade é alterada do modo Multispeed para o Potenciômetro.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
 
       ]
     },
@@ -2411,7 +2456,14 @@
         ["P1.05", "[RPM] - Velocidade de rotação nominal"]
       ],
       
-      "observacoes": []
+      "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "Para desligar, é necessário abrir o borne X1.",
+        "Acionando o borne X3, o inversor recebe comando de aumento de frequência.",
+        "Acionando o borne X4, o inversor recebe comando de redução de frequência.",
+        "O parâmetro P4.12 define o valor do pulso de frequência."
+
+      ]
     }
   }
 }
