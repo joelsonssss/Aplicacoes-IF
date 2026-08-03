@@ -148,7 +148,7 @@ def main(page: ft.Page):
     )
 
     botao_aplicacao = ft.TextButton(
-        text="Aplicação",
+        text="Detalhes",
         width=90,
         height=32,
         disabled=True,
@@ -339,8 +339,9 @@ def main(page: ft.Page):
                 bgcolor=ft.Colors.ORANGE_800,
                 padding=4,
                 content=ft.Text(
-                    "Metaltex",
+                    "Metaltex - Ferramenta oficial IF Aplicações. © 2026. Todos os direitos reservados.",
                     color=ft.Colors.WHITE,
+                    size=9,
                     text_align=ft.TextAlign.CENTER,
                 ),
             )
