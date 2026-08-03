@@ -267,7 +267,9 @@ def main(page: ft.Page):
 
         if not dd_configuracao.value:
             resultado.controls.append(
-                ft.Text("Escolha uma configuração.", color=ft.Colors.RED)
+                ft.Text("Escolha uma Aplicação.", 
+                        color=ft.Colors.RED,
+                        size=18)
             )
             page.update()
             return
