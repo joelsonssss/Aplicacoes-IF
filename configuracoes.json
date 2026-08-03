@@ -965,6 +965,35 @@
       ]
     },
 
+    " AutoTunning": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P0.00", "1 - Tipo G (carga de torque constante)"],
+        ["P0.12", "60 [Hz] - Frequencia máxima"],
+        ["P0.14", "60 [Hz] - Frequência do limite superior"],
+        ["P2.00", "0 - Motor assíncrono"],
+        ["P2.01", "[kW] - * Potência nominal motor "],
+        ["P2.02", "[V] - * Tensão nominal motor "],
+        ["P2.03", "[A] - * Corrente nominal motor "],
+        ["P2.04", "[Hz] - * Frequência nominal motor "],
+        ["P2.05", "[RPM] - * RPM do motor "],
+        ["P2.37", "1 Ajuste estatico / 2 Ajuste dinâmico"]
+
+      ],
+
+      "ligacoes": [],
+
+      "motor": [],
+
+      "observacoes": [
+        "Após configurar o valor 1 no parâmetro P2.37, é preciso ligar o comando de rodar do inversor através do teclado frontal do mesmo na tecla RUN. Após o teclado apresentar a mensagem “STUDY” você deve aguardar o inversor fazer as leituras do motor, no final da leitura dos dados, caso a leitura seja correta, o inversor volta seu display/teclado para o modo de espera/pronto, isto indica que o autotuning foi concluído com sucesso."
+        
+      ]
+    },
+
+
     " Rele de Saída (RA-RB-RC)": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
@@ -1087,7 +1116,6 @@
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019   ",
 
       "parametros": [
-        ["P102", "1"],
         ["P1.11", "Freq. Ini. Freio DC, 0 ~ freq. máx. (Hz)"],
         ["P1.12", "Tempo espera parada freio DC, 0,0 ~ 100,0s"],
         ["P1.13", "Corrente parada freio DC, 0 ~ 100%"],
@@ -1797,6 +1825,38 @@
       ]
     },
 
+
+    " AutoTunning": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P0.00", "1 - Tipo G (carga de torque constante)"],
+        ["P0.10", "60 [Hz] - Frequencia máxima"],
+        ["P0.12", "60 [Hz] - Frequência do limite superior"],
+        ["P1.00", "0 - Motor assíncrono"],
+        ["P1.01", "[kW] - * Potência nominal motor "],
+        ["P1.02", "[V] - * Tensão nominal motor "],
+        ["P1.03", "[A] - * Corrente nominal motor "],
+        ["P1.04", "[Hz] - * Frequência nominal motor "],
+        ["P1.05", "[RPM] - * RPM do motor "],
+        ["P1.37", "1 Ajuste estatico / 2 Ajuste dinâmico"]
+
+      ],
+
+      "ligacoes": [],
+
+      "motor": [],
+
+      "observacoes": [
+        "Após configurar o valor 1 no parâmetro P1.37, é preciso ligar o comando de rodar do inversor através do teclado frontal do mesmo na tecla RUN. Após o teclado apresentar a mensagem “STUDY” você deve aguardar o inversor fazer as leituras do motor, no final da leitura dos dados, caso a leitura seja correta, o inversor volta seu display/teclado para o modo de espera/pronto, isto indica que o autotuning foi concluído com sucesso."
+        
+      ]
+    },
+
+
+
+
     " Relé de Saída (YA / YB / YC)": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
@@ -1878,6 +1938,143 @@
       "observacoes": [
       ]
     },
+
+
+    " Elevador de Carga - Modo Escalar": {
+      "link": "https://drive.google.com/file/d/14KKIQy_hUzIGma9XI6jjAMoXeWcT48tS/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P0.00", "1"],
+        ["P0.08", "60"],
+        ["P0.10", "60"],
+        ["P0.12", "60"],
+        ["P1.00",  "0"],
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal"],
+        ["P1.03", "[A] - Corrente nominal"],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"],
+        ["P1.37", "1 - Ajuste estático "],
+        "*Após o autotuning inserir demais parametros*",
+        ["P0.01", "2"],
+        ["P0.02", "1"],
+        ["P0.03", "6"],
+        ["P0.17", "3,5s"],
+        ["P0.18", "1,0s"],
+        ["P3.01", "0"],
+        ["P3.02", "[60Hz]"],
+        ["P3.10", "0"],
+        ["P3.18", "200"],
+        ["P3.20", "20"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.02", "12"],
+        ["P5.02", "3"],
+        ["P5.04", "36"],
+        ["P8.12", "0.0s"],
+        ["P8.19", "2"],
+        ["P8.20", "0"],
+        ["P8.36", "30"],
+        ["P8.37", "0 [s]"],
+        ["P9.00", "1"],
+        ["P9.01", "1.00"],
+        ["PC.00", "1ª Velocidade"],
+        ["PC.01", "2ª Velocidade"]
+      
+        
+      ],
+
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," 2ª Velocidade (NA)"]
+     
+      ],
+
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal"],
+        ["P1.03", "[A] - Corrente nominal"],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+      
+      "observacoes": [
+        "Para conexões do resistor de frenagem, ( * +/B1 e B2 * para faixa de aplicação 1 a 10 CV - 220V  e 1 a 20 CV - 380/480V)",
+        "Para conexões do resistor de frenagem, ( * + e PB * para faixa de aplicação 15 a 40 CV - 220V  e 25 a 50 CV - 380/480V)"
+
+      ]
+    },
+
+    " Elevador de Carga - Modo Vetorial": {
+      "link": "https://drive.google.com/file/d/14KKIQy_hUzIGma9XI6jjAMoXeWcT48tS/view?usp=sharing",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P0.00", "1"],
+        ["P0.08", "60"],
+        ["P0.10", "60"],
+        ["P0.12", "60"],
+        ["P1.00",  "0"],
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal"],
+        ["P1.03", "[A] - Corrente nominal"],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"],
+        ["P1.37", "1 - Ajuste estático "],
+        "*Após o autotuning inserir demais parametros*",
+        ["P0.01", "0"],
+        ["P0.02", "1"],
+        ["P0.03", "6"],
+        ["P0.17", "3,5s"],
+        ["P0.18", "1,0s"],
+        ["P3.01", "0"],
+        ["P3.02", "[60Hz]"],
+        ["P3.10", "0"],
+        ["P3.11", "0"],
+        ["P3.18", "200"],
+        ["P3.20", "20"],
+        ["P4.00", "1"],
+        ["P4.01", "2"],
+        ["P4.02", "12"],
+        ["P5.02", "3"],
+        ["P5.04", "36"],
+        ["P8.12", "0.0s"],
+        ["P8.19", "2"],
+        ["P8.20", "0"],
+        ["P8.36", "30"],
+        ["P8.37", "0 [s]"],
+        ["P9.00", "1"],
+        ["P9.01", "1.00"],
+        ["P9.03", "0"],
+        ["PC.00", "1ª Velocidade"],
+        ["PC.01", "2ª Velocidade"]
+      
+      ],
+
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"],
+        ["X3 + COM"," 2ª Velocidade (NA)"]
+     
+      ],
+
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal"],
+        ["P1.03", "[A] - Corrente nominal"],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+      
+      "observacoes": [
+        "Para conexões do resistor de frenagem, ( * +/B1 e B2 * para faixa de aplicação 1 a 10 CV - 220V  e 1 a 20 CV - 380/480V)",
+        "Para conexões do resistor de frenagem, ( * + e PB * para faixa de aplicação 15 a 40 CV - 220V  e 25 a 50 CV - 380/480V)"
+
+      ]
+    },
+
 
     " Freio DC Partida": {
       "link": "",
