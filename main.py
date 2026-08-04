@@ -105,7 +105,7 @@ def main(page: ft.Page):
     )
 
     dd_texto01 = ft.Text(
-        "Defina Inversor e Aplicação",
+        "      Defina Inversor e Aplicação",
         size=15,
         color=ft.Colors.ORANGE_800,
         text_align=ft.TextAlign.CENTER,
@@ -113,7 +113,7 @@ def main(page: ft.Page):
 
     dd_inversor = ft.Dropdown(
         label="IF",
-        width=112,
+        width=80,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
         text_style=ft.TextStyle(size=15),
@@ -270,7 +270,7 @@ def main(page: ft.Page):
     botao_mostrar.on_click = mostrar_configuracao
 
     linha_codigo = ft.Container(
-        padding=6,
+        padding=ft.padding.symmetric(vertical=4, horizontal=23),
         content=ft.Row(
             [dd_inversor, dd_configuracao, botao_mostrar],
             wrap=False,
@@ -298,19 +298,17 @@ def main(page: ft.Page):
             ft.Container(
                 expand=True,
                 bgcolor=ft.Colors.ORANGE_800,
-                padding=4,
+                padding=10,
                 content=ft.Row(
                     [
                         ft.Text(
-                            "Metaltex – Ferramenta oficial de aplicações IF © 2026. Todos os direitos reservados. Versão 1.0.",
+                            "Metaltex – Ferramenta oficial de aplicações IF © 2026. Todos os direitos reservados. Versão 1.0",
                             color=ft.Colors.WHITE,
                             size=9,
                             text_align=ft.TextAlign.CENTER,
                             expand=True,
-                            
-                            
                         ),
-                        contador_texto,
+                        #contador_texto,
                     ],
                     alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                 ),
@@ -321,7 +319,7 @@ def main(page: ft.Page):
     area_resultado = ft.Container(expand=True, padding=4, content=resultado)
 
     conteudo_app = ft.Container(
-        width=400,
+        width=800,
         bgcolor=ft.Colors.WHITE,
         content=ft.Column(
             expand=True,
