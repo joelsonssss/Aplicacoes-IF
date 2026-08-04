@@ -99,14 +99,13 @@ def main(page: ft.Page):
             page.launch_url(link_manual["url"])
 
     imagem_topo = ft.Container(
-        alignment=ft.alignment.bottom_left,
+        alignment=ft.alignment.center,
         content=ft.Image(
             src="images/topo01.png",
             height=70,
-            fit=ft.ImageFit.COVER,
+            fit=ft.ImageFit.CONTAIN,
         ),
     )
-
     # Título com espaço abaixo
     dd_texto01 = ft.Container(
         padding=ft.padding.only(bottom=8),
@@ -129,6 +128,7 @@ def main(page: ft.Page):
     )
 
     dd_configuracao = ft.Dropdown(
+  #      icon= ft.icons.PRECISION_MANUFACTURING,
         label="Aplicação",
         width=400,
         dense=True,
