@@ -1,7 +1,7 @@
 {
 
   "IF10": {
-    "  3 Fios e Potenciômetro Externo": {
+    " - 3 Fios e Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1ZcZcYHtw-z4Qb7etojYXHsgjbi6KAGIO/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
@@ -32,7 +32,7 @@
       ]
     },
 
-    " 3 Fios e Potenciômeto Frontal Local": {
+    " - 3 Fios e Potenciômeto Frontal Local": {
       "link": "https://drive.google.com/file/d/14NstN72PCyCKWxqAQUveGMKWOCTU-ghI/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
@@ -63,7 +63,7 @@
       ]
     },
 
-    " 3 Fios + Multi Velocidade": {
+    " - 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1J7qAAfz6Q_H1Sd6R6mitnjsvtvoIK5ua/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
@@ -99,7 +99,7 @@
       ]
     },
 
-    " 3 Fios + Up / Down": {
+    " - 3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1oays2ngpKYikS3-CKDU0blhJjVGbNuFN/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -138,7 +138,7 @@
       ]
     },
 
-    " Alterar Saída Relé NF / NA": {
+    " - Alterar Saída Relé NF / NA": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -160,7 +160,7 @@
       ]
     },
 
-    " Configuração Saída Relé ": {
+    " - Configuração Saída Relé ": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       "parametros": [
@@ -201,7 +201,7 @@
       ]
     },
 
-    " Configuração Motor": {
+    " - Configuração Motor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
       "parametros": [
@@ -229,7 +229,7 @@
       ]
     },
 
-    " Freio DC Partida": {
+    " - Freio DC Partida": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -261,7 +261,7 @@
       ]
     },
 
-    " Freio DC Parada": {
+    " - Freio DC Parada": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
       "parametros": [
@@ -292,7 +292,7 @@
       ]
     },
 
-    " Ganho de Torque": {
+    " - Ganho de Torque": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -316,7 +316,7 @@
       ]
     },
 
-    " Limitar Hz": {
+    " - Limitar Hz": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
       "parametros": [
@@ -337,7 +337,7 @@
       ]
     },
 
-    " Modo CLP": {
+    " - Modo CLP": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -375,7 +375,7 @@
       ]
     },
 
-    " Modbus": {
+    " - Modbus": {
       "link": "https://drive.google.com/file/d/1IdrKWJSRjloRZ1N8Qd89AdiAAzEcOtyO/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532 ",
 
@@ -409,7 +409,7 @@
       ]
     },
 
-    " Motor Aquecendo": {
+    " - Motor Aquecendo": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -437,7 +437,7 @@
       ]
     },
 
-    " Spindle": {
+    " - Spindle": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -470,7 +470,7 @@
       ]
     },
 
-    " Multi Velocidade": {
+    " - Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1hMPdXuQ1a0nGEydPErZf6Dp2vBYtUoGE/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -509,7 +509,7 @@
       ]
     },
 
-    " Parâmetros Básicos": {
+    " - Parâmetros Básicos": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -537,7 +537,7 @@
       "observacoes": []
     },
 
-    " PID": {
+    " - PID": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -579,7 +579,7 @@
       ]
     },
 
-    " Potenciômetro e Terminal": {
+    " - Potenciômetro e Terminal": {
       "link": "https://drive.google.com/file/d/1ip576QtBOV4n56LxeYi5MLsbnESod-Iu/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -611,7 +611,7 @@
       ]
     },
 
-    " Reset de Fábrica": {
+    " - Reset de Fábrica": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -631,7 +631,7 @@
       ]
   },
 
-    " Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
+    " - Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1jPYHF8D25pd2KawuisSjJQVBQUckFwOp/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -676,7 +676,7 @@
       ]
     },
 
-    " Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
+    " - Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V)": {
       "link": "https://drive.google.com/file/d/1-cpZw0r7jGxrv7owZdfh9dLvP8FFKDPR/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -722,7 +722,7 @@
       ]
     },
 
-    " Últimos Alarmes Inversor": {
+    " - Últimos Alarmes Inversor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
       
@@ -763,7 +763,7 @@
       ]
   },
 
-    " UP / DOWN ": {
+    " - UP / DOWN ": {
       "link": "https://drive.google.com/file/d/1m4YSvhgUze3oeZBCriVXsXwNI4qECej4/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
 
@@ -799,7 +799,7 @@
 
   },
   "IF20": {
-    " 3 Fios + Potenciômetro Externo": {
+    " - 3 Fios + Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1oiecj_7vau5vQlwYtUwO7-YDjwu1zG2h/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -839,7 +839,7 @@
       ]
     },
 
-    " 3 Fios e Potenciômeto Frontal Local": {
+    " - 3 Fios e Potenciômeto Frontal Local": {
       "link": "https://drive.google.com/file/d/1lzo5ptKIuBH6jbodGQYo3ZIl6OS7yPZC/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -878,7 +878,7 @@
       ]
     },
 
-    " 3 Fios + Multi Velocidade": {
+    " - 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1HutMlpjAz7TZUM4D8RR-gos_L7hn1_BS/view?usp=drive_link",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -922,7 +922,7 @@
       ]
     },
 
-    " 3 Fios + Up / Down": {
+    " - 3 Fios + Up / Down": {
       "link": "https://drive.google.com/file/d/1rXP0_pxt_OjTuJ_M47yIj3swQ2CVg-N0/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -965,7 +965,7 @@
       ]
     },
 
-    " AutoTunning": {
+    " - AutoTunning": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -994,7 +994,7 @@
     },
 
 
-    " Rele de Saída (RA-RB-RC)": {
+    " - Rele de Saída (RA-RB-RC)": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1078,7 +1078,7 @@
       ]
     },
 
-    " Configuração Motor": {
+    " - Configuração Motor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1103,7 +1103,7 @@
       ]
     },
 
-    " Freio DC Partida": {
+    " - Freio DC Partida": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1135,7 +1135,7 @@
       ]
     },
 
-    " Freio DC Parada": {
+    " - Freio DC Parada": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019   ",
 
@@ -1168,7 +1168,7 @@
       ]
     },
 
-    " Frequência Atingida Saída Relé": {
+    " - Frequência Atingida Saída Relé": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1189,7 +1189,7 @@
       ]
     },
 
-    " Ganho de Torque": {
+    " - Ganho de Torque": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1232,7 +1232,7 @@
       ]
     },
 
-    " Modo CLP": {
+    " - Modo CLP": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019 ",
 
@@ -1271,7 +1271,7 @@
       ]
     },
     
-    " Modbus": {
+    " - Modbus": {
       "link": "https://drive.google.com/file/d/1jre4TFNmLZ2rXKdp-7KeMkyA3ZofY52R/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019   ",
 
@@ -1305,7 +1305,7 @@
       ]
     },
 
-    " Spindle": {
+    " - Spindle": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1339,7 +1339,7 @@
       ]
     },
 
-    " Multi Velocidade": {
+    " - Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1m5pEE3neKetRjkqKmltix7Hl7Ym7WZgz/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019   ",
       
@@ -1378,7 +1378,7 @@
       ]
     },
 
-    " Parâmetros Básicos": {
+    " - Parâmetros Básicos": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1413,7 +1413,7 @@
       ]
     },
 
-    " PID": {
+    " - PID": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1452,7 +1452,7 @@
       ]
     },
 
-    " Potenciômetro e Terminal": {
+    " - Potenciômetro e Terminal": {
       "link": "https://drive.google.com/file/d/1zN5JKs1sz_pN9qdff3CG2LvRPa5zJbIU/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1484,7 +1484,7 @@
       ]
     },
 
-    " Reset de Fábrica": {
+    " - Reset de Fábrica": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1501,7 +1501,7 @@
       ]
     },
 
-    " Troca Velocidade X Potenciômetro ou 0-10V, Y Multispeed": {
+    " - Troca Velocidade X Potenciômetro ou 0-10V, Y Multispeed": {
       "link": "https://drive.google.com/file/d/1g_Q7gvk656rSXCL7cGkpnbX-HE36qdys/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1544,7 +1544,7 @@
       ]
     },
 
-    " Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
+    " - Troca Velocidade X Multispeed Y Potenciômetro ou 0-10V": {
       "link": "https://drive.google.com/file/d/1PTqjn7qQA24E1DZ6lWehqxpIQIWherAU/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1588,7 +1588,7 @@
       
     },
 
-    " Últimos Alarmes Inversor": {
+    " - Últimos Alarmes Inversor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1643,7 +1643,7 @@
       ]
     },
 
-    " Up / Down": {
+    " - Up / Down": {
       "link": "https://drive.google.com/file/d/1W6c_l_39kGd8t4lDuvIuzYYFWnDUcD6b/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1687,7 +1687,7 @@
 
   "IF30": {
 
-    " 3 Fios + Potenciômetro Externo": {
+    " - 3 Fios + Potenciômetro Externo": {
       "link": "https://drive.google.com/file/d/1gNjFEcWMt-nH535h2M_wK1Ka1LcQZeAh/view?usp=drive_link",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1725,7 +1725,7 @@
       ]
     },
 
-    " 3 Fios + Potenciômetro Frontal Local": {
+    " - 3 Fios + Potenciômetro Frontal Local": {
       "link": "https://drive.google.com/file/d/1V6PoliL3P8wt5AN3omuwlAk-rxdyXH5-/view?usp=drive_link",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1760,7 +1760,7 @@
       ]
     },
 
-    " 3 Fios + Multi Velocidade": {
+    " - 3 Fios + Multi Velocidade": {
       "link": "https://drive.google.com/file/d/14QxPwUbxd7yvUxrxzDN1P3m-yCVtYxi-/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1804,7 +1804,7 @@
       ]
     },
 
-    " 3 Fios + UP / DOWN": {
+    " - 3 Fios + UP / DOWN": {
       "link": "https://drive.google.com/file/d/176Vx6y6JJq-AwvuuhbCKKecHVscIEHlH/view?usp=drive_link",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1850,7 +1850,7 @@
     },
 
 
-    " AutoTunning": {
+    " - AutoTunning": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1881,7 +1881,7 @@
 
 
 
-    " Relé de Saída (YA / YB / YC)": {
+    " - Relé de Saída (YA / YB / YC)": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1942,7 +1942,7 @@
     },
 
 
-    "Resistor de Frenagem": {
+    " - Resistor de Frenagem": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1965,7 +1965,7 @@
       ]
     },
 
-    " Configuração Motor": {
+    " - Configuração Motor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -1987,7 +1987,7 @@
       ]
     },
 
-    " Elevador de Carga - Modo Escalar": {
+    " - Elevador de Carga - Modo Escalar": {
       "link": "https://drive.google.com/file/d/14KKIQy_hUzIGma9XI6jjAMoXeWcT48tS/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2054,7 +2054,7 @@
       ]
     },
 
-    " Elevador de Carga - Modo Vetorial": {
+    " - Elevador de Carga - Modo Vetorial": {
       "link": "https://drive.google.com/file/d/14KKIQy_hUzIGma9XI6jjAMoXeWcT48tS/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2123,7 +2123,7 @@
     },
 
 
-    " Freio DC Partida": {
+    " - Freio DC Partida": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2157,7 +2157,7 @@
       ]
     },
 
-    " Freio DC Parada": {
+    " - Freio DC Parada": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2191,7 +2191,7 @@
       ]
     },
 
-    " Frequência Atingida (Aciona Saída Relé)": {
+    " - Frequência Atingida (Aciona Saída Relé)": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2209,7 +2209,7 @@
       "observacoes": []
     },
 
-    " Ganho de Torque": {
+    " - Ganho de Torque": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2231,7 +2231,7 @@
       ]
     },
 
-    " Limitar Frequência": {
+    " - Limitar Frequência": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2252,7 +2252,7 @@
       ]
     },
 
-    " Modo CLP": {
+    " - Modo CLP": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",  
 
@@ -2290,7 +2290,7 @@
       ]
     },
 
-    " Modbus": {
+    " - Modbus": {
       "link": "https://drive.google.com/file/d/1j-FpceK3G3yWkEXk85pAqGQRAPOawkYj/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2322,7 +2322,7 @@
       ]
     },
 
-    " Spindle": {
+    " - Spindle": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2358,7 +2358,7 @@
       ]
     },
 
-    " Parâmetros Básicos": {
+    " - Parâmetros Básicos": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
       
@@ -2393,7 +2393,7 @@
       ]
     },
 
-    "PID": {
+    " - PID": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2434,7 +2434,7 @@
       ]
     },
 
-    " Multi Velocidade": {
+    " - Multi Velocidade": {
       "link": "https://drive.google.com/file/d/1vKX_Irbr5CbDkOGadvYpi0fgrJaK-sr4/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",  
 
@@ -2474,7 +2474,7 @@
 
     },
 
-    " Potenciômetro Externo e Terminal": {
+    " - Potenciômetro Externo e Terminal": {
       "link": "https://drive.google.com/file/d/19OYfXRL22FZerovBG6qit68yuSnsEwKW/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2509,7 +2509,7 @@
       ]
     },
 
-    " Reset de Fábrica": {
+    " - Reset de Fábrica": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2524,7 +2524,7 @@
       ]
     },
 
-    " Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
+    " - Troca Velocidade (X = Potenciometro ou 0-10V / Y = Multispeed)": {
       "link": "https://drive.google.com/file/d/1zTqIGnV62nHefDwtLoRseb7Vj7Mp0B72/view?usp=drive_link",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2567,7 +2567,7 @@
       ]
     },
 
-    " Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
+    " - Troca Velocidade (X = Multispeed / Y = Potenciometro ou 0-10V": {
       "link": "https://drive.google.com/file/d/16bBxW2vfTREGQqEOBcsB6HN-MdIFKyHZ/view?usp=drive_link",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
@@ -2612,7 +2612,7 @@
       ]
     },
 
-    " Últimos Alarme Inversor": {
+    " - Últimos Alarme Inversor": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",  
 
@@ -2669,7 +2669,7 @@
       ]
   },
 
-    "UP / DOWN": {
+    " - UP / DOWN": {
       "link": "https://drive.google.com/file/d/1evDywWSuj1LsZlDwMZX5yyuIAGYyFWlT/view?usp=drive_link",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
 
