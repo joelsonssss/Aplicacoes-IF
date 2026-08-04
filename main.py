@@ -305,8 +305,10 @@ def main(page: ft.Page):
                             "Metaltex – Ferramenta oficial de aplicações IF © 2026. Todos os direitos reservados. Versão 1.0.",
                             color=ft.Colors.WHITE,
                             size=9,
-                            text_align=ft.TextAlign.LEFT,
+                            text_align=ft.TextAlign.CENTER,
                             expand=True,
+                            
+                            
                         ),
                         contador_texto,
                     ],
