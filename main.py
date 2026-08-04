@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQUIVO_CONFIG = os.path.join(BASE_DIR, "configuracoes.json")
 CONTADOR_ARQUIVO = Path(BASE_DIR) / "contador_acessos.txt"
@@ -73,7 +74,7 @@ def main(page: ft.Page):
         if isinstance(dados, dict):
             return {
                 "link": dados.get("link", ""),
-                "manual": dados.get("manual", "")
+                "manual": dados.get("manual", ""),
             }
         return {"link": "", "manual": ""}
 
@@ -82,9 +83,11 @@ def main(page: ft.Page):
         link_aplicacao["url"] = links["link"].strip() if isinstance(links["link"], str) else ""
         botao_aplicacao.disabled = not bool(link_aplicacao["url"])
         botao_aplicacao.visible = bool(link_aplicacao["url"])
+
         link_manual["url"] = links["manual"].strip() if isinstance(links["manual"], str) else ""
         botao_manual.disabled = not bool(link_manual["url"])
         botao_manual.visible = bool(link_manual["url"])
+
         page.update()
 
     def abrir_aplicacao(e):
@@ -104,18 +107,22 @@ def main(page: ft.Page):
         ),
     )
 
-    dd_texto01 = ft.Text(
-        "      Defina Inversor e Aplicação",
-        size=15,
-        color=ft.Colors.ORANGE_800,
-        text_align=ft.TextAlign.CENTER,
+    # Título com espaço abaixo
+    dd_texto01 = ft.Container(
+        padding=ft.padding.only(bottom=8),
+        content=ft.Text(
+            "Defina Inversor e Aplicação",
+            size=15,
+            color=ft.Colors.ORANGE_800,
+            text_align=ft.TextAlign.LEFT,
+        ),
     )
 
     dd_inversor = ft.Dropdown(
         label="IF",
         width=400,
         dense=True,
-       # content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
+        content_padding=ft.padding.symmetric(vertical=1, horizontal=8),
         text_style=ft.TextStyle(size=15),
         label_style=ft.TextStyle(size=17),
         options=[ft.dropdown.Option(nome) for nome in sorted(CONFIGURACOES.keys())],
@@ -125,7 +132,7 @@ def main(page: ft.Page):
         label="Aplicação",
         width=400,
         dense=True,
-      #  content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
+        # content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
         text_style=ft.TextStyle(size=15),
         label_style=ft.TextStyle(size=17),
         options=[],
@@ -230,7 +237,9 @@ def main(page: ft.Page):
             return
         grupo = CONFIGURACOES.get(modelo, {})
         if not isinstance(grupo, dict):
-            resultado.controls.append(ft.Text("Estrutura inválida para esse modelo.", color=ft.Colors.RED))
+            resultado.controls.append(
+                ft.Text("Estrutura inválida para esse modelo.", color=ft.Colors.RED)
+            )
             atualizar_linha_link()
             return
         nomes = [n for n in grupo.keys() if n != "manual_url"]
@@ -244,20 +253,36 @@ def main(page: ft.Page):
     def mostrar_configuracao(e):
         resultado.controls.clear()
         if not dd_inversor.value:
-            resultado.controls.append(ft.Text("Escolha um modelo de inversor.", color=ft.Colors.RED))
+            resultado.controls.append(
+                ft.Text("Escolha um modelo de inversor.", color=ft.Colors.RED)
+            )
             page.update()
             return
         if not dd_configuracao.value:
-            resultado.controls.append(ft.Text("Escolha uma Aplicação.", color=ft.Colors.RED, size=18))
+            resultado.controls.append(
+                ft.Text("Escolha uma Aplicação.", color=ft.Colors.RED, size=18)
+            )
             page.update()
             return
         grupo = CONFIGURACOES.get(dd_inversor.value, {})
         dados = grupo.get(dd_configuracao.value)
         if not isinstance(dados, dict):
-            resultado.controls.append(ft.Text("Configuração inválida.", color=ft.Colors.RED))
+            resultado.controls.append(
+                ft.Text("Configuração inválida.", color=ft.Colors.RED)
+            )
             page.update()
             return
-        resultado.controls.append(ft.Text(f"{dd_inversor.value} - {dd_configuracao.value}", size=24, weight=ft.FontWeight.BOLD))
+
+        # trata possível hífen no início da aplicação
+        aplicacao = str(dd_configuracao.value).lstrip("-").strip()
+
+        resultado.controls.append(
+            ft.Text(
+                f"{dd_inversor.value}  {aplicacao}",
+                size=24,
+                weight=ft.FontWeight.BOLD,
+            )
+        )
         resultado.controls.append(ft.Divider())
         adicionar_secao("LIGAÇÕES", dados.get("ligacoes", []), "→")
         adicionar_secao("PARÂMETROS", dados.get("parametros", []), "=")
@@ -271,8 +296,6 @@ def main(page: ft.Page):
     botao_mostrar.on_click = mostrar_configuracao
 
     linha_codigo = ft.Container(
-        
-        #padding=ft.padding.symmetric(vertical=4, horizontal=23),
         alignment=ft.alignment.center,
         content=ft.Row(
             [dd_inversor, dd_configuracao, botao_mostrar],
@@ -281,12 +304,10 @@ def main(page: ft.Page):
             run_spacing=5,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
-           #tight=True,
         ),
     )
 
     linha_link = ft.Container(
-        
         padding=4,
         alignment=ft.alignment.center,
         content=ft.Row(
@@ -294,7 +315,6 @@ def main(page: ft.Page):
             wrap=True,
             spacing=6,
             run_spacing=6,
-            
         ),
     )
 
@@ -304,7 +324,6 @@ def main(page: ft.Page):
             ft.Container(
                 expand=True,
                 bgcolor=ft.Colors.ORANGE_800,
-                
                 padding=10,
                 content=ft.Row(
                     [
@@ -315,7 +334,7 @@ def main(page: ft.Page):
                             text_align=ft.TextAlign.CENTER,
                             expand=True,
                         ),
-                        #contador_texto,
+                        # contador_texto,
                     ],
                     alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                 ),
@@ -349,7 +368,13 @@ def main(page: ft.Page):
         page.update()
 
     page.on_resize = ajustar_layout
-    page.add(ft.Row(expand=True, alignment=ft.MainAxisAlignment.CENTER, controls=[conteudo_app]))
+    page.add(
+        ft.Row(
+            expand=True,
+            alignment=ft.MainAxisAlignment.CENTER,
+            controls=[conteudo_app],
+        )
+    )
     ajustar_layout()
     atualizar_linha_link()
 
