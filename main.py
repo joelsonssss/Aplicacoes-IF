@@ -75,8 +75,8 @@ def main(page: ft.Page):
         ft.PagePlatform.MACOS,
         ft.PagePlatform.LINUX,
     ):
-        page.window_width = 400
-        page.window_height = 700
+        page.window_width = 0
+        page.window_height = 0
 
     # Conta acesso toda vez que uma nova sessão é iniciada
     total_acessos = registrar_acesso()
@@ -401,23 +401,27 @@ def main(page: ft.Page):
         content=ft.Column(
             expand=True,
             spacing=0,
-            # se quiser, pode ativar scroll aqui também:
-            # scroll=ft.ScrollMode.AUTO,
+            alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             controls=[
-                imagem_topo,
-                dd_texto01,
-                linha_codigo,
-                area_resultado,
-                linha_link,
+                ft.Column(
+                    [
+                        imagem_topo,
+                        dd_texto01,
+                        linha_codigo,
+                        area_resultado,
+                        linha_link,
+                    ],
+                    spacing=0,
+                    expand=True,
+                ),
                 rodape,
-            ],
-        ),
-    )
-
+        ],
+    ),
+)
     def ajustar_layout(e=None):
-        largura_disponivel = page.width if page.width else 400
+        largura_disponivel = page.width or 400
         # mais flexível para celulares e PCs
-        largura_final = min(max(largura_disponivel - 12, 260), 480)
+        largura_final = max(largura_disponivel - 24, 260)
         conteudo_app.width = largura_final
         page.update()
 
