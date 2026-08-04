@@ -303,13 +303,13 @@ def main(page: ft.Page):
         controls=[
             ft.Container(
                 expand=True,
-                bgcolor=ft.Colors.ORANGE_600,
+                bgcolor=ft.Colors.ORANGE_800,
                 
                 padding=10,
                 content=ft.Row(
                     [
                         ft.Text(
-                            "Ferramenta oficial IF Aplicações © 2026. Todos os direitos reservados. Versão 1.0",
+                            "Ferramenta oficial IF Aplicações © 2026. Direitos reservados. Versão 1.0",
                             color=ft.Colors.WHITE,
                             size=9,
                             text_align=ft.TextAlign.CENTER,
