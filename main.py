@@ -113,9 +113,9 @@ def main(page: ft.Page):
 
     dd_inversor = ft.Dropdown(
         label="IF",
-        width=95,
+        width=400,
         dense=True,
-        content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
+       # content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
         text_style=ft.TextStyle(size=15),
         label_style=ft.TextStyle(size=17),
         options=[ft.dropdown.Option(nome) for nome in sorted(CONFIGURACOES.keys())],
@@ -123,9 +123,9 @@ def main(page: ft.Page):
 
     dd_configuracao = ft.Dropdown(
         label="Aplicação",
-        width=150,
+        width=400,
         dense=True,
-        content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
+      #  content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
         text_style=ft.TextStyle(size=15),
         label_style=ft.TextStyle(size=17),
         options=[],
@@ -135,9 +135,9 @@ def main(page: ft.Page):
         text="Buscar",
         icon=ft.Icons.SEARCH,
         height=40,
-        width=100,
-        bgcolor=ft.Colors.ORANGE_800,
-        color="#F7F8F3",
+        width=400,
+        bgcolor=ft.Colors.GREY_200,
+        color="#0F0E0A",
         style=ft.ButtonStyle(
             shape=ft.RoundedRectangleBorder(radius=5),
             padding=ft.padding.symmetric(horizontal=10, vertical=8),
@@ -151,8 +151,8 @@ def main(page: ft.Page):
         disabled=True,
         on_click=abrir_aplicacao,
         style=ft.ButtonStyle(
-            bgcolor=ft.Colors.ORANGE_800,
-            color="#F7F8F3",
+            bgcolor=ft.Colors.GREY_200,
+            color="#0C0C0B",
             shape=ft.RoundedRectangleBorder(radius=5),
         ),
     )
@@ -165,8 +165,8 @@ def main(page: ft.Page):
         visible=False,
         on_click=abrir_manual,
         style=ft.ButtonStyle(
-            bgcolor=ft.Colors.ORANGE_800,
-            color="#F7F8F3",
+            bgcolor=ft.Colors.GREY_200,
+            color="#0B0B0B",
             shape=ft.RoundedRectangleBorder(radius=5),
         ),
     )
@@ -271,17 +271,22 @@ def main(page: ft.Page):
     botao_mostrar.on_click = mostrar_configuracao
 
     linha_codigo = ft.Container(
-        padding=ft.padding.symmetric(vertical=4, horizontal=23),
+        
+        #padding=ft.padding.symmetric(vertical=4, horizontal=23),
+        alignment=ft.alignment.center,
         content=ft.Row(
             [dd_inversor, dd_configuracao, botao_mostrar],
-            wrap=False,
             spacing=4,
+            wrap=True,
+            run_spacing=5,
             alignment=ft.MainAxisAlignment.CENTER,
-            tight=True,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+           #tight=True,
         ),
     )
 
     linha_link = ft.Container(
+        
         padding=4,
         alignment=ft.alignment.center,
         content=ft.Row(
@@ -289,7 +294,7 @@ def main(page: ft.Page):
             wrap=True,
             spacing=6,
             run_spacing=6,
-            alignment=ft.MainAxisAlignment.CENTER,
+            
         ),
     )
 
@@ -298,12 +303,13 @@ def main(page: ft.Page):
         controls=[
             ft.Container(
                 expand=True,
-                bgcolor=ft.Colors.ORANGE_800,
+                bgcolor=ft.Colors.ORANGE_600,
+                
                 padding=10,
                 content=ft.Row(
                     [
                         ft.Text(
-                            "Metaltex – Ferramenta oficial de aplicações IF © 2026. Todos os direitos reservados. Versão 1.0",
+                            "Ferramenta oficial IF Aplicações © 2026. Todos os direitos reservados. Versão 1.0",
                             color=ft.Colors.WHITE,
                             size=9,
                             text_align=ft.TextAlign.CENTER,
