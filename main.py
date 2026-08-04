@@ -113,7 +113,7 @@ def main(page: ft.Page):
 
     dd_inversor = ft.Dropdown(
         label="IF",
-        width=90,
+        width=95,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
         text_style=ft.TextStyle(size=15),
@@ -123,7 +123,7 @@ def main(page: ft.Page):
 
     dd_configuracao = ft.Dropdown(
         label="Aplicação",
-        width=100,
+        width=150,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
         text_style=ft.TextStyle(size=15),
@@ -135,7 +135,7 @@ def main(page: ft.Page):
         text="Buscar",
         icon=ft.Icons.SEARCH,
         height=40,
-        width=15,
+        width=100,
         bgcolor=ft.Colors.ORANGE_800,
         color="#F7F8F3",
         style=ft.ButtonStyle(
