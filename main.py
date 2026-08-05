@@ -400,12 +400,20 @@ def main(page: ft.Page):
         ),
     )
 
+#    def ajustar_layout(e=None):
+#        largura_disponivel = page.width if page.width else 400
+#        largura_final = min(max(largura_disponivel - 12, 280), 400)
+#        conteudo_app.width = largura_final
+#        page.update()
+
+
+
+
     def ajustar_layout(e=None):
         largura_disponivel = page.width if page.width else 400
-        largura_final = min(max(largura_disponivel - 12, 280), 400)
-        conteudo_app.width = largura_final
+        conteudo_app.width = largura_disponivel  # usa toda a largura da tela
         page.update()
-
+    
     page.on_resize = ajustar_layout
     page.add(
         ft.Row(
