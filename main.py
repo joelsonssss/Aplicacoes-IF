@@ -120,7 +120,7 @@ def main(page: ft.Page):
     dd_inversor = ft.Dropdown(
         
         label="IF",
-       # width=400,
+        width=400,
         expand=True,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=1, horizontal=8),
@@ -132,6 +132,7 @@ def main(page: ft.Page):
     dd_configuracao = ft.Dropdown(
        
         label="Aplicação",
+        width=400,
         expand=True,
         dense=True,
         text_style=ft.TextStyle(size=15),
