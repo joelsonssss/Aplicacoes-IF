@@ -3,7 +3,6 @@ import json
 import os
 from pathlib import Path
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQUIVO_CONFIG = os.path.join(BASE_DIR, "configuracoes.json")
 CONTADOR_ARQUIVO = Path(BASE_DIR) / "contador_acessos.txt"
@@ -80,6 +79,7 @@ def main(page: ft.Page):
 
     def atualizar_linha_link():
         links = obter_links_aplicacao()
+
         link_aplicacao["url"] = links["link"].strip() if isinstance(links["link"], str) else ""
         botao_aplicacao.disabled = not bool(link_aplicacao["url"])
         botao_aplicacao.visible = bool(link_aplicacao["url"])
@@ -98,6 +98,7 @@ def main(page: ft.Page):
         if link_manual["url"]:
             page.launch_url(link_manual["url"])
 
+    # topo
     imagem_topo = ft.Container(
         alignment=ft.alignment.center,
         content=ft.Image(
@@ -106,7 +107,7 @@ def main(page: ft.Page):
             fit=ft.ImageFit.CONTAIN,
         ),
     )
-    # Título com espaço abaixo
+
     dd_texto01 = ft.Container(
         padding=ft.padding.only(left=10, right=10, bottom=4),
         content=ft.Text(
@@ -117,10 +118,9 @@ def main(page: ft.Page):
         ),
     )
 
+    # dropdowns
     dd_inversor = ft.Dropdown(
-        
         label="IF",
-       # width=400,
         expand=True,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=1, horizontal=8),
@@ -130,7 +130,6 @@ def main(page: ft.Page):
     )
 
     dd_configuracao = ft.Dropdown(
-       
         label="Aplicação",
         expand=True,
         dense=True,
@@ -144,7 +143,6 @@ def main(page: ft.Page):
         icon=ft.Icons.SEARCH,
         height=40,
         expand=True,
-       
         bgcolor=ft.Colors.GREY_200,
         color="#0F0E0A",
         style=ft.ButtonStyle(
@@ -275,7 +273,6 @@ def main(page: ft.Page):
             page.update()
             return
 
-        # trata possível hífen no início da aplicação
         aplicacao = str(dd_configuracao.value).lstrip("-").strip()
 
         resultado.controls.append(
@@ -297,21 +294,19 @@ def main(page: ft.Page):
     dd_configuracao.on_change = ao_mudar_configuracao
     botao_mostrar.on_click = mostrar_configuracao
 
+    # linhas com ícones
     linha_codigo = ft.Container(
-        
         alignment=ft.alignment.center,
         padding=ft.padding.only(left=10, right=10, bottom=10),
         content=ft.Row(
             [
                 ft.Icon(ft.Icons.SETTINGS, size=22, color=ft.Colors.BLUE_GREY_700),
-                dd_inversor   
+                dd_inversor,
             ],
-            spacing=4,
+            spacing=8,
             wrap=False,
-            run_spacing=5,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
-            
         ),
     )
 
@@ -321,24 +316,22 @@ def main(page: ft.Page):
         content=ft.Row(
             [
                 ft.Icon(ft.Icons.PRECISION_MANUFACTURING, size=22, color=ft.Colors.BLUE_GREY_700),
-                dd_configuracao                 
+                dd_configuracao,
             ],
-            spacing=4,
+            spacing=8,
             wrap=False,
-            run_spacing=5,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
         ),
     )
 
-    linha_codigo3= ft.Container(
+    linha_codigo3 = ft.Container(
         alignment=ft.alignment.center,
         padding=ft.padding.only(left=10, right=10, bottom=4),
         content=ft.Row(
             [botao_mostrar],
-            spacing=4,
+            spacing=8,
             wrap=False,
-            run_spacing=5,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
         ),
@@ -382,7 +375,7 @@ def main(page: ft.Page):
     area_resultado = ft.Container(expand=True, padding=4, content=resultado)
 
     conteudo_app = ft.Container(
-        width=800,
+        expand=True,
         bgcolor=ft.Colors.WHITE,
         content=ft.Column(
             expand=True,
@@ -402,11 +395,11 @@ def main(page: ft.Page):
 
     def ajustar_layout(e=None):
         largura_disponivel = page.width if page.width else 400
-        largura_final = min(max(largura_disponivel - 12, 280), 400)
-        conteudo_app.width = largura_final
+        conteudo_app.width = largura_disponivel
         page.update()
 
     page.on_resize = ajustar_layout
+
     page.add(
         ft.Row(
             expand=True,
