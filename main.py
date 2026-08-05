@@ -108,7 +108,7 @@ def main(page: ft.Page):
     )
     # Título com espaço abaixo
     dd_texto01 = ft.Container(
-        padding=ft.padding.only(bottom=8),
+        padding=ft.padding.only(left=10, right=10, bottom=4),
         content=ft.Text(
             "Defina Inversor e Aplicação",
             size=15,
@@ -118,8 +118,10 @@ def main(page: ft.Page):
     )
 
     dd_inversor = ft.Dropdown(
+        
         label="IF",
-        width=400,
+       # width=400,
+        expand=True,
         dense=True,
         content_padding=ft.padding.symmetric(vertical=1, horizontal=8),
         text_style=ft.TextStyle(size=15),
@@ -128,11 +130,10 @@ def main(page: ft.Page):
     )
 
     dd_configuracao = ft.Dropdown(
-  #      icon= ft.icons.PRECISION_MANUFACTURING,
+       
         label="Aplicação",
-        width=400,
+        expand=True,
         dense=True,
-        # content_padding=ft.padding.symmetric(vertical=4, horizontal=8),
         text_style=ft.TextStyle(size=15),
         label_style=ft.TextStyle(size=17),
         options=[],
@@ -142,7 +143,8 @@ def main(page: ft.Page):
         text="Buscar",
         icon=ft.Icons.SEARCH,
         height=40,
-        width=400,
+        expand=True,
+       
         bgcolor=ft.Colors.GREY_200,
         color="#0F0E0A",
         style=ft.ButtonStyle(
@@ -279,7 +281,7 @@ def main(page: ft.Page):
         resultado.controls.append(
             ft.Text(
                 f"{dd_inversor.value}  {aplicacao}",
-                size=24,
+                size=18,
                 weight=ft.FontWeight.BOLD,
             )
         )
@@ -296,11 +298,46 @@ def main(page: ft.Page):
     botao_mostrar.on_click = mostrar_configuracao
 
     linha_codigo = ft.Container(
+        
         alignment=ft.alignment.center,
+        padding=ft.padding.only(left=10, right=10, bottom=10),
         content=ft.Row(
-            [dd_inversor, dd_configuracao, botao_mostrar],
+            [
+                ft.Icon(ft.Icons.SETTINGS, size=22, color=ft.Colors.BLUE_GREY_700),
+                dd_inversor   
+            ],
             spacing=4,
-            wrap=True,
+            wrap=False,
+            run_spacing=5,
+            alignment=ft.MainAxisAlignment.CENTER,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+            
+        ),
+    )
+
+    linha_codigo2 = ft.Container(
+        alignment=ft.alignment.center,
+        padding=ft.padding.only(left=10, right=10, bottom=10),
+        content=ft.Row(
+            [
+                ft.Icon(ft.Icons.PRECISION_MANUFACTURING, size=22, color=ft.Colors.BLUE_GREY_700),
+                dd_configuracao                 
+            ],
+            spacing=4,
+            wrap=False,
+            run_spacing=5,
+            alignment=ft.MainAxisAlignment.CENTER,
+            vertical_alignment=ft.CrossAxisAlignment.CENTER,
+        ),
+    )
+
+    linha_codigo3= ft.Container(
+        alignment=ft.alignment.center,
+        padding=ft.padding.only(left=10, right=10, bottom=4),
+        content=ft.Row(
+            [botao_mostrar],
+            spacing=4,
+            wrap=False,
             run_spacing=5,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -354,6 +391,8 @@ def main(page: ft.Page):
                 imagem_topo,
                 dd_texto01,
                 linha_codigo,
+                linha_codigo2,
+                linha_codigo3,
                 area_resultado,
                 linha_link,
                 rodape,
