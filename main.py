@@ -118,14 +118,15 @@ def main(page: ft.Page):
         ),
     )
 
-    # dropdowns
+    # dropdowns mais compactos
     dd_inversor = ft.Dropdown(
         label="IF",
         expand=True,
         dense=True,
-        content_padding=ft.padding.symmetric(vertical=1, horizontal=8),
-        text_style=ft.TextStyle(size=15),
-        label_style=ft.TextStyle(size=17),
+     #   height=46,
+        content_padding=ft.padding.only(left=10, right=10, top=2, bottom=2),
+        text_style=ft.TextStyle(size=14),
+        label_style=ft.TextStyle(size=15),
         options=[ft.dropdown.Option(nome) for nome in sorted(CONFIGURACOES.keys())],
     )
 
@@ -133,21 +134,23 @@ def main(page: ft.Page):
         label="Aplicação",
         expand=True,
         dense=True,
-        text_style=ft.TextStyle(size=15),
-        label_style=ft.TextStyle(size=17),
+     #   height=46,
+        content_padding=ft.padding.only(left=10, right=10, top=2, bottom=2),
+        text_style=ft.TextStyle(size=14),
+        label_style=ft.TextStyle(size=15),
         options=[],
     )
 
     botao_mostrar = ft.ElevatedButton(
         text="Buscar",
         icon=ft.Icons.SEARCH,
-        height=40,
+       # height=38,
         expand=True,
         bgcolor=ft.Colors.GREY_200,
         color="#0F0E0A",
         style=ft.ButtonStyle(
             shape=ft.RoundedRectangleBorder(radius=5),
-            padding=ft.padding.symmetric(horizontal=10, vertical=8),
+            padding=ft.padding.symmetric(horizontal=10, vertical=6),
         ),
     )
 
@@ -294,16 +297,16 @@ def main(page: ft.Page):
     dd_configuracao.on_change = ao_mudar_configuracao
     botao_mostrar.on_click = mostrar_configuracao
 
-    # linhas com ícones
+    # linhas com ícones - compactas para celular
     linha_codigo = ft.Container(
         alignment=ft.alignment.center,
-        padding=ft.padding.only(left=10, right=10, bottom=10),
+        padding=ft.padding.only(left=10, right=10, bottom=6),
         content=ft.Row(
             [
-                ft.Icon(ft.Icons.SETTINGS, size=22, color=ft.Colors.BLUE_GREY_700),
+                ft.Icon(ft.Icons.SETTINGS, size=18, color=ft.Colors.BLUE_GREY_700),
                 dd_inversor,
             ],
-            spacing=8,
+            spacing=6,
             wrap=False,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -312,13 +315,13 @@ def main(page: ft.Page):
 
     linha_codigo2 = ft.Container(
         alignment=ft.alignment.center,
-        padding=ft.padding.only(left=10, right=10, bottom=10),
+        padding=ft.padding.only(left=10, right=10, bottom=6),
         content=ft.Row(
             [
-                ft.Icon(ft.Icons.PRECISION_MANUFACTURING, size=22, color=ft.Colors.BLUE_GREY_700),
+                ft.Icon(ft.Icons.PRECISION_MANUFACTURING, size=18, color=ft.Colors.BLUE_GREY_700),
                 dd_configuracao,
             ],
-            spacing=8,
+            spacing=6,
             wrap=False,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
@@ -330,7 +333,7 @@ def main(page: ft.Page):
         padding=ft.padding.only(left=10, right=10, bottom=4),
         content=ft.Row(
             [botao_mostrar],
-            spacing=8,
+            spacing=6,
             wrap=False,
             alignment=ft.MainAxisAlignment.CENTER,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
