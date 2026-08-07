@@ -13,8 +13,12 @@
 
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
-        ["S1 + GND", "Desliga (NC)"],
-        ["REV + GND", "Reversão (NA) (Opcional)"]
+        ["S1 + GND", "Desliga (NF)"],
+        ["REV + GND", "Reversão (NA) (Opcional)"],
+        ["AVI = Terminal Central do Potenciômetro"],
+        ["+10V = Terminal Positivo do Potenciômetro"],
+        ["GND = Terminal Negativo do Potenciômetro"]
+
       ],
 
       "motor": [
@@ -44,7 +48,7 @@
 
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
-        ["S1 + GND", "Desliga (NC)"],
+        ["S1 + GND", "Desliga (NF)"],
         ["REV + GND", "Reversão (NA) (Opcional)"]
       ],
 
@@ -115,7 +119,7 @@
 
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
-        ["S1 + GND", "Desliga (NC)"],
+        ["S1 + GND", "Desliga (NF)"],
         ["REV + GND", "+ Velocidade (NA)"],
         ["S2 + GND", "- Velocidade (NA)"]
       ],
@@ -137,6 +141,52 @@
 
       ]
     },
+
+    " - 3 Fios + Potenciômetro Externo + JOG": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+      "parametros": [
+        ["P101", "1"],
+        ["P102", "1"],
+        ["P315", "6"],        
+        ["P316", "3"],
+        ["P317", "8"],
+        ["P318", "2"],
+        ["P329", "2"],
+        ["P400,", "Frequência de JOG [Hz]"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["S1 + GND", "Desliga (NF)"],
+        ["S2 + GND", "OG Avanço (NA)"],
+        ["REV + GND", "JOG Reverso (NA)"],
+        ["AVI = Terminal Central do Potenciômetro"],
+        ["+10V = Terminal Positivo do Potenciômetro"],
+        ["GND = Terminal Negativo do Potenciômetro"]
+      ],
+
+      "motor": [
+        ["P209", "[V] Tensão nominal"],
+        ["P210", "[A] Corrente nominal"],
+        ["P212", "[RPM] Velocidade nominal"],
+        ["P213", "Numero de polos"],
+        ["P215", "[Hz] Frequência nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor.",
+        "Ao fechar o borne REV, o inversor aciona o motor no modo JOG Reverso, na Velocidade ajustada em P400.",
+        "Ao fechar o borne S2, o inversor aciona o motor no modo JOG Avanço, na Velocidade ajustada em P400."
+      ]
+    },
+
+
+
+
+
 
     " - Alterar Saída Relé NF / NA": {
       "link": "",
@@ -815,7 +865,7 @@
 
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
-        ["S1 + GND", "Desliga (NC)"],
+        ["S1 + GND", "Desliga (NF)"],
         ["REV + GND", "Reversão (NA) (Opcional)"],
         ["FIV + Potenciômetro","Terminal central pot."], 
         ["+10V + Potenciômetro","Terminal positivo pot."],
@@ -855,7 +905,7 @@
 
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
-        ["S1 + GND", "Desliga (NC)"],
+        ["S1 + GND", "Desliga (NF)"],
         ["REV + GND", "Reversão (NA) (Opcional)"],
         ["FIV + Potenciômetro","Terminal central pot."], 
         ["+10V + Potenciômetro","Terminal positivo pot."],
@@ -923,7 +973,7 @@
     },
 
     " - 3 Fios + Up / Down": {
-      "link": "https://drive.google.com/file/d/1rXP0_pxt_OjTuJ_M47yIj3swQ2CVg-N0/view?usp=sharing",
+      "link": "https://drive.google.com/file/d/176Vx6y6JJq-AwvuuhbCKKecHVscIEHlH/view?usp=sharing",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
       "parametros": [
@@ -942,7 +992,7 @@
       "ligacoes": [
         ["FWD + GND", "Liga (NA)"],
         ["REV + GND", "Reversão (NA)"],
-        ["S1 + GND", "Desliga (NC)"],
+        ["S1 + GND", "Desliga (NF)"],
         ["S2 + GND", "+ Velocidade (NA)"],
         ["S3 + GND", "- Velocidade (NA)"]
       ],
@@ -964,6 +1014,134 @@
 
       ]
     },
+
+
+    " - 3 Fios + Frequência via (0 – 10V) com Vel. inversamente proporcional": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "2"],
+        ["P5.02", "3"],
+        ["P5.11", "2"],
+        ["P5.13", "0.00"],
+        ["P5.14", "0.00"],
+        ["P5.15", "10.0"],
+        ["P5.16", "0.0"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA)"],
+        ["S1 + GND", "Desliga (NF)"],
+        ["FIV = Terminal Entrada Analógica (0 – 10V)"]
+        
+      ],
+
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal"],
+        ["P2.02", "[V] - Tensão nominal"],
+        ["P2.03", "[A] - Corrente nominal"],
+        ["P2.04", "[Hz] - Frequência nominal "],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Os Parâmetros P5.13 até P5.16 pertencem ao grupo de configuração das entradas analógicas.",
+        "Especificamente, eles definem os pontos da Curva 1 (FIV - Entrada Analógica de Tensão), permitindo mapear o sinal elétrico recebido (em volts) para a porcentagem de velocidade/frequência desejada do motor.",        "Acionando o borne S2, o inversor recebe comando de aumento de frequência.",
+        "P5.13 = 0.00 V (Início do Sinal com 0V).",
+        "P5.14 = 100.0% (100% da velocidade quando o Sinal estiver no mínimo).",
+        "P5.15 = 10.00 V (Fim do Sinal com 10V).",
+        "P5.16 = 0.0% (0% da velocidade quando o Sinal estiver no máximo)."
+      ]
+    },
+
+
+    " - 3 Fios + Frequência via (4 – 20 mA) com Vel. inversamente proporcional": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "2"],
+        ["P5.02", "3"],
+        ["P5.11", "2"],
+        ["P5.18", "2.00"],
+        ["P5.19", "100.0"],
+        ["P5.20", "10.0"],
+        ["P5.21", "0.0"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA)"],
+        ["S1 + GND", "Desliga (NF)"],
+        ["FIC = Terminal Entrada Analógica (4 – 20mA)"]
+        
+      ],
+
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal"],
+        ["P2.02", "[V] - Tensão nominal"],
+        ["P2.03", "[A] - Corrente nominal"],
+        ["P2.04", "[Hz] - Frequência nominal "],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Os Parâmetros P5.13 até P5.16 pertencem ao grupo de configuração das entradas analógicas.",
+        "Especificamente, eles definem os pontos da Curva 2 (FIC - Entrada Analógica de Corrente), permitindo mapear o sinal elétrico recebido (I) para a porcentagem de velocidade/frequência desejada do motor.",        "Acionando o borne S2, o inversor recebe comando de aumento de frequência.",
+        "P5.18 = 2.00 V (Início do Sinal com 4mA).",
+        "P5.19 = 100.0% (100% da velocidade quando o Sinal estiver no mínimo).",
+        "P5.20 = 10.00 V (Fim do Sinal com 20mA).",
+        "P5.21 = 0.0% (0% da velocidade quando o Sinal estiver no máximo)."
+      ]
+    },
+
+
+    " - 3 Fios + Potenciômetro Externo + JOG": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "2"],
+        ["P5.00", "1"],
+        ["P5.01", "2"],
+        ["P5.02", "3"],
+        ["P5.03", "4"],
+        ["P5.04", "5"],
+        ["P5.11", "2"],
+        ["P8.00", " Frequência de JOG [Hz]"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA)"],
+        ["S1 + GND", "Desliga (NF)"],
+        ["FIV + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]        
+      ],
+
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal"],
+        ["P2.02", "[V] - Tensão nominal"],
+        ["P2.03", "[A] - Corrente nominal"],
+        ["P2.04", "[Hz] - Frequência nominal "],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor.",
+        "Ao fechar o borne S2, o inversor aciona o motor no modo JOG Avanço, na Velocidade ajustada em P8.00.",
+        "Ao fechar o borne S3, o inversor aciona o motor no modo JOG Reverso, na Velocidade ajustada em P8.00."
+      ]
+    },
+
 
     " - AutoTunning": {
       "link": "",
@@ -1054,7 +1232,7 @@
       ]
     },
 
-    "Resistor de Frenagem": {
+    " - Resistor de Frenagem": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1212,7 +1390,7 @@
       ]
     },
 
-    " Limitar Frequência": {
+    " - Limitar Frequência": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
 
@@ -1846,6 +2024,48 @@
         "Acionando o borne X5, o inversor recebe comando de redução da frequência.",
         "O parâmetro P4.11 define o valor do pulso de frequência."
 
+      ]
+    },
+
+    " - 3 Fios + Potenciômetro externo + JOG": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "3"],
+        ["P4.00", "1"],
+        ["P4.01", "5"],
+        ["P4.02", "3"],
+        ["P4.03", "4"],
+        ["P4.11", "2"],
+        ["P8.00 = Frequência de JOG [Hz]"]
+      ],
+
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM = JOG Reverso (NA)"],
+        ["X3 + COM"," Desliga (NF)"],
+        ["X4 + COM = JOG Avanço (NA)"],
+        ["FIC + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+      ],
+
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal "],
+        ["P1.03", "[A] - Corrente nominal "],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne X3, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor.",
+        "Ao fechar o borne X2, o inversor aciona o motor no modo JOG Reverso, na Velocidade ajustada em P8.00.",
+        "Ao fechar o borne S2, o inversor aciona o motor no modo JOG Avanço, na Velocidade ajustada em P8.00." 
       ]
     },
 
