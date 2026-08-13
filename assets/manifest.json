@@ -1,7 +1,7 @@
 
 {
   "name": "Aplicações IF",
-  "short_name": "Manual Rapido",
+  "short_name": "ManualRapido",
   "description": "Metaltex",
   "start_url": "/",
   "display": "standalone",
