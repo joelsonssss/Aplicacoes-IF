@@ -2348,7 +2348,6 @@
       ]
     },
 
-
     " - AutoTunning": {
       "link": "",
       "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
@@ -2376,9 +2375,6 @@
         
       ]
     },
-
-
-
 
     " - Relé de Saída (YA / YB / YC)": {
       "link": "",
@@ -2439,7 +2435,6 @@
         "P5.02 = 41 Falha na saída (sem tensão)"
       ]
     },
-
 
     " - Resistor de Frenagem": {
       "link": "",
@@ -2707,6 +2702,33 @@
       ],
       "observacoes": []
     },
+
+    " - Função STO": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [],
+
+      "ligacoes": [
+        ["Jumper J9", "Colocar o Jumper nos pinos 1 e 2, para habilitar a função STO"],
+        ["X4 + COM", " Sinal STO (NF)"]
+      ],
+
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal"],
+        ["P1.03", "[A] - Corrente nominal"],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Com a função STO habilitada através do Jumper J9, para uso da entrada de safety, fechar os contatos X4 e COM através de um Botão NF (normalmente fechado).",
+        "Ao acionar o botão e interromper o circuito, o inversor irá desligar a saída, parando o motor.",
+        "Após fechar o circuito novamente, não é necessário enviar nenhum comando de RESET no Inversor, bastando acionar novamente o comando LIGA."
+      ]
+    },
+    
 
     " - Ganho de Torque": {
       "link": "",
