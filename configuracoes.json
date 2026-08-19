@@ -1,6 +1,66 @@
 {
 
   "IF10": {
+
+    " - 2 Fios e Potenciômetro Externo": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+      "parametros": [
+        ["P101", "1"],
+        ["P102", "1"]        
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA) (Opcional)"],
+        ["AVI = Terminal Central do Potenciômetro"],
+        ["+10V = Terminal Positivo do Potenciômetro"],
+        ["GND = Terminal Negativo do Potenciômetro"]
+
+      ],
+
+      "motor": [
+        ["P209", "[V] Tensão nominal"],
+        ["P210", "[A] Corrente nominal"],
+        ["P212", "[RPM] Velocidade nominal"],
+        ["P213", "Numero de polos"],
+        ["P215", "[Hz] Frequência nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
+      ]
+    },
+
+    " - 2 Fios e Potenciômeto Frontal Local": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+      "parametros": [
+        ["P101", "3"],
+        ["P102", "1"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA) (Opcional)"]
+      ],
+
+      "motor": [
+        ["P209", "[V] Tensão nominal motor"],
+        ["P210", "[A] Corrente nominal motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos motor"],
+        ["P215", "[Hz] Frequência nominal motor"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "Para desligar, é necessário enviar um pulso no borne S1, que comanda a parada do motor.",
+        "A rotação é ajustada por um potenciômetro frontal do inversor."
+      ]
+    },
+
     " - 3 Fios e Potenciômetro Externo": {
       "link": "https://mkt.metaltex.com.br/manualrapidopdfs/if10-3_Fios_Potenciometro_Externo.pdf",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
@@ -849,6 +909,73 @@
 
   },
   "IF20": {
+
+    " - 2 Fios + Potenciômetro Externo": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "2"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA) (Opcional)"],
+        ["FIV + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+
+      ],
+
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal"],
+        ["P2.02", "[V] - Tensão nominal"],
+        ["P2.03", "[A] - Corrente nominal"],
+        ["P2.04", "[Hz] - Frequência nominal"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."
+
+      ]
+    },
+
+    " - 2 Fios e Potenciômeto Frontal Local": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "4"],
+        ["P0.23", "1"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA) (Opcional)"],
+        ["FIV + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+
+      ],
+
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal"],
+        ["P2.02", "[V] - Tensão nominal"],
+        ["P2.03", "[A] - Corrente nominal"],
+        ["P2.04", "[Hz] - Frequência nominal"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "A rotação é ajustada pelo potenciômetro frontal do inversor."
+
+      ]
+    },
+
     " - 3 Fios + Potenciômetro Externo": {
       "link": "https://mkt.metaltex.com.br/manualrapidopdfs/if20-3_Fios_Potenciometro_Externo.pdf",
       "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
@@ -1864,6 +1991,68 @@
   },
 
   "IF30": {
+
+    " - 2 Fios + Potenciômetro Externo": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "3"]
+      ],
+
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão"],
+        ["FIC + Potenciômetro","Terminal central pot."], 
+        ["+10V + Potenciômetro","Terminal positivo pot."],
+        ["GND + Potenciômetro", "Terminal negativo pot."]
+      ],
+
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal "],
+        ["P1.03", "[A] - Corrente nominal "],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro externo do inversor."  
+
+      ]
+    },
+
+    " - 2 Fios + Potenciômetro Frontal Local": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "4"]
+      ],
+
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"]
+      ],
+
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal"],
+        ["P1.03", "[A] - Corrente nominal"],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro local do inversor."
+
+      ]
+    },
+
 
     " - 3 Fios + Potenciômetro Externo": {
       "link": "https://mkt.metaltex.com.br/manualrapidopdfs/if30-3_Fios_Potenciometro_Externo.pdf",
