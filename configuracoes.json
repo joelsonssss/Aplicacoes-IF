@@ -61,6 +61,35 @@
       ]
     },
 
+    " - 2 Fios e Teclado Local": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
+      "parametros": [
+        ["P101", "0"],
+        ["P102", "1"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA) (Opcional)"]
+      ],
+
+      "motor": [
+        ["P209", "[V] Tensão nominal motor"],
+        ["P210", "[A] Corrente nominal motor"],
+        ["P212", "[RPM] Velocidade nominal motor"],
+        ["P213", "Numero de polos motor"],
+        ["P215", "[Hz] Frequência nominal motor"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro frontal do inversor."
+      ]
+    },
+
+
+
     " - 3 Fios e Potenciômetro Externo": {
       "link": "https://mkt.metaltex.com.br/manualrapidopdfs/if10-3_Fios_Potenciometro_Externo.pdf",
       "manual": "https://metaltex.com.br/cdn/shop/files/m_if10.pdf?v=10459772782930306532",
@@ -975,6 +1004,38 @@
 
       ]
     },
+
+    " - 2 Fios e Teclado Frontal Local": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/IF20_Manual_Portugues-rev16.pdf?v=5305153846828326019",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.04", "1"],
+        ["P0.23", "1"]
+      ],
+
+      "ligacoes": [
+        ["FWD + GND", "Liga (NA)"],
+        ["REV + GND", "Reversão (NA) (Opcional)"]
+
+      ],
+
+      "motor": [
+        ["P2.01", "[KW] - Potência nominal"],
+        ["P2.02", "[V] - Tensão nominal"],
+        ["P2.03", "[A] - Corrente nominal"],
+        ["P2.04", "[Hz] - Frequência nominal"],
+        ["P2.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+      "observacoes": [
+        "Ao fechar o borne FWD, o inversor aciona o motor.",
+        "A rotação é ajustada teclado frontal do inversor."
+
+      ]
+    },
+
+
 
     " - 3 Fios + Potenciômetro Externo": {
       "link": "https://mkt.metaltex.com.br/manualrapidopdfs/if20-3_Fios_Potenciometro_Externo.pdf",
@@ -2053,6 +2114,35 @@
       ]
     },
 
+    " - 2 Fios + Teclado Frontal Local": {
+      "link": "",
+      "manual": "https://metaltex.com.br/cdn/shop/files/Manual_IF30.pdf?v=6866441313632078607",
+
+      "parametros": [
+        ["P0.02", "1"],
+        ["P0.03", "1"],
+        ["P0.23", "1"]
+      ],
+
+      "ligacoes": [
+        ["X1 + COM", "Liga (NA)"],
+        ["X2 + COM", "Reversão (NA)"]
+      ],
+
+      "motor": [
+        ["P1.01", "[KW] - Potência nominal"],
+        ["P1.02", "[V] - Tensão nominal"],
+        ["P1.03", "[A] - Corrente nominal"],
+        ["P1.04", "[Hz] - Frequência nominal"],
+        ["P1.05", "[RPM] - Velocidade de rotação nominal"]
+      ],
+
+      "observacoes": [
+        "Ao fechar o borne X1, o inversor aciona o motor.",
+        "A rotação é ajustada por um potenciômetro local do inversor."
+
+      ]
+    },
 
     " - 3 Fios + Potenciômetro Externo": {
       "link": "https://mkt.metaltex.com.br/manualrapidopdfs/if30-3_Fios_Potenciometro_Externo.pdf",
